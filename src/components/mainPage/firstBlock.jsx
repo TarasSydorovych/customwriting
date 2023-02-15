@@ -8,6 +8,7 @@ export default function FirstPage() {
 
 
     return(
+        <section id="firsBlock">
         <div className="picture">
         <img  src={one}></img>
         <div className='firstBlockWrap'>
@@ -39,6 +40,7 @@ Qualified Writers</h2>
          </button>
         </div>
                 </div>
+                </section>
                 
     )
 }
