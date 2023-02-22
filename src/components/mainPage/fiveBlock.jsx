@@ -43,11 +43,80 @@ export default function FiveBlock() {
                     </div>
 
                 </div>
-                
+                <button>View this sample</button>
             </div>
-            <div className="samplesList"></div>
-            <div className="samplesList"></div>
-            <div className="samplesList"></div>
+            <div className="samplesList">
+                    
+                    <h1>History</h1>
+                    <div>
+                    <p>Paper title</p>
+                    <h2>Education Benefits Analysis</h2>
+                    </div>
+                    <div>
+                    <p>Academic level</p>
+                    <h2>Undergraduate (yrs. 3-4)</h2>
+                    </div>
+                <div className="samplesListEnd">
+                    <div className="paperType">
+                    <p>Paper type</p>
+                    <h2>Analysis (any type)</h2>
+                    </div>
+                    <div className="paperFormat">
+                    <p>Paper Format</p>
+                    <h2>Apa 7</h2>
+                    </div>
+
+                </div>
+                <button>View this sample</button>
+            </div>
+            <div className="samplesList">
+                    
+                    <h1>History</h1>
+                    <div>
+                    <p>Paper title</p>
+                    <h2>Education Benefits Analysis</h2>
+                    </div>
+                    <div>
+                    <p>Academic level</p>
+                    <h2>Undergraduate (yrs. 3-4)</h2>
+                    </div>
+                <div className="samplesListEnd">
+                    <div className="paperType">
+                    <p>Paper type</p>
+                    <h2>Analysis (any type)</h2>
+                    </div>
+                    <div className="paperFormat">
+                    <p>Paper Format</p>
+                    <h2>Apa 7</h2>
+                    </div>
+
+                </div>
+                <button>View this sample</button>
+            </div>
+            <div className="samplesList">
+                    
+                    <h1>History</h1>
+                    <div>
+                    <p>Paper title</p>
+                    <h2>Education Benefits Analysis</h2>
+                    </div>
+                    <div>
+                    <p>Academic level</p>
+                    <h2>Undergraduate (yrs. 3-4)</h2>
+                    </div>
+                <div className="samplesListEnd">
+                    <div className="paperType">
+                    <p>Paper type</p>
+                    <h2>Analysis (any type)</h2>
+                    </div>
+                    <div className="paperFormat">
+                    <p>Paper Format</p>
+                    <h2>Apa 7</h2>
+                    </div>
+
+                </div>
+                <button>View this sample</button>
+            </div>
             <AiOutlineRight className="AiOutlineLeft"/>
            </div>
            <div className="fiveBlockBodyPoint">

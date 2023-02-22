@@ -1,0 +1,129 @@
+.headerUser{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   width: 100%;
+   height: 70px;
+   background: #ffffff;
+}
+.upList{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90px;
+    height: 40px;
+    font-size: 1.5em;
+    border: 2px solid #03a9f4;
+    border-radius: 50px;
+    color: #03a9f4;
+    font-weight: bolder;
+}
+.upList ul{
+    position: absolute;
+    top: 30px;
+    z-index: 3;
+    text-align: center;
+    width: auto;
+    height: auto;
+    color: black;
+    border: 3px solid #03a9f4;
+    background: #196aac;
+    top: 35px;
+    padding: 0;
+}
+.upList ul li{
+    width: 100%;
+    border-bottom: 3px solid #03a9f4;
+    font-size: 0.8em;
+    cursor: pointer;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+.upList ul li:last-child{
+    border-bottom: none;
+}
+.upList ul li a{
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+}
+.headerPidUser{
+    display: flex;
+    align-items: center;
+   
+    width: 100%;
+    height: 60px;
+    background: #196aac;
+}
+.myOrder{
+    color: white;
+    width: 100%;
+}
+.myOrder ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    width: 80%;
+    height: 100%;
+}
+.myOrder ul li{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 1.5em;
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+}
+.statusOrder{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 120px;
+   justify-content: center;
+}
+.statusOrderWrap{
+    width: 80%;
+    height: 60px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.statusOrderWrap ul{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 40%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+.statusOrderWrap ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.statusOrderWrap ul li:first-child{
+    border-bottom: 3px solid #196aac;
+}
+.userBodyContainer{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+}
+.GiBoxUnpacking{
+    font-size: 8em;
+    color: #196aac;
+}
+.userBodyContainer button{
+    position: relative;
+    width: 200px;
+}

@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 body {
+  display:flex; 
+  flex-direction:column;
+  height: 100%;
+  padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -174,15 +178,18 @@ nav ul li a{
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  background: #000;
+  height: 100%;
+  overflow: hidden;
+ 
 }
-.picture img{
+.slideCardMedia{
   position: absolute;
-  z-index: -2;
-  width: 100%;
+object-fit: cover;
   height: 100vh;
-  opacity: 0.2;
+  
+  width: 100vw;
+ 
+  
 }
 .firstBlockWrap {
   display: flex;
@@ -353,13 +360,34 @@ color: #03a9f4;
   font-weight: bold;
   width: 100%;
 }
-.future ul li:first-child{
+.colorLi{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5em;
+  height: 53px;
+  font-weight: bold;
+  width: 100%;
   border-bottom: 3px solid #03a9f4;
+  cursor: pointer;
 }
-.future ul li:last-child{
+.greyLi{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5em;
+  height: 53px;
+  font-weight: bold;
+  width: 100%;
   color: #dde2e7;
   border-bottom: 3px solid #dde2e7;
+  cursor: pointer;
 }
+
 .bibliography{
   height: 300;
 }
@@ -388,12 +416,106 @@ color: #03a9f4;
   justify-content: space-around;
   width: 100%;
 }
-.calkInput{
- 
+.customSelect{
+  
+  position: relative;
   width: 30%;
+  height: 60px;
+}
+
+.customSelect span{
+  position: absolute;
+  left: 5px;
+  font-family: 'Quicksand', sans-serif;
+  
+}
+.calkSelect{
+  width: 100%;
   height: 60px;
   border-radius: 8px;
   border-color: #03a9f4;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
+  font-size: 1.4em;
+}
+.customSelectInput{
+  position: relative;
+  border: 1px solid #03a9f4;
+  border-radius: 8px;
+  position: relative;
+  width: 30%;
+  height: 60px;
+}
+.customSelectInput label{
+  margin: 0;
+  font-size: 10px;
+  color: #c0c1c2;
+  position: absolute;
+  top:2px;
+  left: 15px;
+  color: black;
+  font-family: 'Quicksand', sans-serif;
+}
+.customSelectInput span {
+  position: absolute;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  color: #c0c1c2;
+  top: 30px;
+  left: 71px;
+}
+.buttonPlus{
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width:50%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 130px;
+}
+.plus{
+  display: flex;
+  background: none;
+  font-size: 4em;
+  color: black;
+   align-items: center;
+ margin: 0;
+ padding: 0;
+ 
+}
+.plus:hover{
+background: none;
+}
+.minus:hover{
+  background: none;
+  }
+.minus{
+  display: flex;
+  background: none;
+  font-size: 4em;
+  color: black;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+ padding: 0;
+}
+.calkInput {
+  position: absolute;
+  top: 25px;
+left:20px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
+  font-size: 1.4em;
+  background: white;
+width: 40px;
+height: 30px;
+
+  border-radius: 8px;
+  
+  margin: 0px;
+  padding: 0px;
 }
 .clakSecondBlock{
   display: flex;
@@ -401,14 +523,38 @@ color: #03a9f4;
   justify-content: space-around;
   width: 100%;
 }
-.clakSecondBlock div{
+.clakSecondBlock .secondBlockPrice{
+  display: flex;
 width: 11%;
 height: 250px;
-border: 1px solid #03a9f4;
+border: 1px solid #dddfdf;
 border-radius: 8px;
+cursor: pointer;
 }
-.clakSecondBlock div:first-child{
-background: #03a9f4;
+.clakSecondBlock .secondBlockPrice:hover{
+  border: 1px solid #03a9f4;
+
+}
+.clakSecondBlock .secondBlockPrice ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+align-items: center;
+margin: 0px;
+padding: 0px;
+  width: 100%;
+  height: 100%;
+list-style: none;
+}
+.clakSecondBlock .secondBlockPrice ul li{
+width: 80%;
+text-align: center;
+}
+.clakSecondBlock .secondBlockPrice ul li:nth-child(2n){
+color: white;
+}
+.clakSecondBlock .secondBlockPrice ul:hover li:nth-child(2n){
+color: grey;
 }
 .calkthreBlock{
   display: flex;
@@ -736,15 +882,20 @@ font-family: 'Quicksand', sans-serif;
   align-items: center;
   justify-content: space-around;
   width: 90%;
+  background: linear-gradient(#03a9f4, #018dce);
+  padding-bottom: 50px;
+  border-radius: 20px;
 }
 .samplesList{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-evenly;
   border-radius: 10px;
 width: 22%;
 font-family: 'Quicksand', sans-serif;
 height: 450px;
+background: white;
 box-shadow: 2px 2px 10px #ECECF0;
 margin-top: 40px;
 }
@@ -757,8 +908,23 @@ font-size: 1.2em;
   }
   .samplesList h2{
     font-size: 1em;
-   
     }
+.samplesList button{
+ height: 50px;
+ border: none;
+ border-radius: 30px;
+ background: none;
+ cursor: pointer;
+ box-shadow: 2px 2px 10px #ECECF0;
+ font-family: 'Quicksand', sans-serif;
+  width:70%;
+}
+.paperType{
+  width: 50%;
+}
+.paperFormat{
+  
+}
 .AiOutlineLeft{
   font-size: 1.8em;
   color: #DBDBE0;
@@ -782,8 +948,406 @@ font-size: 1.2em;
   align-items: center;
   justify-content: space-between;
 }
+/* ======================== sixblock ==============*/
+#sixblock{
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 90px;
+  background: #f2f6f9;
+}
+.sixBlogP {
+  display: flex;
+  align-self: flex-start;
+  margin-left: 10%;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  width: 60%;
+}
+.dusListWrap{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+.disListrow{
+  display: flex;
+  height: 300px;
+}
+.disListrow ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 300px;
+}
+.disListrow ul li{
+  display: flex;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+list-style: none;
+}
+.disListrowIcon{
+  color: #018dce;
+  font-size: 25px; 
+  margin-right: 10px;
+}
+.discipline{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  height: 100px;
+  background: white;
+  box-shadow: 2px 2px 10px #ECECF0;
+  border-radius: 15px;
+  bottom: -50px;
+  right: 10%;
+}
+.GoSmiley{
+  width: 150px;
+  height: 150px;
+color: #03a9f4;
+align-self: flex-end;
+}
+.discipline p{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+}
+.discipline button{
+  width: 150px;
+  position: relative;
+  z-index: 1;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  background: #03a9f4;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  color: black;
+}
+/* ----------------- Seven Block---------------*/
+#sevenBlock{
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 90px;
+  
+}
+.sevenBlockInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 80px;
+  width:80%;
+  font-family: 'Quicksand', sans-serif;
+}
+.sevenBlockInfo div{
+  margin-right: 30px;
+  align-self: start;
+}
+.TbWriting{
+  display: flex;
+  align-self: start;
+font-size: 5em;
+margin-right: 5px;
+width: 30%;
+color:#03a9f4;
+}
+.sevenBlockLastP{
+  display: flex;
+  font-family: 'Quicksand', sans-serif;
+  width: 80%;
+  margin-top: 60px;
+}
+/*------------eighthBlock0---------------------*/
+#eighthBlock{
+background: #f2f6f9;;
+  width: 100%;
+  height: auto;
+  padding-bottom: 90px;
+}
+.eighthBlockWrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-family: 'Quicksand', sans-serif;
+}
+.eighthBlockWrap h1{
+  display: flex;
+  font-size: 2.5em;
+  margin-top: 60px;
+}
+.eighthBlockWrapP{
+  display: flex;
+  font-size: 1.4em;
+  width: 70%;
+  text-align: center;
+}
+.eighthBlockWrapLIst{
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  text-align: center;
+}
+.eighthBlockWrapLIst p{
+width: 25%;
+font-size: 1.3em;
+}
+.checkIcon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  color: white;
+  width: 50px;
+  height: 50px;
+  background: #03a9f4;
+  border-radius: 50%;
+}
+/*----------------nineblock ------------*/
+#nineBlock{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+  width: 100%;
+  height: auto;
+  padding-bottom: 90px;
+}
 
+.nineBlockWrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-family: 'Quicksand', sans-serif;
+  width: 80%;
+}
+.nineBlockWrap h1{
+  display: flex;
+  align-self: flex-start;
+  font-size: 3em;
+  margin-top: 60px;
+}
+.nineBlockWrapP{
+  display: flex;
+  align-self: flex-start;
+  font-size: 1.4em;
+  width: 70%;
+  
+}
+.eighthBlockWrapLIst{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  text-align: center;
+}
+.vidgukBlock{
+width: 300px;
+height: 300px;
+background: #eaeaea;
+border-radius: 10px;
+}
+.vidgukArrow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.8em;
+  cursor: pointer;
+  color:#7a7a7a;
+  width: 60px;
+  height: 60px;
+  background: #eaeaea;
+  border-radius: 10px;
+}
+.blockUserIconVID{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  font-size: 1.5em;
+}
+.blockuserinfo{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.blockuserinfo1{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  
+  width: 100%;
+}
+.blocknik{
+  width: 40%;
+}
 
+.iconStars{
+  font-size: 0.7em;
+  color: #FFD700;
+}
+.positive{
+  width: 26px;
+  color: #c0c1c2;
+  font-size: 5px;
+}
+.paragrafvidguk{
+  width: 100%;
+  height: 100px;
+  font-size: 0.9em;
+  text-align: center;
+  
+  overflow-y: scroll;
+  margin-top: 5px;
+}
+.paragrafvidguk::-webkit-scrollbar {
+  width: 12px;
+}
+.paragrafvidguk::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  border-radius: 10px;
+}
+.paragrafvidguk::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+/* ----------tenBlock -------------*/
+#tenBlock{
+  background: #f2f6f9;
+  width: 100%;
+  height: auto;
+  padding-bottom: 90px;
+}
+.teblockwrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.tenblockContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+.tenblockContainer h1{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 3.5em;
+}
+.tenblockContainer h1 span{
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.7em;
+  font-weight: bolder;
+  color: #018dce;
+}
+.tenblockContainer button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  background: #03a9f4;
+  border: none;
+  color: white;
+  width: 150px;
+  height: 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+}
+/*---------------footer-------------------*/
+footer{
+  background: #071826;
+  
+  width: 100%;
+  height: auto;
+  padding-bottom: 90px;
+  margin-bottom: 0;
+}
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.logoFooter h1{
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  font-weight: bolder;
+  color: #03a9f4;
+  margin: 0;
+}
+.logoFooter h1 span{
+  color: white;
+}
+
+.logoFooter ul li{
+  list-style: none;
+}
+.logoFooter ul li a{
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+.logoFooter ul li a::before{
+  content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+height: 2px;
+width: 0%;
+background: #03a9f4;
+}
+.logoFooter ul li a:hover::before{
+  transition: all .5s ease-in-out;
+  width: 100%;
+}
+.payment{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ width: 20%;
+ font-family: 'Quicksand', sans-serif;
+ color: white;
+ font-size: 1.9em;
+}
+.paymentIco{
+  color: #03a9f4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ width: 100%;
+  font-size: 3em;
+}
+.spcial{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  font-size: 1.9em;
+ }
+ .spcialIco{
+   color: #03a9f4;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+  width: 100%;
+   font-size: 4em;
+ }
 
 
 
@@ -1026,4 +1590,448 @@ font-size: 1.2em;
     opacity: 0;
     transform: scale(1.7, 1.7);
   }
+}
+/* ------------------ What we offer --------------------------- */
+.headerWrapnew{
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.headerMenynew{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 40px;
+  height: 90px;
+}
+nav .outLineMenunew{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  margin-left: 10px;
+   border: 1px solid white;
+   border-radius: 3px;
+   background: white;
+
+}
+.menunew{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top:0;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  background: white;
+  opacity: 0.8;
+  z-index: 3;
+}
+.menunew .ulMobilenew{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.liMobilenew a{
+  border: none;
+  font-family: 'Quicksand', sans-serif;
+ 
+  font-size: 2em;
+  color: black;
+}
+.navnew ul{
+  display: flex;
+  align-items: center;
+  
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.navnew ul li{
+  display: flex;
+  position: relative;
+  list-style: none;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 90px;
+}
+.navnew ul li::before{
+  content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+height: 2px;
+width: 0%;
+background: #03a9f4;
+}
+.navnew ul li:hover::before{
+  transition: all .5s ease-in-out;
+  width: 100%;
+}
+.navnew ul li:last-child{
+ 
+  margin-right: 0px;
+}
+.navnew ul li a{
+  
+   text-decoration: none;
+   font-family: 'Quicksand', sans-serif;
+   color: black;
+   font-size: 0.9375em;
+   font-weight: bold;
+   
+}
+
+
+.signInnew {
+  display: flex;
+  align-items: center;
+   margin-right: 35px;
+}
+.AiOutlineUsernew{
+  color: #03a9f4;  
+  margin-right: 15px;
+  font-size: 20px;
+}
+.signInnew a{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+  color: #03a9f4;
+  font-weight: bold;
+}
+.signInnew a:hover{
+  font-size: 1.25em;
+  transition: all .3s ease-in-out;
+}
+.headerMenynew button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #03a9f4;
+  border: none;
+  color: white;
+  width: 110px;
+  height: 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+}
+.headerMenynew button:hover{
+ background: #03a9f4;
+ transition: all .3s ease-in-out;
+}
+.logonew h1{
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  font-weight: bolder;
+  color: #03a9f4;
+}
+.logonew h1 span{
+  color: black;
+}
+/*  first block offer */
+#offerfirstblock{
+ 
+  width: 100%;
+  height: auto;
+  padding-bottom: 90px;
+}
+.OfferOneBlock{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 40%;
+}
+.OfferOneBlock h1{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 3.5em;
+}
+.OfferOneBlock h1 span{
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.7em;
+  font-weight: bolder;
+  color: #018dce;
+}
+.OfferOneBlock p{
+  width: 70%;
+  font-size: 1.2em;
+}
+/*---------- two block offer------------------*/
+#twoblockoffer{
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 90px;
+  background: #f2f6f9;
+  
+}
+.twoblockOfferWrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+ 
+}
+.sixBlogPOffer {
+  display: flex;
+  align-self: flex-start;
+  margin-left: 14%;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  width: 60%;
+}
+.dusListWrapOffer{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+.disListrowOffer{
+  display: flex;
+  height: 300px;
+}
+.disListrowOffer ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 300px;
+}
+.disListrowOffer ul li{
+  display: flex;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+list-style: none;
+}
+.disListrowIcon{
+  color: #018dce;
+  font-size: 25px; 
+  margin-right: 10px;
+}
+.discipline{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  height: 100px;
+  background: white;
+  box-shadow: 2px 2px 10px #ECECF0;
+  border-radius: 15px;
+  bottom: -50px;
+  right: 10%;
+}
+.GoSmiley{
+  width: 150px;
+  height: 150px;
+color: #03a9f4;
+align-self: flex-end;
+}
+.discipline p{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+}
+.discipline button{
+  width: 150px;
+  position: relative;
+  z-index: 1;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  background: #03a9f4;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  color: black;
+}
+.secodFirsOffer{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 80px;
+ width: 90%;
+}
+.secodFirsOffer h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2.5em;
+  width: 80%;
+}
+.bubleGroupOffer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  
+}
+.bubleGroupOffer h1{
+  font-size: 3em;
+}
+.bubleGroupOfferThree {
+  display: flex;
+  justify-content: center;
+  
+  width: 80%;
+  
+}
+.bubleGroupOfferThree h1{
+  font-weight: bold;
+  font-size: 5em;
+}
+.bubleGroupOfferThree h1 span{
+  font-family: 'Dancing Script', cursive;
+  color: #03a9f4;
+  margin-left: 15px;
+}
+.sixBlogPOfferThree {
+  display: flex;
+  align-self: center;
+  margin-left: 14%;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  width: 42%;
+}
+.sevenBlockInfoOffer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 80px;
+  width:80%;
+  font-family: 'Quicksand', sans-serif;
+}
+.sevenBlockInfoOffer div{
+  margin-right: 30px;
+  align-self: start;
+}
+.TbWritingOffer{
+  display: flex;
+  align-self: start;
+font-size: 5em;
+margin-right: 5px;
+width: 30%;
+color:#03a9f4;
+}
+.OfferFourCheck {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 80px;
+  width:80%;
+  font-family: 'Quicksand', sans-serif;
+}
+.blockcheckbox{
+ width: 20%;
+  align-self: start;
+}
+.checkIconOffer{
+  display: flex;
+  
+
+color:white;
+}
+.offerfourblocIcon{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+ border-radius: 50%;
+  background: #03a9f4;
+}
+#offerFour{
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 90px;
+  background: #f2f6f9;
+}
+.blockLeptop{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin-top: 30px;
+}
+.lapPic{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+}
+.pictureCircle{
+display: flex;
+justify-content: center;
+}
+
+.pictureCircle img{
+  width: 50%;
+  height: 50%;
+}
+.paragrafOfferFive {
+  display: flex;
+  align-self: center;
+  margin-left: 5%;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  width: 50%;
+}
+.tenblockContainerOffer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+.tenblockContainerOffer h1{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2.5em;
+}
+.tenblockContainerOffer h1 span{
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.7em;
+  font-weight: bolder;
+  margin-left: 5px;
+  color: #018dce;
+}
+.tenblockContainerOffer button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  background: #03a9f4;
+  border: none;
+  color: white;
+  width: 150px;
+  height: 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+}
+#tenBlockOffer{
+  
+  width: 100%;
+  height: auto;
+  padding-bottom: 90px;
 }

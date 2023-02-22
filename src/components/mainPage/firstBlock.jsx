@@ -1,8 +1,8 @@
-import one from '../../img/f1.jpg'
+import one from '../../img/video.mp4'
 import { BsPencil } from "react-icons/bs";
 import { GiMoneyStack } from "react-icons/gi";
 import { HiDocumentReport } from "react-icons/hi";
-
+import { CardMedia, Card} from '@mui/material';
 export default function FirstPage() {
 
 
@@ -10,7 +10,16 @@ export default function FirstPage() {
     return(
         <section id="firsBlock">
         <div className="picture">
-        <img  src={one}></img>
+       
+        <CardMedia
+       component='video'
+       className="slideCardMedia"
+       
+        autoPlay 
+        loop muted
+        loading='lazy'
+        src={one}
+      />
         <div className='firstBlockWrap'>
          <h1>Essay Writing Service - Hire A Professional Essay Writer For All Your Writing Needs</h1>
          <div className='firstBlockIcon'>
