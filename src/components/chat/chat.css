@@ -1,36 +1,97 @@
 .chatBlock{
+  
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-self: center;
+    
     width: 600px;
-    height: 400px;
+    height: 500px;
     background: white;
-    border-radius: 20px;
+    border-radius: 0 10px 0 0;
     border: 1px solid #6C8EA4;
+    overflow-y: auto; 
+    position: relative;
+}
+
+.chatBlock::-webkit-scrollbar {
+  width: 12px;
+}
+.chatBlock::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  border-radius: 10px;
+}
+.chatBlock::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.listAdmin{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 300px;
+    height: 500px;  
+    border-radius: 10px 0 0 0;
+    border: 1px solid #6C8EA4;
+    font-family: 'Quicksand', sans-serif;
+    overflow: hidden;
+}
+.avatar{
+  margin-top: 10px;
+  margin-left: 10px;
+  position: relative;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    font-family: 'Quicksand', sans-serif;
+    height: 50px;
+    border-radius: 5px;
+    
+    border: 2px solid #6C8EA4;
+    overflow: hidden;
+    cursor: pointer;
+}
+.wrapchat{
+    display: flex;
+    justify-content: center;
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+    height: auto; 
+    margin-top: 50px;
+    
 }
 .wrapper{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+ 
+  width: 100%;
+  height: auto;
+  padding-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Quicksand', sans-serif;
+  align-items: center;
+   
 }
 .bubbleWrapper {
 	padding: 10px 10px;
 	display: flex;
-	justify-content: flex-end;
-	flex-direction: column;
-	align-self: flex-end;
+  flex-direction: column;
+  font-family: 'Quicksand', sans-serif;
   color: #fff;
 }
 .bubbleWrapperOther {
 	padding: 10px 10px;
 	display: flex;
-	justify-content: flex-end;
+	width: 90%;
+ 
 	flex-direction: column;
-	align-self: flex-start;
+  align-items: flex-end;
+  font-family: 'Quicksand', sans-serif;
+	
   color: #fff;
+}
+.bubbleWrapperOther .other {
+	align-self: flex-end;
 }
 .inlineContainer {
   display: inline-flex;
@@ -47,19 +108,21 @@
 	max-width: 700px;
 	padding: 14px 18px;
   margin: 6px 8px;
-	background-color: #5b5377;
+	background-color: #196aac;
 	border-radius: 16px 16px 0 16px;
-	border: 1px solid #443f56;
+  font-family: 'Quicksand', sans-serif;
+	border: 1px solid #10558d;
  
 }
 .otherBubble {
 	min-width: 60px;
 	max-width: 700px;
 	padding: 14px 18px;
+  font-family: 'Quicksand', sans-serif;
   margin: 6px 8px;
-	background-color: #6C8EA4;
+	background-color: #196aac;
 	border-radius: 16px 16px 16px 0;
-	border: 1px solid #54788e;
+	border: 1px solid #10558d;
   
 }
 .own {
@@ -73,3 +136,202 @@ span.other{
   font-size: 14px;
   color: grey;
 }
+.counerMessage{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+  width: 15px;
+  font-size: 0.8em;
+  height: 15px;
+  border-radius: 50%;
+  background: #196aac;
+}
+.userListWithName{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.mailUser{
+  display: flex;
+  width: 60%;
+}
+.iconFileIcon{
+  color: black;
+  font-size: 4em;
+}
+.send-message{
+  display: flex;
+
+
+font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 902px;
+  overflow: hidden;
+ 
+}
+.form-input__input{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Quicksand', sans-serif;
+  padding: 0px;
+  margin: 0px;
+  height: 40px;
+  width:80%;
+  border-radius: 0px;
+}
+.selectFileInput{
+  padding: 0px;
+  margin: 0px;
+  height: 40px;
+  font-family: 'Quicksand', sans-serif;
+  
+  width: 20%;
+}
+.chatButton{
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Quicksand', sans-serif;
+  height: 40px;
+  width: 10%;
+  border-radius: 0px;
+  border: 1px solid #196aac;
+}
+label.label input[type="file"] {
+ 
+  position: absolute;
+  right: -1000px;
+  top: -1000px;
+}
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  
+  
+  width: 20%;
+  padding: 0px;
+  height: 40px;
+  margin: 0px;
+  font-size: 1.2em;
+  background: #03a9f4;
+  display: inline-block;
+}
+.label:hover {
+  background: #03a9f4;
+}
+.label:active {
+  background: #03a9f4;
+}
+.label:invalid + span {
+  color: #000000;
+}
+.label span {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-family: 'Quicksand', sans-serif;
+ height: 100%;
+}
+.label:valid + span {
+  color: #ffffff;
+}
+
+
+
+
+/* Loading css ========================================*/
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #03a9f4;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #03a9f4 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Десктопна версія */
+@media only screen and (min-width: 600px) {
+  .chatBlock{
+  width: 600px;
+  height: 500px;
+  }
+  .listAdmin{
+  width: 300px;
+  height: 500px;
+  border-radius: 10px 0 0 0;
+  }
+  .wrapchat{
+  margin-top: 50px;
+  }
+  .wrapper{
+  padding-bottom: 90px;
+  }
+  .send-message{
+  width: 902px;
+  }
+  }
+  
+  /* Мобільна версія */
+  @media only screen and (max-width: 599px) {
+  .chatBlock{
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  }
+  .listAdmin{
+  width: 100%;
+  height: 250px;
+  border-radius: 0;
+  }
+  .wrapchat{
+  margin-top: 10px;
+  }
+  .wrapper{
+  padding-bottom: 70px;
+  }
+  .send-message{
+  width: 100%;
+  margin: 0;
+  }
+  .form-input__input{
+  width: 70%;
+  }
+  .selectFileInput{
+  width: 30%;
+  }
+  }
+

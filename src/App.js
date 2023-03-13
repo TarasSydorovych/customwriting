@@ -9,6 +9,9 @@ import SignIn from "./components/signIn/signIn";
 import MainUser from "./components/userMenu/mainUser";
 
 import Chat from "./components/chat/chat";
+import Order from "./components/order/order";
+import Sample from "./components/sample/sample";
+import OurValues from "./components/values/ourValues";
 function App() {
   return (
    <>
@@ -20,6 +23,9 @@ function App() {
     <Route path='/signin' element={<SignIn/>}/>
     <Route path='/cabinet' element={<MainUser/>}/>
     <Route path='/chat' element={<Chat/>}/>
+    <Route path='/order' element={<Order/>}/>
+    <Route path='/sample' element={<Sample/>}/>
+    <Route path='/values' element={<OurValues/>}/>
     
    </Routes>
    </>

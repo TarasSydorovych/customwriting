@@ -3,9 +3,11 @@ import { useState } from 'react'
 import Header from '../header'
 import Footer from '../mainPage/footer'
 import './signIn.css'
-import {auth} from '../../firebase'
+import {auth, db} from '../../firebase'
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import { doc, setDoc } from "firebase/firestore"; 
+
 
 export default function SignIn() {
 const [mail, setMail] = useState('');
@@ -28,15 +30,21 @@ const signIn = (e) => {
    
 
 }
-const signUp = (e) => {
+const signUp = async (e) => {
     e.preventDefault();
-    createUserWithEmailAndPassword(auth, newUserMail, newUserPassword)
-    .then((userCredencial) => {
-    alert(`User with mail ${userCredencial.user.email} is registered. You can enter`)
-    })
-    .catch((error) => {
+
+    try{
+  const res = await createUserWithEmailAndPassword(auth, newUserMail, newUserPassword);
+  await setDoc(doc(db, "users", res.user.uid), {
+    uid: res.user.uid,
+    displayName: name,
+    email: newUserMail,
+
+   })
+}catch (error) {
         alert('The user with this login is not registered')
-    })
+    }
+ 
 
 }
 

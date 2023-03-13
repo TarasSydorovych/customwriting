@@ -94,3 +94,76 @@ font-family: 'Quicksand', sans-serif;
     padding-bottom: 90px;
     background: #f2f6f9;
   }
+  /* Mobile version */
+  @media only screen and (max-width: 600px) {
+
+    #phone {
+      padding-bottom: 60px;
+    }
+    
+    .wraper {
+      width: 90%;
+    }
+    
+    .contact p {
+      font-size: 1.2em;
+      width: 80%;
+    }
+    
+    .phone:last-child {
+      margin-left: 0px;
+      margin-top: 20px;
+    }
+    
+    .phone button {
+      width: 120px;
+      height: 40px;
+      font-size: 1.2em;
+    }
+    
+    .secodFirstnew h1 {
+      font-size: 2em;
+    }
+    
+    #thirdBlockContact {
+      padding-bottom: 60px;
+    }
+  
+  }
+  
+  /* Desktop version */
+  @media only screen and (min-width: 601px) {
+  
+    #phone {
+      padding-bottom: 90px;
+    }
+    
+    .wraper {
+      width: 70%;
+    }
+    
+    .contact p {
+      font-size: 1.5em;
+      width: 60%;
+    }
+    
+    .phone:last-child {
+      margin-left: 100px;
+      margin-top: 0px;
+    }
+    
+    .phone button {
+      width: 150px;
+      height: 50px;
+      font-size: 1.5em;
+    }
+    
+    .secodFirstnew h1 {
+      font-size: 2.5em;
+    }
+    
+    #thirdBlockContact {
+      padding-bottom: 90px;
+    }
+  
+  }

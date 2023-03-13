@@ -2,10 +2,10 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { GoogleAuthProvider } from "firebase/auth";
-import {getAuth} from 'firebase/auth'
-import { getFirestore } from "firebase/firestore";
+import {getAuth, listUsers} from 'firebase/auth'
 
-const firebaseConfig = {
+import { getFirestore } from "firebase/firestore";
+export const firebaseConfig = {
   apiKey: "AIzaSyAqxTNIy9zjFXIyeHbXHmtYhkQM6GFfvrI",
   authDomain: "new-project-4c242.firebaseapp.com",
   projectId: "new-project-4c242",
@@ -20,3 +20,4 @@ export const db = getFirestore(app);
 export const googleAuthProvider = new GoogleAuthProvider();  
 export const auth = getAuth(app);
 const analytics = getAnalytics(app);
+ 

@@ -1,3 +1,4 @@
+import './samples.css'
 import { useState } from "react";
 import {AiOutlineRight, AiOutlineLeft} from "react-icons/ai";
 import one from '../../sample/PSY 201 General Psychology - University of Mississippi.pdf';
@@ -90,68 +91,57 @@ const objListSampl = [{
 }];
 
 
-export default function FiveBlock() {
 
-    const [contSample, setContSample] = useState(4);
-const contSamplePlus = () => {
-if (contSample <= 11){
-    setContSample(prev => prev + 1)
-}
-}
-const contSampleMinus = () => {
-    if (contSample > 4){
-        setContSample(prev => prev - 1)
-    }
-}
+
+export default function FirstBlock() {
+
+
+
+
 
     return(
-          <section id="fiveBlock">
-           <div className="fiveBlock">
-           <div className="fiveBlockHeader">
-           <h2>Check out our samples</h2>
-           <button>
-            View all samples
-           </button>
+<>
+<section id="samplesFirstBlock">
+    <div className='samplesFirstBlock'>
+    <div className="samplesFirstHeader">
+           <h2 className='samplesNeedH2'>Essay samples you need</h2>
+          
            </div>
-           <div className="fiveBlockTwo">
-            <p>The examples of assignments we can complete will tell you more about the quality our experts provide. Before you ask us, “help me write my essay,” take a look at the samples we’ve composed to make sure we do an extraordinary job.</p>
+           <div className="samplesFirstHeaderP">
+            <p>All our papers come from experts who follow your instructions to the letter. Take a look at our sample essays and see for yourself how good our writers are.</p>
            </div>
-           <div className="fiveBlockBody">
-            <AiOutlineLeft className="AiOutlineLeft" onClick={contSampleMinus}/>
-            {objListSampl.map((el, index) => {
+           <div className='samplesListBlock'>
+           {objListSampl.map((el, index) => {
 
-    if(index >= (contSample - 4) && index < contSample){
-    return   <div className="samplesList" key={index}>
-                    
-    <h1>{el.CourseDetails}</h1>
-    <div className="paperTitleDiv">
-    <p className="paperTitleP">Paper title</p>
-    <h2 className="paperTitleH2">{el.paperTitle}</h2>
-    </div>
-    
+return   <div className="samplesList" key={index}>
+                
+<h1>{el.CourseDetails}</h1>
+<div className="paperTitleDiv">
+<p className="paperTitleP">Paper title</p>
+<h2 className="paperTitleH2">{el.paperTitle}</h2>
+</div>
+
 <div className="samplesListEnd">
-    <div className="paperType">
-    <p>Paper type</p>
-    <h2>{el.type}</h2>
-    </div>
-    <div className="paperFormat">
-    <p>Paper Format</p>
-    <h2>{el.style}</h2>
-    </div>
+<div className="paperType">
+<p>Paper type</p>
+<h2>{el.type}</h2>
+</div>
+<div className="paperFormat">
+<p>Paper Format</p>
+<h2>{el.style}</h2>
+</div>
 
 </div>
 <a className="viewSampleA" href={el.href} target="_blank"> View this sample</a>
 </div>
 
-}
-            })}
-      
-            <AiOutlineRight className="AiOutlineLeft" onClick={contSamplePlus}/>
+
+        })}
            </div>
-           <div className="fiveBlockBodyPoint">
-            
-           </div>
-           </div>
-          </section>
+    </div>
+
+</section>
+</>
+
     )
 }

@@ -1,0 +1,681 @@
+
+.wraperHeadMenu{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.wrapListMenu{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.elementMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+}
+.h4ElementOrder{
+    margin: 0;
+    padding: 0;
+}
+.iconElementOrder{
+    font-size: 1.5em;
+    color: #03a9f4;
+}
+.pElementOrder{
+    margin: 0;
+    padding: 0; 
+}
+.arrowOrderMenu{
+    width: 15%;
+    height: 3px;
+    background: #03a9f4;
+}
+.wraperBodyMenu{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+.wrapBodyMenu{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.centralBlockOrder{
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: flex-start;
+    width: 40%;
+    height: 500px;
+    background: #093b76;
+    border-radius: 50px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.centrelBlockLeftP{
+    margin-top: 30px;
+    margin-left: 30px;
+    color: #718eb0;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+.centrelBlockLeftH2{
+    margin-left: 30px;
+    color: white;
+    margin-top: 0;
+    font-size: 4em;
+    font-weight: bolder;
+}
+.centralBlockOrderFinish{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: flex-start;
+  width: 40%;
+  height: auto;
+  background: #093b76;
+  border-radius: 50px;
+  font-family: 'Quicksand', sans-serif;
+}
+.orderInformation{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+  width: 100%;
+  height: auto;
+  
+}
+.orderInformationOne{
+  margin-top: 10px;
+  height: 20px;
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #083468;
+  color: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.orderInfoCount{
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  background: #083468;
+  color: white;
+  margin-top: 20px;
+}
+.orderInfoCountLast{
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  background: #083468;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 90px;
+}
+.orderInfoCountTwo{
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  
+  color: white;
+  margin-top: 20px;
+}
+.checkIconNew{
+  margin-right: 10px;
+}
+.remove{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  cursor: pointer;
+  width: 50px;
+  height: 20px;
+  font-size: 0.6em;
+  background: #2b517d;
+}
+.orderInfoCountPage{
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.orderInfoCountPageNew{
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+.orderInfoCountPageP{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.orderInfoCountPagePNew{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.elementPlus{
+  margin-left: 10px;
+  cursor: pointer;
+}
+.centralBlockOrderInfo{
+    display: flex;
+    flex-direction: column;
+   justify-content: space-between;
+    width: 55%;
+    height: auto;
+    
+    
+    font-family: 'Quicksand', sans-serif;
+}
+.blockAcademic{
+    width: 100%;
+    border: 2px solid #eeeded;
+    height: 150px;
+    border-radius: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background: #f9fcff;
+}
+.blockAcademicH4{
+    margin-left: 20px;
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
+.blockAcademicP{
+    margin-left: 20px;
+}
+
+  .buttonOrderMenuNext{
+    width: 100%;
+    height: 50px;
+    background: #196aac;
+    font-family: 'Quicksand', sans-serif;
+  }
+  .buttonOrderMenuNext:hover{
+    background: #093b76;
+  }
+  .buttonOrderMenuBack{
+    background: none;
+    border: none;
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+  }
+  .buttonOrderMenuBack:hover{
+    background: none;
+    border: none;
+  }
+  .educationLevelUl{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    padding: 0;
+  }
+  .educationLevelLi{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+    border: 2px solid #eeeded;
+    cursor: pointer;
+  }
+  .educationLevelLi:hover{
+    background: #f9fcff;
+  }
+
+  .calendarNew{
+    width: 80%;
+  }
+  .calendarStyle{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+
+  .react-calendar {
+    width: 350px;
+    max-width: 100%;
+    background: white;
+    border: 1px solid #a0a096;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.125em;
+  }
+  .react-calendar--doubleView {
+    width: 700px;
+  }
+  .react-calendar--doubleView .react-calendar__viewContainer {
+    display: flex;
+    margin: -0.5em;
+  }
+  .react-calendar--doubleView .react-calendar__viewContainer > * {
+    width: 50%;
+    margin: 0.5em;
+  }
+  .react-calendar,
+  .react-calendar *,
+  .react-calendar *:before,
+  .react-calendar *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .react-calendar button {
+    margin: 0;
+    border: 0;
+    outline: none;
+  }
+  .react-calendar button:enabled:hover {
+    cursor: pointer;
+  }
+  .react-calendar__navigation {
+    display: flex;
+    height: 44px;
+    margin-bottom: 1em;
+    
+    
+  }
+  .react-calendar__navigation button {
+    min-width: 44px;
+    background: none;
+    color: #093b76;
+  }
+  .react-calendar__navigation button:disabled {
+    background-color: #f0f0f0;
+  }
+  .react-calendar__navigation button:enabled:hover,
+  .react-calendar__navigation button:enabled:focus {
+    background-color: #e6e6e6;
+  }
+  .react-calendar__month-view__weekdays {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.75em;
+  }
+  .react-calendar__month-view__weekdays__weekday {
+    padding: 0.5em;
+  }
+  .react-calendar__month-view__weekNumbers .react-calendar__tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75em;
+    font-weight: bold;
+  }
+  .react-calendar__month-view__days__day--weekend {
+    color: #d10000;
+  }
+
+  .react-calendar__year-view .react-calendar__tile,
+  .react-calendar__decade-view .react-calendar__tile,
+  .react-calendar__century-view .react-calendar__tile {
+    padding: 2em 0.5em;
+  }
+  .react-calendar__tile {
+    max-width: 100%;
+    padding: 10px 6.6667px;
+    background: none;
+    text-align: center;
+    line-height: 16px;
+    color: black;
+  }
+  .react-calendar__month-view__days__day--neighboringMonth {
+    color: #757575;
+  }
+  .react-calendar__tile:disabled {
+    background-color: #f0f0f0;
+  }
+  .react-calendar__tile:enabled:hover,
+  .react-calendar__tile:enabled:focus {
+    background-color: #e6e6e6;
+  }
+  .react-calendar__tile--now {
+    background: #ffff76;
+  }
+  .react-calendar__tile--now:enabled:hover,
+  .react-calendar__tile--now:enabled:focus {
+    background: #ffffa9;
+  }
+  .react-calendar__tile--hasActive {
+    background: #76baff;
+  }
+  .react-calendar__tile--hasActive:enabled:hover,
+  .react-calendar__tile--hasActive:enabled:focus {
+    background: #a9d4ff;
+  }
+  .react-calendar__tile--active {
+    background: #006edc;
+    color: white;
+  }
+  .react-calendar__tile--active:enabled:hover,
+  .react-calendar__tile--active:enabled:focus {
+    background: #1087ff;
+  }
+  .react-calendar--selectRange .react-calendar__tile--hover {
+    background-color: #e6e6e6;
+  }
+  
+  .blockLikeAcademic{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 2px solid #eeeded;
+    height: 100px;
+    cursor: pointer;
+   
+}
+.blockLikeAcademicH4{
+    margin-left: 20px;
+    font-size: 1.2em;
+    margin-bottom: 0;
+    background: none;
+}
+.blockLikeAcademicP{
+    margin-left: 20px;
+    background: none;
+}
+.typePaperWrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: auto;
+}
+.optionTypePaper{
+  display: flex;
+  flex-direction: column;
+  width: 100%S;
+}
+.countPageInOrder{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inputWordCount{
+  width: 30%;
+  margin: 0;
+  font-size: 1.5em;
+  padding-left: 30%;
+  
+}
+.coutnWWrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  margin: 0;
+}
+.countPlusMinus{
+  font-size: 2em;
+  cursor: pointer;
+}
+.countWOrds{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0dede;
+  width: 20%;
+  height: 40px;
+  border-radius: 5px;
+}
+.divChats{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #006edc;
+  color: #006edc;
+  width: 15%;
+  height: 40px;
+  border-radius: 5px; 
+}
+.detailWraperHeader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Quicksand', sans-serif;
+}
+.paragrafRef{
+  margin-top: 0px;
+}
+.wrapArea{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.textAreaR{
+  border-radius: 5px 5px 0 0;
+  height: 150px;
+  font-size: 1.5em;
+  padding: 5px;
+  font-family: 'Quicksand', sans-serif;
+}
+.uploadFile{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50px;
+  background: #efeff8;
+  border-radius: 0 0 5px 5px;
+  border: 1px solid grey;
+  border-top: 0px;
+}
+.browsFile{
+  width: 200px;
+  height: 40px;
+  background: #f5f9fe;
+  color: black;
+  padding: 0;
+  margin: 0;
+  margin-left: 50px;
+}
+.calkSelectPaperFormat{
+  width: 25%;
+  height: 60px;
+  border-radius: 8px;
+  border-color: #03a9f4;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
+  font-size: 1.4em;
+}
+.blockLikeAcademicCheck{
+  display: flex;
+  margin-top: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+    border: 2px solid #eeeded;
+    height: 100px;
+}
+.checkBoxSt{
+  margin: 0px;
+  width: 30px;
+  height: 30px;
+  margin-left: 30px;
+}
+.recomendedDateCheck{
+  width: 80%;
+}
+.inputFileOrder{
+ 
+}
+
+
+
+/*   мобільна версія */
+@media screen and (max-width: 768px) {
+  .wraperHeadMenu {
+  flex-direction: column;
+  margin-top: 20px;
+  }
+  
+  .wrapListMenu {
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+  }
+  
+  .elementMenu {
+  margin-bottom: 20px;
+  }
+  
+  .arrowOrderMenu {
+  width: 10%;
+  }
+  
+  .wraperBodyMenu {
+  flex-direction: column;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  }
+  
+  .wrapBodyMenu {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  }
+  
+  .centralBlockOrder {
+  width: 80%;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  }
+  
+  .centralBlockOrderInfo {
+  width: 100%;
+  }
+  
+  .blockAcademic {
+  height: 120px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  }
+  
+  .educationLevelUl {
+  height: 200px;
+  }
+  
+  .react-calendar {
+  width: 100%;
+  max-width: none;
+  }
+  
+  .react-calendar--doubleView {
+  width: 100%;
+  }
+  
+  .react-calendar--doubleView .react-calendar__viewContainer > * {
+  width: 100%;
+  margin: 0;
+  }
+  }
+  
+  @media screen and (min-width: 768px) {
+  .wraperHeadMenu {
+  margin-top: 40px;
+  }
+  
+  .wrapListMenu {
+  justify-content: space-around;
+  margin-top: 0;
+  }
+  
+  .arrowOrderMenu {
+  width: 15%;
+  }
+  
+  .wraperBodyMenu {
+  margin-top: 20px;
+  padding-bottom: 40px;
+  }
+  
+  .centralBlockOrder {
+  height: 500px;
+  margin-top: 0;
+  margin-bottom: 0;
+  }
+  
+  .blockAcademic {
+  height: 150px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  }
+  
+  .educationLevelUl {
+  height: 300px;
+  }
+  
+  .react-calendar {
+  width: 350px;
+  max-width: 100%;
+  }
+  
+  .react-calendar--doubleView {
+  width: 700px;
+  }
+  
+  .react-calendar--doubleView .react-calendar__viewContainer {
+  display: flex;
+  margin: -0.5em;
+  }
+  
+  .react-calendar--doubleView .react-calendar__viewContainer > * {
+  width: 50%;
+  margin: 0.5em;
+  }
+  }
+  .payWrapper{
+    width:100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+  }
+.payContainer{
+  width:50%;
+  height: 400px;
+  color: black;
+}

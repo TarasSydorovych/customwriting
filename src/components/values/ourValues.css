@@ -1,0 +1,140 @@
+#blockTitile{
+    
+   
+    width: 100%;
+    height: auto;
+    padding-bottom: 90px;
+  
+}
+.titeWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.titeWrapperH1{
+    padding-top: 50px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+  font-size: 3em;
+}
+
+
+
+/*first block*/
+#firstBlockTime{
+    background: #f2f6f9;
+    width: 100%;
+    height: auto;
+    padding-bottom: 90px;
+  }
+  .firstBlockTimeteblockwrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 40px;
+  }
+  .firstBlockTimeOfferOneBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 40%;
+  }
+  .firstBlockTimeOfferOneBlock h1{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3.5em;
+  }
+  .firstBlockTimeOfferOneBlock h1 span{
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.7em;
+    font-weight: bolder;
+    color: #018dce;
+  }
+  .firstBlockTimeOfferOneBlock p{
+    width: 100%;
+    font-size: 1.2em;
+  }
+  .imageKol{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    
+}
+.imageKol img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+/*block two --------------------*/
+.imageKolTwo{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    
+}
+.imageKolTwo img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+   
+}
+.secondBlockTimeOfferOneBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 40%;
+  }
+  .secondBlockTimeOfferOneBlock h1{
+    align-self: flex-end;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3.5em;
+  }
+  .secondBlockTimeOfferOneBlock h1 span{
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.7em;
+    font-weight: bolder;
+    color: #018dce;
+  }
+  .secondBlockTimeOfferOneBlock p{
+    width: 100%;
+    font-size: 1.2em;
+  }
+  #secondBlockTime{
+   
+    width: 100%;
+    height: auto;
+    padding-bottom: 90px;
+  }
+  /*threbloc================*/
+  .imageKolUnique{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    
+}
+.imageKolUnique img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    transform: rotate(15deg);
+}
+/*diversity--------------*/
+.imageKolDiversity{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    
+}
+.imageKolDiversity img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    transform: rotate(-15deg);
+   
+}

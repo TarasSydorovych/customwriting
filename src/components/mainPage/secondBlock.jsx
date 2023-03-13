@@ -217,7 +217,19 @@ We can’t believe we’ve just told you that!
     <ul>
     <li>${Math.round(el.price * procent)}</li>
     <li>page</li>
-    <li>{el.time}h</li>
+    <li>{el.time <= 24 &&
+    <>
+        {el.time}h
+        </>
+        }
+        {el.time > 24 &&
+    <>
+        {el.time/24}d
+        </>
+        }
+        
+        
+        </li>
     <li>deadline</li>
 {((el.time === 4) && ((hour+4) < 24) ) &&
     <li>today at {`${hour + el.time}`}</li>
@@ -238,19 +250,19 @@ We can’t believe we’ve just told you that!
     <li>tomorrow at {`${(hour + el.time)-24}`}</li>
 }
 {(el.time === 48) &&
-    <li>{CurrentTime.getHours() } {month1[CurrentTime.getMonth()]}</li>
+    <li>{CurrentTime.getDate() } {month1[CurrentTime.getMonth()]}</li>
 }
 {(el.time === 72) &&
-    <li>{CurrentTime.getHours() } {month1[CurrentTime.getMonth()]}</li>
+    <li>{CurrentTime.getDate() } {month1[CurrentTime.getMonth()]}</li>
 }
 {(el.time === 120) &&
-    <li>{CurrentTime.getHours() } {month1[CurrentTime.getMonth()]}</li>
+    <li>{CurrentTime.getDate() } {month1[CurrentTime.getMonth()]}</li>
 }
 {(el.time === 168) &&
-    <li>{CurrentTime.getHours() } {month1[CurrentTime.getMonth()]}</li>
+    <li>{CurrentTime.getDate() } {month1[CurrentTime.getMonth()]}</li>
 }
 {(el.time === 336) &&
-    <li>{CurrentTime.getHours() } {month1[CurrentTime.getMonth()]}</li>
+    <li>{CurrentTime.getDate() } {month1[CurrentTime.getMonth()]}</li>
 }
  
     </ul>
