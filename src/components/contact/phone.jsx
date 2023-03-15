@@ -34,10 +34,12 @@ export default function Phone() {
     <div className='phone'>
     <BsFillChatRightDotsFill className='icon'/><h1>Chat</h1>
    <button>
+    <a href="chat">
     Live chat
     <span className="pulse-button__rings"></span>
     <span className="pulse-button__rings"></span>
     <span className="pulse-button__rings"></span>
+    </a>
    </button>
     <p>We will be happy to talk to you either through live chat, Facebook Messenger, or WhatsApp from Monday 00:00 AM to Saturday 08:00 PM (UTC).</p>
     </div>

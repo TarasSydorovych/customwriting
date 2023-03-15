@@ -5,9 +5,9 @@ import { AiOutlineDown, AiOutlineLogout, AiOutlineUnorderedList, AiFillFileAdd }
 import { useEffect, useState } from 'react';
 import { auth } from '../../firebase';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import UserCabinetIcon from '../userCabinetIcon/userCabinetIcon';
-
+import logoBlack from '../../img/logoBlack.png'
 
 export default function HeaderUser() {
     const navigate = useNavigate();
@@ -22,8 +22,8 @@ listen();
     return(
         <>
         <div className="headerUser">
- <div className="logonew">
-           <h1>Essay-Wanted<span>.com</span></h1>
+ <div className="logoImgAdmin">
+       <Link to="/">    <img src={logoBlack} className='logoAdm'></img></Link>
         </div>
    <UserCabinetIcon/>
 
@@ -31,9 +31,9 @@ listen();
         <div className='headerPidUser'>
             <div className='myOrder'>
                 <ul>
-            <li><AiOutlineUnorderedList/>My order</li>
-            <li><AiFillFileAdd/>New order</li>
-            <li><BsFillChatLeftTextFill/> Chat</li>
+            <li><Link to="/cabinet"><AiOutlineUnorderedList/>My order</Link></li>
+            <li><Link to="/order"><AiFillFileAdd/>New order</Link></li>
+            <li><Link to="/chat"><BsFillChatLeftTextFill/> Chat</Link></li>
             </ul>
             </div>
 

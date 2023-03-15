@@ -1,8 +1,9 @@
 import { AiOutlineDollarCircle, AiOutlineCheck } from "react-icons/ai";
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
-
+import { useNavigate } from "react-router-dom";
 export default function SecondBlock() {
+    const navigate = useNavigate();
 const [pageCount, setPageCount] = useState(1);
 const [procent, setProcent] = useState(1);
 const [finalPrice, setPrice] = useState(0);
@@ -278,7 +279,7 @@ We'll send you the first draft for approval
 <div className="threBlockTwo">
 Total price: <span>${Math.round(finalPrice)}</span>
 </div>
-<button>
+<button onClick={() => navigate("/order")}>
 Order paper
 <span className="pulse-button__rings"></span>
     <span className="pulse-button__rings"></span>

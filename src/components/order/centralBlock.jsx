@@ -16,12 +16,13 @@ import PayBlock from "./payBlock";
 import {auth, db} from '../../firebase'
 import { useNavigate } from "react-router-dom";
 import { doc, setDoc, addDoc, collection, serverTimestamp } from "firebase/firestore"; 
-
+import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 
 
 
 export default function CentralBlock() {
+    const [authUser, setAuthUser] = useState(null);
     const [price, setPrise] = useState(2);
    
      const [academicWri, setAcademicWri] = useState('');
@@ -55,14 +56,22 @@ export default function CentralBlock() {
      const [checkPayment, setCheckPayment] = useState(false);
      const [orderId, setOrderId] = useState('');
      const storage = getStorage();
+     const navigate = useNavigate();
+
+
+
+
    
     useEffect(() => {
         if(checkPayment === true){
            
         const addOrder = async (e) => {
+            
         try{
-            console.log('progress File if', file[0].name)
-            if(file[0]){
+            
+            
+            if(file !== null){
+                
             const storageRef = ref(storage, file[0].name);
             const uploadTask = uploadBytesResumable(storageRef, file[0]);
             
@@ -76,8 +85,12 @@ export default function CentralBlock() {
               }, 
               ()  => {
             getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
-                const messagesCollectionRef = collection(db, `order/${orderId.payment.orderId}/order`);
-                const newMessageRef = await addDoc(messagesCollectionRef, {
+                const arr = []
+                arr.push({downloadURL: downloadURL, fileName: file[0].name})
+                const frankDocRef = doc(db, "order", orderId.payment.orderId);
+               // const messagesCollectionRef = collection(db, `order/${orderId.payment.orderId}/order`);
+               // const newMessageRef = await addDoc(messagesCollectionRef, {
+                await setDoc(frankDocRef, {
               uid: orderId.payment.orderId,
               academicWri: academicWri,
               educationLevel: educationLevel,
@@ -88,21 +101,27 @@ export default function CentralBlock() {
               chartOrSlide: chartOrSlide,
               textArea: textArea,
               paperFormat: paperFormat,
-              downloadURL: downloadURL,
+              downloadURL: arr,
+              downloadURLs:'',
               countReference: countReference,
               paperPreffer: paperPreffer,
               adwVriterText: adwVriterText,
               printableText: printableText,
               totalPrice: totalPrice,
               auth: auth.lastNotifiedUid,
+              status: 'RECENT',
+              orderStatus: 'Waiting for confirmation',
+              fileName: file[0].name,
 
              })
             });
         }
         );
         }else{
-            const messagesCollectionRef = collection(db, `order/${orderId.payment.orderId}/order`);
-            const newMessageRef = await addDoc(messagesCollectionRef, {
+            const frankDocRef = doc(db, "order", orderId.payment.orderId);
+           //const messagesCollectionRef = collection(db, `order/${orderId.payment.orderId}/order`);
+           //const newMessageRef = await addDoc(messagesCollectionRef, {
+            await setDoc(frankDocRef, {
           uid: orderId.payment.orderId,
           academicWri: academicWri,
           educationLevel: educationLevel,
@@ -113,14 +132,13 @@ export default function CentralBlock() {
           chartOrSlide: chartOrSlide,
           textArea: textArea,
           paperFormat: paperFormat,
-          
           countReference: countReference,
           paperPreffer: paperPreffer,
           adwVriterText: adwVriterText,
           printableText: printableText,
           totalPrice: totalPrice,
           auth: auth.lastNotifiedUid,
-
+          status: 'RECENT',
          })
         }
           }catch (error) {
@@ -128,6 +146,9 @@ export default function CentralBlock() {
               }
             }
             addOrder();
+            alert('Your order has been successfully paid')
+            navigate("/cabinet");
+            setCheckPayment(false);
         }
 
    
@@ -362,7 +383,7 @@ const summaryFun = () => {
                  </button>
             </>
                 }
-             {step === 7 &&
+             {step === 7 && 
                 <>
            <PayBlock totalPrice={totalPrice.toFixed(0)} setOrderId={setOrderId} setCheckPayment={setCheckPayment}/>
            

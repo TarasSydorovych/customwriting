@@ -71,6 +71,10 @@ border-radius: 50px;
 background: #03a9f4;
 font-family: 'Quicksand', sans-serif;
 }
+.phone button a{
+  text-decoration: none;
+  color:white
+}
 
 .secodFirstnew{
     display: flex;

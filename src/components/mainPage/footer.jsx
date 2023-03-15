@@ -3,7 +3,8 @@ import {RiVisaLine,} from "react-icons/ri";
 import {FaCcMastercard,FaCcDiscover} from "react-icons/fa";
 import {SiAmericanexpress,} from "react-icons/si";
 import {AiOutlineInstagram, AiOutlineFacebook, AiOutlineTwitter, AiOutlineBehance} from "react-icons/ai";
-
+import logoBlack from '../../img/logoWhite.png'
+import { Link} from "react-router-dom";
 export default function Footer() {
 
 
@@ -14,14 +15,16 @@ export default function Footer() {
         <footer>
             <div className="footer">
                 <div className="logoFooter">
-                <h1>Essay-Wanted<span>.com</span></h1>
+                <div className="logoImgBlock">
+       <Link to="/">    <img src={logoBlack} className='logoImg'></img></Link>
+        </div>
                 <ul>
-                <li><a href="/">What we offer</a></li>
-            <li><a href="/">Our prices</a></li>
-            <li><a href="/">Sample papers</a></li>
-            <li><a href="/">Our values</a></li>
-            <li><a href="/">Blog</a></li>
-            <li><a href="/">Contact us</a></li>
+                <li><Link to="/offer">What we offer</Link></li>
+            <li><Link to="/prices">Our prices</Link></li>
+            <li><Link to="/sample">Sample papers</Link></li>
+            <li><Link to="/values">Our values</Link></li>
+            <li><Link to="/">Blog</Link></li>
+            <li><Link to="/contact">Contact us</Link></li>
                 </ul>
                 </div>
                 <div className="spcial">

@@ -13,8 +13,8 @@ export default function TenBlock() {
             <div className='teblockwrap'>
                 <div className='tenblockContainer'>
                <h1> Get your troublesome papers finished by our <span>competent writers</span></h1>
-               <button>
-                Order now
+               <button><a href="/order">
+                Order now</a>
                 <span className="pulse-button__rings"></span>
     <span className="pulse-button__rings"></span>
     <span className="pulse-button__rings"></span>

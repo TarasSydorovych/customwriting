@@ -15,7 +15,9 @@ export default function PriceBlockTwo() {
            <h1>First time here and want to pay less <span>for your paper?</span></h1>
            <p>Get a free page and save up to 33% on your first order</p>
            <button>
+            <a href="/order">
             Get offer
+            </a>
             <span className="pulse-button__rings"></span>
 <span className="pulse-button__rings"></span>
 <span className="pulse-button__rings"></span>

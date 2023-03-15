@@ -80,11 +80,11 @@ We write original papers in 75+ disciplines to help you cope with any topic. Fro
         <div className="discipline">
 <AiOutlineLike className="GoSmiley"/>
  <p>Get a great paper in your discipline now!</p>
- <a href="/"> <button>Order now
+  <button><a href="/order">Order now</a>
  <span className="pulse-button__rings"></span>
     <span className="pulse-button__rings"></span>
     <span className="pulse-button__rings"></span>
-    </button></a>
+    </button>
         </div>
 
 </section>

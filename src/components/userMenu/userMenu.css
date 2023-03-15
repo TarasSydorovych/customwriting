@@ -41,3 +41,120 @@
     justify-content: center;
     cursor: pointer;
 }
+.wrapPageStatus{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Quicksand', sans-serif;
+    padding-bottom: 60px;
+}
+.headOrder{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3em;
+}
+.headOrderAcadem{
+    font-size: 2.5em;
+}
+.orderSection{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.smallOrderBlock{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+    box-shadow: 2px 2px 10px #f3f3f5;
+    border-radius: 10px;
+    background: #ECECF0;
+    cursor: pointer;
+}
+.h3CartSmOrder{
+margin: 0;
+}
+.h4CartSmOrder{
+    margin: 0; 
+}
+.standartText{
+    color: #bcbcc2;
+    margin: 0;
+}
+.joinOrder{
+    width: 60%;
+    border: 2px solid black;
+    padding: 20px;
+    margin-top: 40px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.joinOrderTwBlock{
+    width: 70%;
+    margin-top: 10px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.joinPblock{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5em;
+    color: #727275;
+    margin-right: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+}
+.joinH4block{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.6em;
+    display: flex;
+    align-self: center;
+    margin-right: 10px;
+    color: black;
+}
+.instruction{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 400px;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: auto;
+}
+.fileWrap{
+    width: 400px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.fileBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logoImgAdmin{
+    width: 196px;
+    height: 58px;
+}
+.logoAdm{
+    width: 196px;
+    height: 58px;
+    object-fit: cover;
+}

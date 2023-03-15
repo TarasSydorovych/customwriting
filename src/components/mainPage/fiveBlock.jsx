@@ -11,6 +11,7 @@ import eight from '../../sample/NUR 6512Grand Canyon University.pdf';
 import nine from '../../sample/NUR PC 705Frontier Nursing University.pdf';
 import ten from '../../sample/NURS 6630NChamberlain College of Nursing.pdf';
 import eleven from '../../sample/EDUC 8542 - Walden University.pdf';
+import { useNavigate, Link } from "react-router-dom";
 const objListSampl = [{
     CourseDetails: 'PSY 201 University of Mississipi',
     paperTitle:'Research demonstrates that people look more like their spouses?',
@@ -91,7 +92,7 @@ const objListSampl = [{
 
 
 export default function FiveBlock() {
-
+    const navigate = useNavigate();
     const [contSample, setContSample] = useState(4);
 const contSamplePlus = () => {
 if (contSample <= 11){
@@ -109,8 +110,9 @@ const contSampleMinus = () => {
            <div className="fiveBlock">
            <div className="fiveBlockHeader">
            <h2>Check out our samples</h2>
-           <button>
-            View all samples
+           <button >
+            <a href="/sample">
+            View all samples</a>
            </button>
            </div>
            <div className="fiveBlockTwo">

@@ -5,14 +5,15 @@ import { Link} from "react-router-dom";
 import { auth } from '../../firebase';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import UserCabinetIcon from "../userCabinetIcon/userCabinetIcon";
-
+import logoBlack from '../../img/logoWhite.png'
+import { useNavigate } from "react-router-dom";
 export default function Header() {
     
     
     const [windowDimensions, setWindowDimensions] = useState(true)
     const [menu, setMenu] = useState(false)
     const [authUser, setAuthUser] = useState(null);
-
+    const navigate = useNavigate();
     useEffect(() => {
       const listen = onAuthStateChanged(auth, (user) => {
           if(user){
@@ -49,8 +50,8 @@ export default function Header() {
 
     return (
        <div className="headerWrap">
-         <div className="logo">
-           <h1>Essay-Wanted<span>.com</span></h1>
+         <div className="logoImgBlock">
+       <Link to="/">    <img src={logoBlack} className='logoImg'></img></Link>
         </div>
        <div className="headerMeny">
        <nav className="nav">
@@ -65,11 +66,11 @@ export default function Header() {
 <div className="menu">
 <AiOutlineClose style={{alignSelf: 'flex-end', margin:'5%', fontSize: '3em'}} onClick={() => setMenu(false)}/>
 <ul className="ulMobile">
-  <li className="liMobile"><Link to='offer'>What we offer</Link></li>
-  <li className="liMobile"><Link to='offer'>Our prices</Link></li>
-  <li className="liMobile"><Link to='offer'>Sample papers</Link></li>
-  <li className="liMobile"><Link to='offer'>Our values</Link></li>
-  <li className="liMobile"><Link to='offer'>Blog</Link></li>
+  <li className="liMobile"><Link to='/offer'>What we offer</Link></li>
+  <li className="liMobile"><Link to='/prices'>Our prices</Link></li>
+  <li className="liMobile"><Link to='/sample'>Sample papers</Link></li>
+  <li className="liMobile"><Link to='/values'>Our values</Link></li>
+  <li className="liMobile"><Link to='/blog'>Blog</Link></li>
   <li className="liMobile"><Link to='/contact'>Contact us</Link></li>
 </ul>
 </div>
@@ -82,10 +83,10 @@ export default function Header() {
        {windowDimensions &&
         <ul>
             <li><Link to='/offer'>What we offer</Link></li>
-            <li><Link to='/'>Our prices</Link></li>
-            <li><Link to='offer'>Sample papers</Link></li>
-            <li><Link to='offer'>Our values</Link></li>
-            <li><Link to='offer'>Blog</Link></li>
+            <li><Link to='/prices'>Our prices</Link></li>
+            <li><Link to='/sample'>Sample papers</Link></li>
+            <li><Link to='/values'>Our values</Link></li>
+            <li><Link to='/blog'>Blog</Link></li>
             <li><Link to='/contact'>Contact us</Link></li>
         </ul>
 }
@@ -101,8 +102,8 @@ export default function Header() {
        <UserCabinetIcon/>
        }
        <div className="wraperFixed">
-       <button>
-        Order now
+       <button ><a to="/order">
+        Order now</a>
         <span className="pulse-button__rings"></span>
     <span className="pulse-button__rings"></span>
     <span className="pulse-button__rings"></span>

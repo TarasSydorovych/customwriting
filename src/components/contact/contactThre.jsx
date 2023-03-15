@@ -16,7 +16,9 @@ export default function ContactThre() {
             <div className='tenblockContainerOffer'>
            <h1>Need your complex paper done ASAP? Get it done in no time<span>with our help!</span></h1>
            <button>
+            <a href="/order">
             Order now
+            </a>
             <span className="pulse-button__rings"></span>
 <span className="pulse-button__rings"></span>
 <span className="pulse-button__rings"></span>

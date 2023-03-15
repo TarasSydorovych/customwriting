@@ -2,11 +2,13 @@ import { useState, useEffect } from "react";
 import { AiOutlineUser, AiOutlineClose,  AiOutlineMenu} from "react-icons/ai";
 import { Link} from "react-router-dom";
 import { auth } from '../firebase';
+import { useNavigate } from "react-router-dom";
+
 import { onAuthStateChanged} from 'firebase/auth';
 import UserCabinetIcon from "./userCabinetIcon/userCabinetIcon";
-
+import logoBlack from '../img/logoBlack.png';
 export default function Header() {
-
+  const navigate = useNavigate();
     const [windowDimensions, setWindowDimensions] = useState(true)
     const [menu, setMenu] = useState(false)
     const [authUser, setAuthUser] = useState(null);
@@ -48,9 +50,8 @@ export default function Header() {
 
     return (
        <div className="headerWrapnew">
-         <div className="logonew">
-          <img></img>
-           <h1>Essay-Wanted<span>.com</span></h1>
+         <div className="logoImgBlock">
+       <Link to="/">    <img src={logoBlack} className='logoImg'></img></Link>
         </div>
        <div className="headerMenynew">
        <nav className="navnew">
@@ -65,10 +66,10 @@ export default function Header() {
 <div className="menunew">
 <AiOutlineClose style={{alignSelf: 'flex-end', margin:'5%', fontSize: '3em'}} onClick={() => setMenu(false)}/>
 <ul className="ulMobilenew">
-  <li className="liMobilenew"><Link to='offer'>What we offer</Link></li>
-  <li className="liMobilenew"><Link to='offer'>Our prices</Link></li>
-  <li className="liMobilenew"><Link to='offer'>Sample papers</Link></li>
-  <li className="liMobilenew"><Link to='offer'>Our values</Link></li>
+  <li className="liMobilenew"><Link to='/offer'>What we offer</Link></li>
+  <li className="liMobilenew"><Link to='/prices'>Our prices</Link></li>
+  <li className="liMobilenew"><Link to='/sample'>Sample papers</Link></li>
+  <li className="liMobilenew"><Link to='/values'>Our values</Link></li>
   <li className="liMobilenew"><Link to='offer'>Blog</Link></li>
   <li className="liMobilenew"><Link to='/contact'>Contact us</Link></li>
 </ul>
@@ -83,8 +84,8 @@ export default function Header() {
         <ul>
             <li><Link to='/offer'>What we offer</Link></li>
             <li><Link to='/prices'>Our prices</Link></li>
-            <li><Link to='/'>Sample papers</Link></li>
-            <li><Link to='offer'>Our values</Link></li>
+            <li><Link to='/sample'>Sample papers</Link></li>
+            <li><Link to='/values'>Our values</Link></li>
             <li><Link to='offer'>Blog</Link></li>
             <li><Link to='/contact'>Contact us</Link></li>
         </ul>
@@ -102,7 +103,7 @@ export default function Header() {
        }
       
        <div className="wraperFixednew">
-       <button>
+       <button onClick={() => navigate("/order")}>
         Order now
         <span className="pulse-button__rings"></span>
     <span className="pulse-button__rings"></span>

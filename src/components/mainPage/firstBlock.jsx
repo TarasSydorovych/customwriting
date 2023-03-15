@@ -3,8 +3,9 @@ import { BsPencil } from "react-icons/bs";
 import { GiMoneyStack } from "react-icons/gi";
 import { HiDocumentReport } from "react-icons/hi";
 import { CardMedia, Card} from '@mui/material';
+import { useNavigate,Link } from "react-router-dom";
 export default function FirstPage() {
-
+  const navigate = useNavigate();
 
 
     return(
@@ -20,7 +21,9 @@ export default function FirstPage() {
         loading='lazy'
         src={one}
       />
-        <div className='firstBlockWrap'>
+       
+                </div>
+                <div className='firstBlockWrap'>
          <h1>Essay Writing Service - Hire A Professional Essay Writer For All Your Writing Needs</h1>
          <div className='firstBlockIcon'>
             <div className='blockIconF'>
@@ -41,14 +44,13 @@ Qualified Writers</h2>
             <h2>100%<br/>
             Plagiarism-free Papers</h2>
          </div>
-         <button>
-            Place an order
+         <button ><a href="/order">
+            Place an order</a>
             <span className="pulse-button__rings"></span>
     <span className="pulse-button__rings"></span>
     <span className="pulse-button__rings"></span>
          </button>
         </div>
-                </div>
                 </section>
                 
     )

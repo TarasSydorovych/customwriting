@@ -82,7 +82,9 @@ const arrowRight = () => {
     {objList[num].step === 4 && 
 
 <button className="placeAnOrderButton">
+<a href="/order">
 Place an order
+</a>
 <span className="pulse-button__rings"></span>
 <span className="pulse-button__rings"></span>
 <span className="pulse-button__rings"></span>

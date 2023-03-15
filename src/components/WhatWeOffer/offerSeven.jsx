@@ -13,8 +13,9 @@ export default function OfferSeven() {
             <div className='teblockwrap'>
                 <div className='tenblockContainerOffer'>
                <h1> Need an expert to help you write a<span>compelling text?</span></h1>
-               <button>
+               <button><a href="/contact">
                 Contact us
+                </a>
                 <span className="pulse-button__rings"></span>
     <span className="pulse-button__rings"></span>
     <span className="pulse-button__rings"></span>

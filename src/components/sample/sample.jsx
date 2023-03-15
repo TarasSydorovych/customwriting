@@ -4,11 +4,10 @@ import FirstBlock from "./firstBlock";
 import SecondBlockSample from "./secondBlock";
 import ThreeBlock from "./threBlock";
 import SecondBlock from '../mainPage/secondBlock'
-
+import { useNavigate } from "react-router-dom";
 export default function Sample() {
 
-
-
+    
 
 
     return(

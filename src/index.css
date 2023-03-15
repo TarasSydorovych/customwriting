@@ -26,9 +26,19 @@ code {
 .logo h1 span{
   color: white;
 }
+.logoImgBlock{
+  width: 196px;
+  height: 58px;
+}
+.logoImg{
+  width: 196px;
+  height: 58px;
+  object-fit: cover;
+}
 #firsBlock{
+  z-index: -2;
   width: 100%;
-  height: 660px;
+  height: 100vh;
 }
 .headerWrap{
   width: 100%;
@@ -164,15 +174,20 @@ nav ul li a{
   width: 110px;
   height: 40px;
   border-radius: 50px;
+  margin-right: 70px;
   cursor: pointer;
   font-family: 'Quicksand', sans-serif;
+}
+.headerMeny button a{
+  text-decoration: none;
+  color: white;
 }
 .headerMeny button:hover{
  background: #03a9f4;
  transition: all .3s ease-in-out;
 }
 
-#firsBlock .picture{
+.picture{
   position: absolute;
   z-index: -2;
   top: 0;
@@ -184,6 +199,7 @@ nav ul li a{
 }
 .slideCardMedia{
   position: absolute;
+  z-index: 1;
 object-fit: cover;
   height: 100vh;
   
@@ -197,7 +213,7 @@ object-fit: cover;
   align-items: center;
   justify-content: center;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   height: 100vh;
 }
@@ -229,6 +245,7 @@ width: 80px;
 height: 80px;
 margin-left: 80px;
 background: white;
+
 }
 .firstBlockIcon h2{
   color: white;
@@ -250,6 +267,10 @@ background: white;
   font-size: 1.125em;
   cursor: pointer;
   font-family: 'Quicksand', sans-serif;
+}
+.firstBlockWrap button a{
+text-decoration: none;
+color: white;
 }
 /* second block first page               ------------------------------- */
 #secondBloc{
@@ -833,6 +854,10 @@ font-family: 'Quicksand', sans-serif;
   cursor: pointer;
   font-family: 'Quicksand', sans-serif;
 }
+.placeAnOrderButton a{
+  text-decoration: none;
+  color:white;
+} 
 
 
 /* -------------------------- FiveBlock -------------------------------*/
@@ -869,6 +894,10 @@ font-family: 'Quicksand', sans-serif;
   font-size: 0.9em;
   color: white;
   border-radius: 30px;
+}
+.fiveBlockHeader button a{
+  text-decoration: none;
+  color: white;
 }
 .fiveBlockTwo{
   width: 70%;
@@ -1046,6 +1075,7 @@ align-self: flex-end;
   width: 150px;
   position: relative;
   z-index: 1;
+  margin: 0;
   height: 50px;
   border-radius: 50px;
   border: none;
@@ -1293,6 +1323,10 @@ border-radius: 10px;
   cursor: pointer;
   font-family: 'Quicksand', sans-serif;
 }
+.tenblockContainer button a{
+  text-decoration: none;
+  color: white;
+}
 /*---------------footer-------------------*/
 footer{
   background: #071826;
@@ -1427,6 +1461,7 @@ background: #03a9f4;
     align-items: center;
     justify-content: center;
     position: relative;
+    z-index: 6;
     background: #08ada4;
     border: none;
     color: white;
@@ -1751,6 +1786,7 @@ background: #03a9f4;
   width: 110px;
   height: 40px;
   border-radius: 50px;
+  margin-right: 70px;
   cursor: pointer;
   font-family: 'Quicksand', sans-serif;
 }
@@ -1763,6 +1799,7 @@ background: #03a9f4;
   font-size: 40px;
   font-weight: bolder;
   color: #03a9f4;
+  margin: 0;
 }
 .logonew h1 span{
   color: black;
@@ -1885,6 +1922,10 @@ align-self: flex-end;
   font-size: 15px;
   cursor: pointer;
   color: black;
+}
+.discipline button a{
+text-decoration: none;
+color: white;
 }
 .secodFirsOffer{
   display: flex;
@@ -2053,6 +2094,10 @@ justify-content: center;
   border-radius: 50px;
   cursor: pointer;
   font-family: 'Quicksand', sans-serif;
+}
+.tenblockContainerOffer button a{
+  text-decoration: none;
+  color:white;
 }
 #tenBlockOffer{
   

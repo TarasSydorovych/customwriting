@@ -48,8 +48,8 @@ export default function UserCabinetIcon() {
 {useProp && 
 <ul className='userHeaderList'>
     <li><Link to="/cabinet"><CiUser/>{authUser.email}</Link></li>
-    <li><BsFillChatLeftTextFill/>Chat</li>
-    <li><AiOutlineUnorderedList/>My order</li>
+    <li><Link to="/chat"><BsFillChatLeftTextFill/>Chat</Link></li>
+    <li><Link to="/cabinet"><AiOutlineUnorderedList/>My order</Link></li>
     <li onClick={userSignOut}><AiOutlineLogout/>Log out</li>
 </ul>
 }
