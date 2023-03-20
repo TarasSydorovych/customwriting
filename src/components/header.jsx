@@ -28,7 +28,10 @@ export default function Header() {
       }
   
   }, [authUser])
-
+const orderButton= () =>{
+  alert('Register to place an order')
+   navigate("/order")
+  }
 
     useEffect(() => {
      
@@ -103,11 +106,10 @@ export default function Header() {
        }
       
        <div className="wraperFixednew">
-       <button onClick={() => navigate("/order")}>
+        
+       <button onClick={orderButton}>
         Order now
-        <span className="pulse-button__rings"></span>
-    <span className="pulse-button__rings"></span>
-    <span className="pulse-button__rings"></span>
+      
        </button>
        </div>
        </div>

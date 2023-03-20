@@ -352,11 +352,11 @@ const changeChatRoom = async (id) => {
 
 </div>
 
-<Container style={{width: '600px',
-  height: '500px', margin: '0px', padding: '0px',}}>
+<Container maxWidth="xs"  sx={{width: '100%',
+  height: '500px', margin: '0px', padding: '0px', display: { xs: 'flex', md: 'none' },}}>
 <Grid container
 
-style={{width: '600px',
+style={{width: '100%',
   height: '500px',
   }}>
     <div className='chatBlock' >
@@ -403,7 +403,57 @@ style={{width: '600px',
 
 </Grid>
 </Container>
+<Container maxWidth="xl"  sx={{width: '600px',
+  height: '500px', margin: '0px', padding: '0px', display: { xs: 'none', md: 'flex' , xl: 'flex'},}}>
+<Grid container
 
+style={{width: '575px',
+  height: '500px',
+  }}>
+    <div className='chatBlock' >
+    {messagesNew.map((el) => {
+  let data = new Date(el.createdAt.seconds);
+  let d = data.toString();
+  console.log(el.createdAt)
+  if(el.uid === user.uid){
+    return <div class="bubbleWrapper">
+    <div class="inlineContainer">
+      {el.downloadURL && 
+    <div class="otherBubble other">
+    <a href={el.downloadURL}><AiFillFile className='iconFileIcon'/></a>
+    </div>
+  }
+      <div class="otherBubble other">
+    
+       {el.message}
+      </div>
+    </div><span class="other">{el.createdAt}</span>
+    </div>
+  }else{
+    return <div class="bubbleWrapperOther">
+    <div class="inlineContainer">
+      {el.downloadURL && 
+    <div class="otherBubble other">
+    <a href={el.downloadURL}><AiFillFile className='iconFileIcon'/></a>
+    
+    </div>
+  }
+      <div class="otherBubble other">
+    
+       {el.message}
+      </div>
+    </div><span class="other">{el.createdAt}</span>
+    </div>
+  }
+
+
+})}
+   
+    <div ref={scroll}></div>
+    </div>
+
+</Grid>
+</Container>
 </div>
 {loading &&
       <Loading/>

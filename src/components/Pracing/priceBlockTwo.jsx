@@ -25,8 +25,7 @@ export default function PriceBlockTwo() {
             </div>
 <HandySvg
     src={iconSrc}
-    width="400"
-    height="400"
+    className="svgPic"
     
 />
 </div>

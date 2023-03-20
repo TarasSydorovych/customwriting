@@ -46,7 +46,10 @@ export default function Header() {
       return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-
+    const orderButton= () =>{
+      alert('Register to place an order')
+       navigate("/order")
+      }
 
     return (
        <div className="headerWrap">
@@ -102,11 +105,8 @@ export default function Header() {
        <UserCabinetIcon/>
        }
        <div className="wraperFixed">
-       <button ><a to="/order">
-        Order now</a>
-        <span className="pulse-button__rings"></span>
-    <span className="pulse-button__rings"></span>
-    <span className="pulse-button__rings"></span>
+       <button onClick={orderButton}>
+        Order now
        </button>
        </div>
        </div>

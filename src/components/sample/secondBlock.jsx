@@ -18,8 +18,7 @@ export default function SecondBlockSample() {
                 </div>
  <HandySvg
         src={iconSrc}
-        width="400"
-        height="400"
+        className="svgPic"
         
     />
     </div>

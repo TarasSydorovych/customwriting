@@ -6,13 +6,13 @@ import {getAuth, listUsers} from 'firebase/auth'
 
 import { getFirestore } from "firebase/firestore";
 export const firebaseConfig = {
-  apiKey: "AIzaSyAqxTNIy9zjFXIyeHbXHmtYhkQM6GFfvrI",
-  authDomain: "new-project-4c242.firebaseapp.com",
-  projectId: "new-project-4c242",
-  storageBucket: "new-project-4c242.appspot.com",
-  messagingSenderId: "808716919856",
-  appId: "1:808716919856:web:20cc98f45bff8b356eb9f5",
-  measurementId: "G-TP1W6T0Y02"
+  apiKey: "AIzaSyCp3Q77dPizwoAt5QykYxWRWEbvleamcTE",
+  authDomain: "essay-wanted.firebaseapp.com",
+  projectId: "essay-wanted",
+  storageBucket: "essay-wanted.appspot.com",
+  messagingSenderId: "244635862768",
+  appId: "1:244635862768:web:3963b9a57675d1801fa435",
+  measurementId: "G-BK22LQV0HJ"
 };
 
 export const app = initializeApp(firebaseConfig);

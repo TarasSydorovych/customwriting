@@ -4,7 +4,7 @@ import Header from '../header'
 import Footer from '../mainPage/footer'
 import './signIn.css'
 import {auth, db} from '../../firebase'
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged, } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { doc, setDoc } from "firebase/firestore"; 
 
@@ -24,7 +24,7 @@ const signIn = (e) => {
         navigate("/cabinet");
     })
     .catch((error) => {
-        alert('The user with this login is not registered')
+        alert('The user with this login is not registered', error)
     })
 
    
@@ -34,7 +34,9 @@ const signUp = async (e) => {
     e.preventDefault();
 
     try{
+        
   const res = await createUserWithEmailAndPassword(auth, newUserMail, newUserPassword);
+
   await setDoc(doc(db, "users", res.user.uid), {
     uid: res.user.uid,
     displayName: name,
@@ -42,7 +44,7 @@ const signUp = async (e) => {
 
    })
 }catch (error) {
-        alert('The user with this login is not registered')
+        alert('The user with this login is not registered', error)
     }
  
 

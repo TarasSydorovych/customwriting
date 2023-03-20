@@ -12,6 +12,7 @@ import Chat from "./components/chat/chat";
 import Order from "./components/order/order";
 import Sample from "./components/sample/sample";
 import OurValues from "./components/values/ourValues";
+import PageError from "./components/404/pageError";
 function App() {
   return (
    <>
@@ -26,7 +27,7 @@ function App() {
     <Route path='/order' element={<Order/>}/>
     <Route path='/sample' element={<Sample/>}/>
     <Route path='/values' element={<OurValues/>}/>
-    
+    <Route path='*' element={<PageError/>}/>
    </Routes>
    </>
   );

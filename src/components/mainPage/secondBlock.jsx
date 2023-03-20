@@ -276,15 +276,16 @@ We can’t believe we’ve just told you that!
 <div className="threBlockOne">
 We'll send you the first draft for approval 
 </div>
-<div className="threBlockTwo">
-Total price: <span>${Math.round(finalPrice)}</span>
-</div>
+
 <button onClick={() => navigate("/order")}>
 Order paper
 <span className="pulse-button__rings"></span>
     <span className="pulse-button__rings"></span>
     <span className="pulse-button__rings"></span>
 </button>
+<div className="threBlockTwo">
+Total price: <span>${Math.round(finalPrice)}</span>
+</div>
 </div>
 </div>
 <div className="futureFormatWrap">

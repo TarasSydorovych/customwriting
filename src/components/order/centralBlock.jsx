@@ -12,7 +12,7 @@ import ThreBlock from "./ThreBlock";
 import TypePaper from "./typePaper";
 import * as React from 'react';
 import { CreditCard, PaymentsForm } from 'react-square-web-payments-sdk';
-import PayBlock from "./payBlock";
+import NewPayBlock from "./newPayBlock";
 import {auth, db} from '../../firebase'
 import { useNavigate } from "react-router-dom";
 import { doc, setDoc, addDoc, collection, serverTimestamp } from "firebase/firestore"; 
@@ -87,11 +87,11 @@ export default function CentralBlock() {
             getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
                 const arr = []
                 arr.push({downloadURL: downloadURL, fileName: file[0].name})
-                const frankDocRef = doc(db, "order", orderId.payment.orderId);
+                const frankDocRef = doc(db, "order", orderId);
                // const messagesCollectionRef = collection(db, `order/${orderId.payment.orderId}/order`);
                // const newMessageRef = await addDoc(messagesCollectionRef, {
                 await setDoc(frankDocRef, {
-              uid: orderId.payment.orderId,
+              uid: orderId,
               academicWri: academicWri,
               educationLevel: educationLevel,
               dekiveryDate: dekiveryDate,
@@ -118,11 +118,11 @@ export default function CentralBlock() {
         }
         );
         }else{
-            const frankDocRef = doc(db, "order", orderId.payment.orderId);
+            const frankDocRef = doc(db, "order", orderId);
            //const messagesCollectionRef = collection(db, `order/${orderId.payment.orderId}/order`);
            //const newMessageRef = await addDoc(messagesCollectionRef, {
             await setDoc(frankDocRef, {
-          uid: orderId.payment.orderId,
+          uid: orderId,
           academicWri: academicWri,
           educationLevel: educationLevel,
           dekiveryDate: dekiveryDate,
@@ -385,7 +385,7 @@ const summaryFun = () => {
                 }
              {step === 7 && 
                 <>
-           <PayBlock totalPrice={totalPrice.toFixed(0)} setOrderId={setOrderId} setCheckPayment={setCheckPayment}/>
+           <NewPayBlock totalPrice={totalPrice.toFixed(0)} orderId={orderId} setCheckPayment={setCheckPayment} setOrderId={setOrderId}/>
            
             </>
                 }

@@ -12,7 +12,7 @@ export default function Footer() {
 
     return(
 
-        <footer>
+        <section id="footer">
             <div className="footer">
                 <div className="logoFooter">
                 <div className="logoImgBlock">
@@ -45,6 +45,6 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-        </footer>
+        </section>
     )
 }

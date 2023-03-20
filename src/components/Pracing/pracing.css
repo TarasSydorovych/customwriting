@@ -11,7 +11,6 @@
     align-items: center;
     width: 100%;
     height: auto;
-   
   }
   .bubleGroupPrice{
     display: flex;
@@ -260,4 +259,322 @@ align-items: center;
 .styled-table tbody tr.active-row {
     font-weight: bold;
     color: #03a9f4;
+}
+@media only screen and (max-width: 479px) and (min-width: 300px) {
+  .secondBlockWrapPrice{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+  }
+  .secondTwoPrice {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: flex-start;
+    width: auto;
+  }
+  .secondTwoPrice ul{
+    display: flex;
+    align-items: flex-start;
+   flex-direction: column;
+    margin-left: 0px;
+    padding-left: 0px;
+    width: 100%;
+      }
+      .secondThreePrice{
+        display: flex;
+        align-self: flex-start;
+        flex-direction: column;
+        height: auto;
+        margin-left: 0px;
+      }
+      .futureFormatWrapPrice{ 
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: flex-start;
+       width: 80%;
+      }
+      .futurePrice{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 80%;
+        margin-left: 0;
+      }
+      .futurePrice ul{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        margin-left: 0;
+        padding-left: 0;
+      }
+      .bibliographyPrice ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 300;
+        padding-left: 0;
+      }
+      .bibliographyPrice{
+        height: auto;
+      }
+      .bibliographyPrice ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: auto;
+      }
+      .bibliographyPrice li{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 15px;
+        margin-bottom: 20px;
+      }
+      .AiOutlineCheckPrice{
+        display: flex;
+        align-self: start;
+        font-size: 40px;
+        color: #03a9f4;
+        margin-right: 10px;
+      }
+      .listWrap{
+        display: flex;
+        flex-direction: column;
+      }
+      .listWrap h1{
+        font-size: 1.3em;
+        padding: 0px;
+        margin: 0px;
+      }
+      .listWrap p{
+        font-size: 0.9em;
+        width: 50%;
+        padding: 0px;
+        margin: 0px;
+      }
+      .secondThreePrice .calkWrapperPrice{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        width: auto;
+        height: auto;
+        
+      }
+      .styled-table thead tr {
+        background-color: #03a9f4;
+        color: #ffffff;
+        text-align: left;
+        font-size: 10px;
+    }
+    .styled-table thead tr th {
+      width: 10px;
+  }
+    .styled-table th,
+    .styled-table td {
+        padding: 5px 8px;
+    }
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+    
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+    
+    .styled-table tbody tr:last-of-type {
+        border-bottom: 1px solid #03a9f4;
+    }
+    .styled-table tbody tr.active-row {
+        font-weight: bold;
+        color: #03a9f4;
+    }
+
+}
+@media only screen and (max-width: 700px) and (min-width: 479px) { 
+  .secondBlockWrapPrice{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+  }
+  .secondTwoPrice {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: flex-start;
+    width: auto;
+  }
+  .secondTwoPrice ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0px;
+    padding-left: 0px;
+    width: 100%;
+      }
+      .secondThreePrice{
+        display: flex;
+        align-self: flex-start;
+        flex-direction: column;
+        height: auto;
+        margin-left: 0px;
+      }
+      .futureFormatWrapPrice{ 
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: flex-start;
+       width: 80%;
+      }
+      .futurePrice{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 80%;
+        margin-left: 0;
+      }
+      .futurePrice ul{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        margin-left: 0;
+        padding-left: 0;
+      }
+      .bibliographyPrice ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 300;
+        padding-left: 0;
+      }
+      .bibliographyPrice{
+        height: auto;
+      }
+      .bibliographyPrice ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: auto;
+      }
+      .bibliographyPrice li{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 15px;
+        margin-bottom: 20px;
+      }
+      .AiOutlineCheckPrice{
+        display: flex;
+        align-self: start;
+        font-size: 40px;
+        color: #03a9f4;
+        margin-right: 10px;
+      }
+      .listWrap{
+        display: flex;
+        flex-direction: column;
+      }
+      .listWrap h1{
+        font-size: 1.3em;
+        padding: 0px;
+        margin: 0px;
+      }
+      .listWrap p{
+        font-size: 0.9em;
+        width: 50%;
+        padding: 0px;
+        margin: 0px;
+      }
+      .secondThreePrice .calkWrapperPrice{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        width: auto;
+        height: auto;
+        
+      }
+      .styled-table thead tr {
+        background-color: #03a9f4;
+        color: #ffffff;
+        text-align: left;
+        font-size: 10px;
+    }
+    .styled-table thead tr th {
+      width: 10px;
+  }
+    .styled-table th,
+    .styled-table td {
+        padding: 5px 8px;
+    }
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+    
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+    
+    .styled-table tbody tr:last-of-type {
+        border-bottom: 1px solid #03a9f4;
+    }
+    .styled-table tbody tr.active-row {
+        font-weight: bold;
+        color: #03a9f4;
+    }
+
+}
+@media only screen and (max-width: 1167px) and (min-width: 700px) { 
+  .secondThreePrice{
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    height: auto;
+    margin-left: 0px;
+  }
+  .futureFormatWrapPrice{ 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: flex-start;
+   width: 80%;
+  }
+  .styled-table thead tr {
+    background-color: #03a9f4;
+    color: #ffffff;
+    text-align: left;
+    font-size: 25px;
+}
+.styled-table thead tr th {
+  width: 40px;
+}
+.styled-table th,
+.styled-table td {
+    padding: 5px 8px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 1px solid #03a9f4;
+}
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #03a9f4;
+}
 }
