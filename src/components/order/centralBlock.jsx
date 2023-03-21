@@ -26,18 +26,18 @@ export default function CentralBlock() {
     const [price, setPrise] = useState(2);
    
      const [academicWri, setAcademicWri] = useState('');
-    const [educationLevel, setEducationLevel] = useState('');
+    const [educationLevel, setEducationLevel] = useState('Senior in high school');
     const [dekiveryDate, setDekiveryDate] = useState(``);
     const [typeOfPaper, setTypeOfPaper] = useState('Annotated bibliography');
     const [discipline, setDiscipline] = useState('Classic English Literature');
     const [pageCount, setPageCount] = useState(2);
     const [chartOrSlide, setChartOrSlide] = useState('');
     const [textArea, setTextArea] = useState('');
-    const [paperFormat, setPaperFormat] = useState('');
+    const [paperFormat, setPaperFormat] = useState('MLA');
     const [countReference, setCountReference] = useState(2);
     const [file, setFile] = useState(null);
     const [procent, setProcent] = useState(1);
-    const [paperPreffer, setPaperPreffer] = useState('');
+    const [paperPreffer, setPaperPreffer] = useState('Advanced paper');
     const [step, setStep] = useState(0);
     const [timeDifference, setTimeDifference] = useState(0)
     const [datePrice, setDatePrice] = useState();
@@ -57,7 +57,7 @@ export default function CentralBlock() {
      const [orderId, setOrderId] = useState('');
      const storage = getStorage();
      const navigate = useNavigate();
-
+     
 
 
 
@@ -112,6 +112,7 @@ export default function CentralBlock() {
               status: 'RECENT',
               orderStatus: 'Waiting for confirmation',
               fileName: file[0].name,
+              paymentStatus: 'check'
 
              })
             });
@@ -138,7 +139,9 @@ export default function CentralBlock() {
           printableText: printableText,
           totalPrice: totalPrice,
           auth: auth.lastNotifiedUid,
+          orderStatus: 'Waiting for confirmation',
           status: 'RECENT',
+          paymentStatus: 'check'
          })
         }
           }catch (error) {
@@ -146,7 +149,7 @@ export default function CentralBlock() {
               }
             }
             addOrder();
-            alert('Your order has been successfully paid')
+            alert('Please pay for the order')
             navigate("/cabinet");
             setCheckPayment(false);
         }

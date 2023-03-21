@@ -40,7 +40,7 @@ const [msg, setMsg] = useState('')
    const scroll = useRef()
    const [mesCheck, setMesCheck] = useState([]);
    const [usersListS, setUsersListS] = useState([]);
-    const recipientId =  '0A9ZbhLVGJTjz6ObKVSFCuUxleW2';
+    const recipientId =  'UplbllesPdOk4VfPQejOXT4Nsm43';
     const sendMessageNew = async (event) => {
       event.preventDefault();
      

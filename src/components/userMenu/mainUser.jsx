@@ -89,12 +89,12 @@ export default function MainUser() {
         <HeaderUser/>
 
         <StatusOrder statusOrder={statusOrder} setStatusOrder={setStatusOrder} setBigBlockProduct={setBigBlockProduct}/>
-        {auth.lastNotifiedUid !== '0A9ZbhLVGJTjz6ObKVSFCuUxleW2' &&
+        {auth.lastNotifiedUid !== 'UplbllesPdOk4VfPQejOXT4Nsm43' &&
         
         <OrderSmallPage order={order} statusOrder={statusOrder} setBigBlockProduct={setBigBlockProduct} bigBlockProduct={bigBlockProduct}/>
       
       }
-    {auth.lastNotifiedUid === '0A9ZbhLVGJTjz6ObKVSFCuUxleW2' &&
+    {auth.lastNotifiedUid === 'UplbllesPdOk4VfPQejOXT4Nsm43' &&
 
         
         <OrderSmallPageAdmin setStatusOrder={setStatusOrder} order={orderUser} statusOrder={statusOrder} setBigBlockProduct={setBigBlockProduct} bigBlockProduct={bigBlockProduct}/>

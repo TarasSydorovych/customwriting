@@ -30,7 +30,7 @@ const educationLevelFun = (id) => {
     setEducationLevel(document.getElementsByTagName('li')[id+3].innerText);
     for(let i = 3; i < document.getElementsByTagName('li').length; i++){
               if(i === (id + 3)){
-                document.getElementsByTagName('li')[id+3].style.background = '#f9fcff';
+                document.getElementsByTagName('li')[id+3].style.background = '#DCDEDF';
               }else{
                 document.getElementsByTagName('li')[i].style.background = 'white';
               }

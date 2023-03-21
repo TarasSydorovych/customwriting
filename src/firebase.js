@@ -8,11 +8,12 @@ import { getFirestore } from "firebase/firestore";
 export const firebaseConfig = {
   apiKey: "AIzaSyCp3Q77dPizwoAt5QykYxWRWEbvleamcTE",
   authDomain: "essay-wanted.firebaseapp.com",
+  databaseURL: "https://essay-wanted-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "essay-wanted",
   storageBucket: "essay-wanted.appspot.com",
   messagingSenderId: "244635862768",
-  appId: "1:244635862768:web:3963b9a57675d1801fa435",
-  measurementId: "G-BK22LQV0HJ"
+  appId: "1:244635862768:web:356f71d2ab3dc89c1fa435",
+  measurementId: "G-TVXC6GF6RQ"
 };
 
 export const app = initializeApp(firebaseConfig);

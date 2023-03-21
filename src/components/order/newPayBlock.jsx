@@ -3,9 +3,10 @@ import './pay.css'
 import {useEffect, useState} from 'react'
 import sha1 from 'sha1'
 import { v4 as uuidv4 } from 'uuid';
-export default function NewPayBlock({totalPrice, orderId, setOrderId}) {
+export default function NewPayBlock({totalPrice, orderId, setOrderId, setCheckPayment}) {
 useEffect(() => {
   setOrderId(uuidv4())
+
 },[totalPrice])
   
 
@@ -44,7 +45,7 @@ useEffect(() => {
   <input type="hidden" name="amount" value={`${totalPrice*100}`}/>
   <input type="hidden" name="signature" value={signature}/>
  
-  <button type="submit">Pay with FONDY</button>
+  <button type="submit" onClick={() => setCheckPayment(true)}>${totalPrice}</button>
 </form>
     )
 }

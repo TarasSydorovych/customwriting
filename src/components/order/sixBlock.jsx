@@ -14,7 +14,7 @@ const setadw = (id, e, text) => {
         for(let i = 0; i < document.getElementsByClassName('blockLikeAcademic').length; i++){
                 document.getElementsByClassName('blockLikeAcademic')[i].style.background = 'white';
         }
-        e.currentTarget.style.background = '#f9fcff';
+        e.currentTarget.style.background = '#DCDEDF';
 
 }
 

@@ -3,10 +3,11 @@ import { useState } from 'react'
 import Header from '../header'
 import Footer from '../mainPage/footer'
 import './signIn.css'
-import {auth, db} from '../../firebase'
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged, } from "firebase/auth";
+import {auth, db, googleAuthProvider} from '../../firebase'
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged, signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { doc, setDoc } from "firebase/firestore"; 
+import { async } from '@firebase/util'
 
 
 export default function SignIn() {
@@ -49,7 +50,21 @@ const signUp = async (e) => {
  
 
 }
-
+const singInWithGoogle = async (e) => {
+    e.preventDefault();
+signInWithPopup(auth, googleAuthProvider).then(async (result) => {
+    await setDoc(doc(db, "users", result.user.uid), {
+        uid: result.user.uid,
+        displayName: result.user.displayName,
+        email: result.user.email,
+    
+       })
+       navigate("/cabinet");
+ console.log(result)
+}).catch((err) => {
+    console.log('Error')
+})
+}
 
     return(
         <>
@@ -61,25 +76,25 @@ const signUp = async (e) => {
 		<input type="checkbox" id="chk" aria-hidden="true"/>
 
 			<div class="signup">
-				<form onSubmit={signUp}>
+				<form >
 					<label for="chk" aria-hidden="true">Sign up</label>
 					<input type="text" name="txt" placeholder="User name" value={name} onChange={(e) => setName(e.target.value)} required=""/>
 					<input type="email" name="email" placeholder="Email" value={newUserMail} onChange={(e) => setNewUserMail(e.target.value)}  required=""/>
 					<input type="password" name="pswd" placeholder="Password" value={newUserPassword} onChange={(e) => setNewUserPassword(e.target.value)} required=""/>
-					<button type="submit">Sign up</button>
-                    <button>Google</button>
-                    <button>Facebook</button>
+					<button onClick={signUp}>Sign up</button>
+                    <button onClick={singInWithGoogle}>Google</button>
+                    
 				</form>
 			</div>
 
 			<div class="login">
-				<form onSubmit={signIn}>
+				<form >
 					<label for="chk" aria-hidden="true">Login in</label>
 					<input type="email" name="email" placeholder="Email" required="" value={mail} onChange={(e) => setMail(e.target.value)}/>
 					<input type="password" name="pswd" placeholder="Password" required="" value={password} onChange={(e) => setPassword(e.target.value)}/>
-					<button type="submit">Login</button>
-                    <button>Google</button>
-                    <button>Facebook</button>
+					<button onClick={signIn}>Login</button>
+                    <button onClick={singInWithGoogle}>Google</button>
+                    
 				</form>
 			</div>
 	</div>

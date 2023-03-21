@@ -404,6 +404,7 @@
     cursor: pointer;
    
 }
+
 .blockLikeAcademicH4{
     margin-left: 20px;
     font-size: 1.2em;
@@ -467,6 +468,7 @@
   width: 15%;
   height: 40px;
   border-radius: 5px; 
+  cursor: pointer;
 }
 .detailWraperHeader{
   display: flex;
