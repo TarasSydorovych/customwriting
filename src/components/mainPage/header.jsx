@@ -67,8 +67,9 @@ export default function Header() {
 }
 {menu &&
 <div className="menu">
-<AiOutlineClose style={{alignSelf: 'flex-end', margin:'5%', fontSize: '3em'}} onClick={() => setMenu(false)}/>
+
 <ul className="ulMobile">
+<AiOutlineClose className="closeIconMenu" onClick={() => setMenu(false)}/>
   <li className="liMobile"><Link to='/offer'>What we offer</Link></li>
   <li className="liMobile"><Link to='/prices'>Our prices</Link></li>
   <li className="liMobile"><Link to='/sample'>Sample papers</Link></li>
@@ -98,7 +99,7 @@ export default function Header() {
        <div className="signIn">
        <Link to="/signin">
            <AiOutlineUser className="AiOutlineUser"/>
-           Sign in</Link>
+           Log in</Link>
        </div>
        }
        {authUser !== null &&

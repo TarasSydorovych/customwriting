@@ -156,8 +156,7 @@ const subArray = [
     <AiOutlinePlus className="countPlusMinus" onClick={() => setPageCount(prev => prev + 1)}/>
     </div>
     <div className="countWOrds">{275 * pageCount} word</div>
-    <div className="divChats" onClick={() => setChartOrSlide('Charts')}><AiOutlinePlus/>Charts</div>
-    <div className="divChats" onClick={() => setChartOrSlide('Slides')}><AiOutlinePlus/>Slides</div>
+    
    </div>
 
 </div>

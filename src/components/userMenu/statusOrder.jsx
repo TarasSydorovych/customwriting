@@ -5,17 +5,26 @@
 
 
 export default function StatusOrder({setStatusOrder, setBigBlockProduct, statusOrder}) {
+
 const recent = () => {
-    setStatusOrder('RECENT')
+    setStatusOrder('NEW')
     setBigBlockProduct(false)
 }
 
 const fifnish = () => {
-    setStatusOrder('FINISHED')
+    setStatusOrder('ACTIVE')
     setBigBlockProduct(false)
 }
 const cancel = () => {
-    setStatusOrder('CANCELED')
+    setStatusOrder('PROCESSED')
+    setBigBlockProduct(false)
+}
+const finished = () => {
+    setStatusOrder('FINISHED')
+    setBigBlockProduct(false)
+}
+const refunded = () => {
+    setStatusOrder('REFUNDED')
     setBigBlockProduct(false)
 }
 
@@ -23,25 +32,49 @@ const cancel = () => {
 <div className="statusOrder">
     <div className="statusOrderWrap">
         <ul>
-            {statusOrder === 'RECENT' &&
+            {statusOrder === 'NEW' &&
             <>
-            <li className="statusOrderWrapliActive" onClick={recent}>RECENT</li>
-            <li className="statusOrderWrapliNotActive" onClick={fifnish}>FINISHED</li>
-            <li className="statusOrderWrapliNotActive" onClick={cancel}>CANCELED</li>
+            <li className="statusOrderWrapliActive" onClick={recent}>NEW</li>
+            <li className="statusOrderWrapliNotActive" onClick={fifnish}>ACTIVE</li>
+            <li className="statusOrderWrapliNotActive" onClick={cancel}>PROCESSED</li>
+            <li className="statusOrderWrapliNotActive" onClick={finished}>FINISHED</li>
+            <li className="statusOrderWrapliNotActive" onClick={refunded}>REFUNDED</li>
+            </>
+            }
+            {statusOrder === 'ACTIVE' &&
+            <>
+            <li className="statusOrderWrapliNotActive" onClick={recent}>NEW</li>
+            <li className="statusOrderWrapliActive" onClick={fifnish}>ACTIVE</li>
+            <li className="statusOrderWrapliNotActive" onClick={cancel}>PROCESSED</li>
+            <li className="statusOrderWrapliNotActive" onClick={finished}>FINISHED</li>
+            <li className="statusOrderWrapliNotActive" onClick={refunded}>REFUNDED</li>
+            </>
+            }
+             {statusOrder === 'PROCESSED' &&
+            <>
+            <li className="statusOrderWrapliNotActive" onClick={recent}>NEW</li>
+            <li className="statusOrderWrapliNotActive" onClick={fifnish}>ACTIVE</li>
+            <li className="statusOrderWrapliActive" onClick={cancel}>PROCESSED</li>
+            <li className="statusOrderWrapliNotActive" onClick={finished}>FINISHED</li>
+            <li className="statusOrderWrapliNotActive" onClick={refunded}>REFUNDED</li>
             </>
             }
             {statusOrder === 'FINISHED' &&
             <>
-            <li className="statusOrderWrapliNotActive" onClick={recent}>RECENT</li>
-            <li className="statusOrderWrapliActive" onClick={fifnish}>FINISHED</li>
-            <li className="statusOrderWrapliNotActive" onClick={cancel}>CANCELED</li>
+            <li className="statusOrderWrapliNotActive" onClick={recent}>NEW</li>
+            <li className="statusOrderWrapliNotActive" onClick={fifnish}>ACTIVE</li>
+            <li className="statusOrderWrapliNotActive" onClick={cancel}>PROCESSED</li>
+            <li className="statusOrderWrapliActive" onClick={finished}>FINISHED</li>
+            <li className="statusOrderWrapliNotActive" onClick={refunded}>REFUNDED</li>
             </>
             }
-             {statusOrder === 'CANCELED' &&
+            {statusOrder === 'REFUNDED' &&
             <>
-            <li className="statusOrderWrapliNotActive" onClick={recent}>RECENT</li>
-            <li className="statusOrderWrapliNotActive" onClick={fifnish}>FINISHED</li>
-            <li className="statusOrderWrapliActive" onClick={cancel}>CANCELED</li>
+            <li className="statusOrderWrapliNotActive" onClick={recent}>NEW</li>
+            <li className="statusOrderWrapliNotActive" onClick={fifnish}>ACTIVE</li>
+            <li className="statusOrderWrapliNotActive" onClick={cancel}>PROCESSED</li>
+            <li className="statusOrderWrapliNotActive" onClick={finished}>FINISHED</li>
+            <li className="statusOrderWrapliActive" onClick={refunded}>REFUNDED</li>
             </>
             }
           

@@ -109,14 +109,14 @@ const contSampleMinus = () => {
           <section id="fiveBlock">
            <div className="fiveBlock">
            <div className="fiveBlockHeader">
-           <h2>Check out our samples</h2>
+           <h2>View our samples</h2>
            <button >
             <a href="/sample">
             View all samples</a>
            </button>
            </div>
            <div className="fiveBlockTwo">
-            <p>The examples of assignments we can complete will tell you more about the quality our experts provide. Before you ask us, “help me write my essay,” take a look at the samples we’ve composed to make sure we do an extraordinary job.</p>
+            <p>Our writers write sample essays, discussions and academic tasks intentionally for this website. These are not the academic writings for our clients.</p>
            </div>
            <div className="fiveBlockBody">
             <AiOutlineLeft className="AiOutlineLeft" onClick={contSampleMinus}/>
@@ -134,11 +134,11 @@ const contSampleMinus = () => {
 <div className="samplesListEnd">
     <div className="paperType">
     <p>Paper type</p>
-    <h2>{el.type}</h2>
+    <h6 className="typePaperTextNew">{el.type}</h6>
     </div>
     <div className="paperFormat">
     <p>Paper Format</p>
-    <h2>{el.style}</h2>
+    <h6 className="typePaperTextNew">{el.style}</h6>
     </div>
 
 </div>

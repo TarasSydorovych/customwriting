@@ -52,6 +52,24 @@
     overflow: hidden;
     cursor: pointer;
 }
+.avatarActive{
+  margin-top: 10px;
+  margin-left: 10px;
+  position: relative;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    font-family: 'Quicksand', sans-serif;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: 10px 0px 15px #6C8EA4;
+    background: #cbd2d6;
+    border: 2px solid #6C8EA4;
+    overflow: hidden;
+    cursor: pointer;
+}
 .wrapchat{
     display: flex;
     justify-content: center;

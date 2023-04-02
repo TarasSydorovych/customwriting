@@ -1,5 +1,11 @@
 
 import { AiOutlineDollarCircle, AiFillHourglass, AiFillFile, AiOutlineBranches, AiOutlineRise, AiFillPlusCircle } from "react-icons/ai";
+import img6 from '../../img/img6.png'
+import img7 from '../../img/Img7.png'
+import img8 from '../../img/Img8.png'
+import img9 from '../../img/img9.png'
+import img10 from '../../img/Img10.png'
+import img11 from '../../img/Img11.png'
 
 export default function ThirdBlock() {
 
@@ -10,7 +16,7 @@ export default function ThirdBlock() {
         <section id="thirdBlock"> 
         <div className="wrapThird">
         <div className="thirdBlockFirst">
-        <h2>Get more benefits with our custom essay writing service</h2>
+        <h2>Why Choose Our Writing Services?</h2>
          <div className="bubleTwo">
          <span>15+<br/></span>
 years in essay<br/>
@@ -22,34 +28,34 @@ writing
 
 <div className="thirdBlockTwo">
 <div>
-<AiOutlineDollarCircle className="AiOutlineDollarCircle"/>
-    <h3>Flexible pricing</h3>
-    <p>You can buy a cheap custom paper here! Just ask us to “write my essay online” in advance and get help at a low price.</p>
+<img src={img6} className="AiOutlineDollarCircleImg"/>
+    <h3>15+ years experience</h3>
+    <p></p>
 </div>
 <div>
-    <AiFillHourglass className="AiOutlineDollarCircle"/>
-<h3>Short deadlines</h3>
-<p>Writing an amazing essay can be fast. Choose a 4-hour deadline, and we’ll complete your paper in no time.</p>
+<img src={img7} className="AiOutlineDollarCircleImg"/>
+<h3>24/7 support</h3>
+<p></p>
 </div>
 <div>
-    <AiFillFile className="AiOutlineDollarCircle"/>
-<h3>Custom formatting</h3>
-<p>We can format your paper according to APA, MLA, Chicago/Turabian, Harvard, or any other style and do so for free.</p>
+<img src={img8} className="AiOutlineDollarCircleImg"/>
+<h3>Any formatting style, topic and discipline</h3>
+<p></p>
 </div>
 <div>
-    <AiOutlineBranches className="AiOutlineDollarCircle"/>
-<h3>75+ disciplines</h3>
-<p>No subject is too complex for our professional academic writers. A pro in your discipline is always here to help you.</p>
+<img src={img9} className="AiOutlineDollarCircleImg"/>
+<h3>Working with short deadlines</h3>
+<p></p>
 </div>
 <div>
-    <AiOutlineRise className="AiOutlineDollarCircle"/>
-<h3>Easy order tracking</h3>
-<p>Stay in touch! Use our mobile app to track the progress on your paper or reach out to your writer at any time.</p>
+<img src={img10} className="AiOutlineDollarCircleImg"/>
+<h3>Easy ordering and tracking</h3>
+<p></p>
 </div>
 <div>
-    <AiFillPlusCircle className="AiOutlineDollarCircle"/>
-<h3>Free features</h3>
-<p>Your title page and bibliography come for free. Use our professional writing service if you need cheap help.</p>
+<img src={img11} className="AiOutlineDollarCircleImg"/>
+<h3>Transparent flexible pricing</h3>
+<p></p>
 </div>
 </div>
         </div>

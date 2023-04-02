@@ -3,7 +3,9 @@ import './contact.css'
 import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai";
 import { GrMapLocation } from "react-icons/gr";
 import { BsFillChatRightDotsFill, BsFillPinMapFill } from "react-icons/bs";
-
+import imgCard from '../../img/img22.png'
+import {AiOutlineInstagram, AiOutlineFacebook, AiFillYoutube, AiOutlineBehance} from "react-icons/ai";
+import {BsPinterest} from "react-icons/bs";
 
 export default function Phone() {
 
@@ -19,33 +21,37 @@ export default function Phone() {
             </div>
             <div className='info'>
 <div className='sectionInfo'>
-    <div className='phone'>
-    <AiOutlinePhone className='icon'/><h1>Phone</h1>
-    <p>US, CA +420607710989</p>
-    <p>Phone working hours: Monday 00:00 AM - Saturday 08:00 PM (UTC).</p>
-    <p>Toll-free for US & Canada (1-855…) only. International callers are charged for outgoing calls.</p>
-    </div>
-    <div className='phone'>
+<div className='phone'>
     <BsFillPinMapFill  className='icon'/><h1>Our location</h1>
-    <p>Company address</p>
+    <p>East 46th Street, New York City, NY </p>
+    <img src={imgCard} style={{width: '450px', height: '350px'}}/>
     </div>
-</div>
-<div className='sectionInfo'>
     <div className='phone'>
-    <BsFillChatRightDotsFill className='icon'/><h1>Chat</h1>
-   <button>
+    <AiOutlinePhone className='icon'/><h1>Do not hesitate and contact us</h1>
+    <p>Phone: +420607710989</p>
+    <p>Email: essaywanted.agent@gmail.com</p>
+    <p>Chat:  <button>
     <a href="chat">
     Live chat
     <span className="pulse-button__rings"></span>
     <span className="pulse-button__rings"></span>
     <span className="pulse-button__rings"></span>
     </a>
-   </button>
-    <p>We will be happy to talk to you either through live chat, Facebook Messenger, or WhatsApp from Monday 00:00 AM to Saturday 08:00 PM (UTC).</p>
+   </button></p>
+    </div>
+   
+</div>
+<div className='sectionInfo'>
+    <div className='phone'>
+    <div className="spcialIcoContact">
+    <a className="iconSocialHrefContact" href="https://www.instagram.com/essaywanted/" target="_blank"> <AiOutlineInstagram style={{color: '#d53c7c'}}/></a>
+                   <a className="iconSocialHrefContact" href='https://www.facebook.com/profile.php?id=100090737010565' target='_blank' ><AiOutlineFacebook style={{color: '#4064ac'}}/></a>
+                  <a className="iconSocialHrefContact" href="https://www.youtube.com/@essaywanted" target="_blank">  <AiFillYoutube style={{color: '#f70000'}}/></a>
+                   <a className="iconSocialHrefContact" href="https://www.pinterest.com/essaywanted/" target='_blank'> <BsPinterest style={{color: '#c51f26'}}/></a>
+                    </div>
     </div>
     <div className='phone'>
-    <AiOutlineMail className='icon' /><h1>Email</h1>
-    <p>Essaywanted.agent@gmail.com</p>
+    
     </div>
 </div>
             </div>

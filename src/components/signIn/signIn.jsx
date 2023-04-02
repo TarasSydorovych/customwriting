@@ -3,12 +3,12 @@ import { useState } from 'react'
 import Header from '../header'
 import Footer from '../mainPage/footer'
 import './signIn.css'
-import {auth, db, googleAuthProvider} from '../../firebase'
+import {auth, db, googleAuthProvider, appleProvider, facebookProvider} from '../../firebase'
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged, signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { doc, setDoc } from "firebase/firestore"; 
 import { async } from '@firebase/util'
-
+import { OAuthProvider ,signInWithRedirect, FacebookAuthProvider } from "firebase/auth";
 
 export default function SignIn() {
 const [mail, setMail] = useState('');
@@ -65,6 +65,65 @@ signInWithPopup(auth, googleAuthProvider).then(async (result) => {
     console.log('Error')
 })
 }
+const singInWithApple = async (e) => {
+    e.preventDefault();
+   
+    signInWithPopup(auth, appleProvider)
+  .then((result) => {
+    // The signed-in user info.
+    const user = result.user;
+
+    // Apple credential
+    const credential = OAuthProvider.credentialFromResult(result);
+    const accessToken = credential.accessToken;
+    const idToken = credential.idToken;
+    console.log(result)
+    // IdP data available using getAdditionalUserInfo(result)
+    // ...
+  })
+  .catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // The email of the user's account used.
+    const email = error.customData.email;
+    // The credential that was used.
+    const credential = OAuthProvider.credentialFromError(error);
+    console.log(error)
+    // ...
+  });
+}
+
+const signWithFacebook = async (e) => {
+    e.preventDefault();
+    console.log(facebookProvider)
+    signInWithPopup(auth, facebookProvider).then(async (result) => {
+    
+      // The signed-in user info.
+      const user = result.user;
+  
+      // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+      const credential = FacebookAuthProvider.credentialFromResult(result);
+      const accessToken = credential.accessToken;
+  console.log(result)
+      // IdP data available using getAdditionalUserInfo(result)
+      // ...
+    })
+    .catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // The email of the user's account used.
+      const email = error.customData.email;
+      // The AuthCredential type that was used.
+      const credential = FacebookAuthProvider.credentialFromError(error);
+  
+      // ...
+    });
+
+
+
+}
 
     return(
         <>
@@ -83,17 +142,22 @@ signInWithPopup(auth, googleAuthProvider).then(async (result) => {
 					<input type="password" name="pswd" placeholder="Password" value={newUserPassword} onChange={(e) => setNewUserPassword(e.target.value)} required=""/>
 					<button onClick={signUp}>Sign up</button>
                     <button onClick={singInWithGoogle}>Google</button>
+                    <button onClick={signWithFacebook}>Facebook</button>
+                    <button onClick={singInWithApple}>Apple ID</button>
                     
 				</form>
 			</div>
 
 			<div class="login">
 				<form >
-					<label for="chk" aria-hidden="true">Login in</label>
+					<label for="chk" aria-hidden="true">Log in</label>
 					<input type="email" name="email" placeholder="Email" required="" value={mail} onChange={(e) => setMail(e.target.value)}/>
 					<input type="password" name="pswd" placeholder="Password" required="" value={password} onChange={(e) => setPassword(e.target.value)}/>
 					<button onClick={signIn}>Login</button>
                     <button onClick={singInWithGoogle}>Google</button>
+                    <button onClick={signWithFacebook}>Facebook</button>
+                    <button onClick={singInWithApple}>Apple ID</button>
+                    
                     
 				</form>
 			</div>

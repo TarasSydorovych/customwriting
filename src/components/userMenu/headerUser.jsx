@@ -31,7 +31,7 @@ listen();
         <div className='headerPidUser'>
             <div className='myOrder'>
                 <ul>
-            <li><Link to="/cabinet"><AiOutlineUnorderedList/>My order</Link></li>
+            <li><Link to="/cabinet"><AiOutlineUnorderedList/>My orders</Link></li>
             <li><Link to="/order"><AiFillFileAdd/>New order</Link></li>
             <li><Link to="/chat"><BsFillChatLeftTextFill/> Chat</Link></li>
             </ul>

@@ -24,13 +24,14 @@ export default function FirstPage() {
        
                 </div>
                 <div className='firstBlockWrap'>
-         <h1>Essay Writing Service - Hire A Professional Essay Writer For All Your Writing Needs</h1>
+         <h1>     Live without stress and take your time.<br/>
+Get your perfect essay done!</h1>
          <div className='firstBlockIcon'>
             <div className='blockIconF'>
             <BsPencil className='BsPencil'/>
             </div>
-            <h2>250+<br/>
-Qualified Writers</h2>
+            <h2>200+<br/>
+            Professional Writers</h2>
 
 <div className='blockIconF'>
             <GiMoneyStack className='BsPencil'/>

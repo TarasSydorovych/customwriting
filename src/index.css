@@ -27,12 +27,12 @@ code {
   color: white;
 }
 .logoImgBlock{
-  width: 196px;
-  height: 58px;
+  width: 147px;
+  height: 43.5px;
 }
 .logoImg{
-  width: 196px;
-  height: 58px;
+  width: 147px;
+  height: 43.5px;
   object-fit: cover;
 }
 #firsBlock{
@@ -78,7 +78,7 @@ nav .outLineMenu{
   align-items: center;
   top:0;
   left: 0;
-  width: 50%;
+  width: 100%;
   height: 100vh;
   background: white;
   opacity: 0.8;
@@ -144,7 +144,12 @@ nav ul li a{
 .signIn {
   display: flex;
   align-items: center;
+  justify-content: center;
    margin-right: 35px;
+   background: white;
+   width: 110px;
+  height: 40px;
+  border-radius: 50px;
 }
 .AiOutlineUser{
   color: #03a9f4;  
@@ -291,6 +296,7 @@ color: white;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-left: 14%;
   
 }
 .buble{
@@ -314,20 +320,24 @@ font-size: 1.9em;
 margin-right: 5px;
 color: #03a9f4;
 }
+.AiOutlineDollarCircleImg{
+  width: 40px;
+  height: 40px;
+}
 .secodFirst{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   margin-top: 80px;
- width: 100%;
+ width: 90%;
 }
 .secodFirst h1{
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Quicksand', sans-serif;
-  font-size: 2.5em;
-  width: 80%;
+  font-size: 2em;
+  width: 60%;
 }
 .secondTwo {
   display: flex;
@@ -431,6 +441,11 @@ color: #03a9f4;
   color: #03a9f4;
   margin-right: 10px;
 }
+.AiOutlineCheckimg{
+  width: 25px;
+  height: 30px;
+  margin-right: 10px;
+}
 .clakfirstBblock{
   display: flex;
   align-items: center;
@@ -446,18 +461,21 @@ color: #03a9f4;
 
 .customSelect span{
   position: absolute;
-  left: 5px;
+  left: 15px;
+  top: 2px;
   font-family: 'Quicksand', sans-serif;
   
 }
 .calkSelect{
   width: 100%;
   height: 60px;
+  padding-left: 10px;
+  padding-top: 15px;
   border-radius: 8px;
   border-color: #03a9f4;
   font-family: 'Quicksand', sans-serif;
   font-weight: bolder;
-  font-size: 1.4em;
+  font-size: 1.3em;
 }
 .customSelectInput{
   position: relative;
@@ -584,6 +602,7 @@ color: grey;
   width: 95%;
 }
 .threBlockOne{
+  width: 50%;
   font-family: 'Quicksand', sans-serif;
 }
 .threBlockTwo{
@@ -638,16 +657,16 @@ color: grey;
 }
 .bubleTwo{
   font-family: 'Quicksand', sans-serif;
-  font-size: 30px;
+  font-size: 15px;
 }
 .bubleTwo span{
-  font-size: 40px;
+  font-size: 20px;
   font-weight: bolder;
 }
 .thirdBlockFirst h2{
   display: flex;
   font-family: 'Quicksand', sans-serif;
-  font-size: 60px;
+  font-size: 30px;
   font-weight: bold;
   width: 80%;
 }
@@ -931,6 +950,7 @@ margin-top: 40px;
 .samplesList h1{
 font-size: 1.2em;
 width: 80%;
+height: 15%;
 }
 .samplesList p{
   font-size: 0.8em;
@@ -967,9 +987,14 @@ width: 80%;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  height: 20%;
 }
 .paperType{
   width: 50%;
+  margin-left: 5px;
+}
+.paperFormat{
+  margin-right: 5px;
 }
 .paperTitleP{
   width: 80%;
@@ -1001,7 +1026,10 @@ width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+ 
 }
+
 /* ======================== sixblock ==============*/
 #sixblock{
   position: relative;
@@ -1113,6 +1141,7 @@ margin-right: 5px;
 width: 30%;
 color:#03a9f4;
 }
+
 .sevenBlockLastP{
   display: flex;
   font-family: 'Quicksand', sans-serif;
@@ -1162,9 +1191,7 @@ font-size: 1.3em;
   justify-content: center;
   font-size: 3em;
   color: white;
-  width: 50px;
-  height: 50px;
-  background: #03a9f4;
+  
   border-radius: 50%;
 }
 /*----------------nineblock ------------*/
@@ -1172,7 +1199,7 @@ font-size: 1.3em;
  display: flex;
  flex-direction: column;
  align-items: center;
-  width: 100%;
+  width: 98%;
   height: auto;
   padding-bottom: 90px;
 }
@@ -1231,7 +1258,7 @@ border-radius: 10px;
   height: 60px;
   background: white;
   border-radius: 50%;
-  font-size: 1.5em;
+  font-size: 0.8em;
 }
 .blockuserinfo{
   display: flex;
@@ -1261,11 +1288,11 @@ border-radius: 10px;
 }
 .paragrafvidguk{
   width: 100%;
-  height: 100px;
+  height: 200px;
   font-size: 0.9em;
   text-align: center;
   
-  overflow-y: scroll;
+ overflow: hidden;
   margin-top: 5px;
 }
 .paragrafvidguk::-webkit-scrollbar {
@@ -1300,7 +1327,7 @@ border-radius: 10px;
 }
 .tenblockContainer h1{
   font-family: 'Quicksand', sans-serif;
-  font-size: 3.5em;
+  font-size: 3em;
 }
 .tenblockContainer h1 span{
   font-family: 'Dancing Script', cursive;
@@ -1336,7 +1363,9 @@ border-radius: 10px;
   
 }
 .footer{
+  padding-top: 40px;
   width: 100%;
+  height: 80%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -1344,6 +1373,7 @@ border-radius: 10px;
 .logoFooter h1{
   font-family: 'Dancing Script', cursive;
   font-size: 40px;
+ 
   font-weight: bolder;
   color: #03a9f4;
   margin: 0;
@@ -1356,7 +1386,7 @@ border-radius: 10px;
   list-style: none;
 }
 .logoFooter ul li a{
-
+font-size: 1.4em;
   text-decoration: none;
   color: white;
 }
@@ -1388,7 +1418,7 @@ border-radius: 10px;
   font-size: 1.9em;
  }
  .spcialIco{
-   color: #03a9f4;
+   
    display: flex;
    align-items: center;
    justify-content: space-around;
@@ -1430,7 +1460,7 @@ nav .outLineMenunew{
   align-items: center;
   width: 36px;
   height: 36px;
-  margin-left: 10px;
+ 
    border: 1px solid white;
    border-radius: 3px;
    background: white;
@@ -1443,11 +1473,15 @@ nav .outLineMenunew{
   align-items: center;
   top:0;
   left: 0;
-  width: 50%;
+  width: 100%;
   height: 100vh;
   background: white;
   opacity: 0.8;
   z-index: 3;
+}
+.closeIconMenu{
+  font-size: 3em;
+  color: black;
 }
 .menunew .ulMobilenew{
   width: 100%;
@@ -1510,6 +1544,11 @@ background: #03a9f4;
   display: flex;
   align-items: center;
    margin-right: 35px;
+   background: white;
+   width: 110px;
+   height: 40px;
+   border-radius: 50px;
+   justify-content: center;
 }
 .AiOutlineUsernew{
   color: #03a9f4;  
@@ -1779,7 +1818,8 @@ color:white;
 }
 .svgPic{
   width: 400px;
-        height: 400px;
+        height: 300px;
+        border-radius: 10px;
 }
 #offerFour{
   position: relative;
@@ -1862,9 +1902,50 @@ justify-content: center;
   height: auto;
   padding-bottom: 90px;
 }
-
+.iconSocialHref{
+  font-size: 0.5em;
+}
 
 @media only screen and (max-width: 479px) and (min-width: 300px) { 
+  .tenblockContainer h1{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2em;
+  }
+  .wrapFourthBlock h2{
+    display: flex;
+  margin-top: 80px;
+  margin-bottom: 0px;
+  width: 80%;
+  height: auto;
+  font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    
+  }
+  .wrapFourthBlock p{
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+      font-size: 15px;
+      width: 80%;
+    }
+  .threBlockOne{
+    width: 30%;
+    font-size: 0.8em;
+    font-family: 'Quicksand', sans-serif;
+  }
+  .threBlockTwo{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+  }
+  .signInnew {
+    display: flex;
+    align-items: center;
+     margin-right: 0px;
+     background: white;
+     width: 110px;
+     height: 40px;
+     border-radius: 50px;
+     justify-content: center;
+  }
   .headerWrap{
     justify-content: center;
   }
@@ -1872,6 +1953,7 @@ justify-content: center;
     font-size: 1em;
   }
   nav{
+    margin: 0px;
     margin-right: 0px;
   }
   .signIn {
@@ -2271,6 +2353,41 @@ justify-content: center;
     }
 }
 @media only screen and (max-width: 700px) and (min-width: 479px) { 
+  .wrapFourthBlock h2{
+    display: flex;
+  margin-top: 80px;
+  margin-bottom: 0px;
+  width: 80%;
+  height: auto;
+  font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    
+  }
+  .wrapFourthBlock p{
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+      font-size: 15px;
+      width: 80%;
+    }
+  .threBlockTwo{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+  }
+  .threBlockOne{
+    width: 30%;
+    font-size: 0.8em;
+    font-family: 'Quicksand', sans-serif;
+  }
+  .signInnew {
+    display: flex;
+    align-items: center;
+     margin-right: 0px;
+     background: white;
+     width: 110px;
+     height: 40px;
+     border-radius: 50px;
+     justify-content: center;
+  }
   .headerWrap{
     justify-content: center;
   }
@@ -3019,4 +3136,8 @@ justify-content: center;
     opacity: 0;
     transform: scale(1.7, 1.7);
   }
+}
+.typePaperTextNew{
+ margin: 0;
+ font-size: 14px;
 }

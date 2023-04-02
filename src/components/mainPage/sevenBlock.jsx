@@ -1,7 +1,9 @@
 import {TbWriting } from "react-icons/tb";
 import {BsFillPeopleFill } from "react-icons/bs";
 import {GiSportMedal } from "react-icons/gi";
-
+import img15 from '../../img/Img15.png'
+import img16 from '../../img/Img16.png'
+import img17 from '../../img/Img17.png'
 
 
 
@@ -20,7 +22,7 @@ export default function SevenBlock() {
 
 </div>
 
-<h1>Professional essay writers will make your paper impressive</h1>
+<h1>Get an “A+” - paper with our professional writers</h1>
 </div>
 
 
@@ -30,27 +32,26 @@ export default function SevenBlock() {
 </div>
 </div>
 <div className="sixBlogP">
-Easy-wanted is your best choice when you come asking, “Help with my essay please, I need someone to explain this topic to me.” We always have essay writers for hire available to compose an amazing piece based on your demands. 80+ disciplines, 4 academic levels, and any complexity—this is just the starting point of what we have to offer and how professional we really are.<br/><br/>
-To satisfy even the pickiest students, we give you three categories of pro essay writers. All of them are highly qualified in their disciplines and willing to help with your paper:
+Essay Wanted writers are here to write your paper, pay attention to your ideas, consider all relevant details and use only the reliable and credible academic sources. Press “Order Now”, choose your topic, level and discipline, upload all necessary files and be ready to find the ready paper as soon as your deadline ends.<br/><br/>
+
 </div>
 <div className="sevenBlockInfo">
-<TbWriting className="TbWriting"/>
+<img src={img15} className="TbWriting"/>
 <div>
-    <h2>Simple English essays</h2>
-    <p>It’s okay if you don’t want to make things complex. Our professional essay writers work for high school and college students too, and they won’t use complex academic language if you need just a high school essay.</p>
+    <h2>Check the paper and leave a feedback or even tips for your writer</h2>
+    
 </div>
-<BsFillPeopleFill className="TbWriting"/>
+<img src={img16} className="TbWriting"/>
 <div>
-    <h2>Complex papers</h2>
-    <p>We take pride in our Advanced writers, who can satisfy even the most scrupulous Master’s and PhD students. If you are looking for an expert to help with your graduate or postgraduate writing, our professionals are up to the job.</p>
+    <h2>Send a paper for revision during 5 days if any points were overlooked</h2>
+  
 </div>
-<GiSportMedal className="TbWriting"/>
+<img src={img17} className="TbWriting"/>
 <div>
-    <h2>Calculation tasks</h2>
-    <p>Our team of STEM experts can easily solve math problems and equations that give you headaches. We have experts in 30+ technical disciplines, so you can rest assured that they will complete your assignment correctly.</p>
+    <h2>Ask for refund if the paper does not correspond to your initial demands </h2>
+   
 </div>
 </div>
-<p className="sevenBlockLastP">Moreover, for those eager to improve their English, we also have Native speakers on our team. With our pro essay writing service, you can always hire the Best available or Advanced native-speaking expert for an extra 30% of the price of your order.</p>
         </div>
         
 

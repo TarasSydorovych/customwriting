@@ -17,7 +17,7 @@ export default function SixBlock() {
 
 </div>
 
-<h1>Check out the disciplines our academic essay writing service covers</h1>
+<h1>Check the list of the academic disciplines our custom writing service covers.</h1>
 </div>
 
 
@@ -33,45 +33,46 @@ We write original papers in 75+ disciplines to help you cope with any topic. Fro
 <div className="dusListWrap">
     <div className="disListrow">
         <ul>
-            <li><AiOutlineCheck className="disListrowIcon"/>English 101</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Law</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Sociology</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Science</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Political Science</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Political Science</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Anthropology</li>
-        </ul>
-    </div>
-    <div className="disListrow">
-    <ul>
-            <li><AiOutlineCheck className="disListrowIcon"/>Business</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Economics</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Art</li>
             <li><AiOutlineCheck className="disListrowIcon"/>Accounting</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Computer Science</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Physics</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Medical</li>
+            <li><AiOutlineCheck className="disListrowIcon"/>Anthropology</li>
+            <li><AiOutlineCheck className="disListrowIcon"/>Art</li>
+            <li><AiOutlineCheck className="disListrowIcon"/>Biology</li>
+            <li><AiOutlineCheck className="disListrowIcon"/>Business</li>
+            <li><AiOutlineCheck className="disListrowIcon"/>Chemistry</li>
+            <li><AiOutlineCheck className="disListrowIcon"/>Computer science</li>
         </ul>
     </div>
     <div className="disListrow">
     <ul>
+            <li><AiOutlineCheck className="disListrowIcon"/>Economics</li>
+            <li><AiOutlineCheck className="disListrowIcon"/>Emergency studies</li>
+            <li><AiOutlineCheck className="disListrowIcon"/>Environmental studies</li>
+            <li><AiOutlineCheck className="disListrowIcon"/>English</li>
+            <li><AiOutlineCheck className="disListrowIcon"/>Geography</li>
             <li><AiOutlineCheck className="disListrowIcon"/>History</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Psychology</li>
+            <li><AiOutlineCheck className="disListrowIcon"/>Humanities</li>
+        </ul>
+    </div>
+    <div className="disListrow">
+    <ul>
+            <li><AiOutlineCheck className="disListrowIcon"/>IT </li>
+            <li><AiOutlineCheck className="disListrowIcon"/>Law</li>
+            <li><AiOutlineCheck className="disListrowIcon"/>Literature</li>
             <li><AiOutlineCheck className="disListrowIcon"/>Management</li>
+            <li><AiOutlineCheck className="disListrowIcon"/>Marketing</li>
+            <li><AiOutlineCheck className="disListrowIcon"/>Medicine</li>
             <li><AiOutlineCheck className="disListrowIcon"/>Nursing</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Technology</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Chemistry</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Finance</li>
         </ul>
     </div>
     <div className="disListrow">
     <ul>
             <li><AiOutlineCheck className="disListrowIcon"/>Philosophy</li>
+            <li><AiOutlineCheck className="disListrowIcon"/>Physics</li>
+            <li><AiOutlineCheck className="disListrowIcon"/>Political Science</li>
+            <li><AiOutlineCheck className="disListrowIcon"/>Psychology</li>
             <li><AiOutlineCheck className="disListrowIcon"/>Religion</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Marketing</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Literature</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Literature</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Literature</li>
+            <li><AiOutlineCheck className="disListrowIcon"/>Sociology</li>
+            <li><AiOutlineCheck className="disListrowIcon"/>Technology</li>
             
         </ul>
     </div>

@@ -16,36 +16,50 @@ export default function OrderSmallPageAdmin({order, statusOrder, setBigBlockProd
     const[product, setProduct] = useState([]);
     const storage = getStorage();
     const arrTypePaper = [
-        'Waiting for confirmation',
-'In progress',
-'Finished',
-'Canceled',
+        'NEW',
+'ACTIVE',
+'PROCESSED',
+'FINISHED',
+'REFUNDED',
     ];
     const orderStatusFun = async (e) => {
         setOrderStat(e.target.value)
-        console.log('Status order', e.target.value)
-        if(e.target.value === 'In progress' || e.target.value === 'Waiting for confirmation'){
+      
+        if(e.target.value === 'NEW'){
             await updateDoc(doc(db, "order", product.uid), {
                 orderStatus: e.target.value,
-                status: 'RECENT',
+                status: 'NEW',
             });
-            setStatusOrder('RECENT')
+            setStatusOrder('NEW')
         }
-        if(e.target.value === 'Finished'){
-            console.log('Status order', e.target.value)
+        if(e.target.value === 'ACTIVE'){
+            await updateDoc(doc(db, "order", product.uid), {
+                orderStatus: e.target.value,
+                status: 'ACTIVE',
+            });
+            setStatusOrder('ACTIVE')
+        }
+        if(e.target.value === 'PROCESSED'){
+            
+            await updateDoc(doc(db, "order", product.uid), {
+                orderStatus: e.target.value,
+                status: 'PROCESSED',
+            });
+            setStatusOrder('PROCESSED')
+        }
+        if(e.target.value === 'FINISHED'){
             await updateDoc(doc(db, "order", product.uid), {
                 orderStatus: e.target.value,
                 status: 'FINISHED',
             });
             setStatusOrder('FINISHED')
         }
-        if(e.target.value === 'Canceled'){
-            console.log('Status order', e.target.value)
+        if(e.target.value === 'REFUNDED'){
             await updateDoc(doc(db, "order", product.uid), {
                 orderStatus: e.target.value,
-                status: 'CANCELED',
+                status: 'REFUNDED',
             });
-            setStatusOrder('CANCELED')
+            setStatusOrder('REFUNDED')
         }
         window.location.reload();
     }

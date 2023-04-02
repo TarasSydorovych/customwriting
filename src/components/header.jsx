@@ -36,7 +36,7 @@ const orderButton= () =>{
     useEffect(() => {
      
       function handleResize() {
-       
+        console.log('windowDimensions', windowDimensions);
         if(window.innerWidth < 1279){
     
         setWindowDimensions(false);
@@ -47,7 +47,7 @@ const orderButton= () =>{
       handleResize()
       window.addEventListener('resize', handleResize);
       return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    }, [windowDimensions]);
 
 
 
@@ -67,8 +67,9 @@ const orderButton= () =>{
 }
 {menu &&
 <div className="menunew">
-<AiOutlineClose style={{alignSelf: 'flex-end', margin:'5%', fontSize: '3em'}} onClick={() => setMenu(false)}/>
+
 <ul className="ulMobilenew">
+<AiOutlineClose className="closeIconMenu" onClick={() => setMenu(false)}/>
   <li className="liMobilenew"><Link to='/offer'>What we offer</Link></li>
   <li className="liMobilenew"><Link to='/prices'>Our prices</Link></li>
   <li className="liMobilenew"><Link to='/sample'>Sample papers</Link></li>
@@ -98,7 +99,7 @@ const orderButton= () =>{
         <div className="signInnew">
         <Link to="/signin">
             <AiOutlineUser className="AiOutlineUsernew"/>
-            Sign in</Link>
+            Log in</Link>
         </div>
        }
        {authUser !== null &&

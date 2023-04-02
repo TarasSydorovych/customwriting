@@ -109,8 +109,8 @@ export default function CentralBlock() {
               printableText: printableText,
               totalPrice: totalPrice,
               auth: auth.lastNotifiedUid,
-              status: 'RECENT',
-              orderStatus: 'Waiting for confirmation',
+              status: 'NEW',
+              orderStatus: 'NEW',
               fileName: file[0].name,
               paymentStatus: 'check'
 
@@ -139,8 +139,8 @@ export default function CentralBlock() {
           printableText: printableText,
           totalPrice: totalPrice,
           auth: auth.lastNotifiedUid,
-          orderStatus: 'Waiting for confirmation',
-          status: 'RECENT',
+          status: 'NEW',
+          orderStatus: 'NEW',
           paymentStatus: 'check'
          })
         }
@@ -181,7 +181,7 @@ export default function CentralBlock() {
         setPageCount(prev => prev + 1)
     }
 const changeState = () => {
-    if(step <= 5){
+    if(step <= 4){
     setStep(el => el+1);
     
 }
@@ -194,8 +194,8 @@ const changeStateBack = () => {
 }
 const infoBlock = [{
     step: 1,
-    title: 'What do you need help with?',
-    desc: 'Choose the task you want to delegate'
+    title: 'Basic paper details',
+    desc: 'Provide general requirements'
 }, 
 {
     step: 2,
@@ -209,26 +209,21 @@ const infoBlock = [{
 }, 
 {
     step: 4,
-    title: 'Basic paper details',
-    desc: 'Provide general requirements',
-}, 
-{
-    step: 5,
     title: 'Detailed requirements',
     desc: 'Specify additional instructions',
 }, 
 {
-    step: 6,
+    step: 5,
     title: 'What do you expect?',
     desc: 'Choose the paper level you prefer',
 }, 
 {
-    step: 7,
+    step: 6,
     title: 'Upgrades',
     desc: 'Add more services to your order',
 }, 
 {
-    step: 8,
+    step: 7,
     title: 'Upgrades',
     desc: 'Proceed to checkout',
 }, 
@@ -253,7 +248,7 @@ const summaryFun = () => {
                      <p className="centrelBlockLeftP">Symmary</p>
                 <h2 className="centrelBlockLeftH2">Order details</h2>
                 <div className="orderInformation">
-                    <div className="orderInformationOne">{academicWri}</div>
+                   
                     <div className="orderInformationOne">{educationLevel}</div>
                     <div className="orderInformationOne">{typeOfPaper}</div>
                     <div className="orderInformationOne">{discipline}</div>
@@ -322,7 +317,7 @@ const summaryFun = () => {
                 }
                  {!lastSym && 
                  <div className="centralBlockOrder">
-                <p className="centrelBlockLeftP">Step {infoBlock[step].step}/7</p>
+                <p className="centrelBlockLeftP">Step {infoBlock[step].step}/6</p>
                 <h2 className="centrelBlockLeftH2">{infoBlock[step].title}</h2>
                 </div>
                  }
@@ -331,11 +326,11 @@ const summaryFun = () => {
                 <h2>{infoBlock[step].desc}</h2>
                 {step === 0 &&
                 <>
-                <BlockAcademicWriter setAcademicWri={setAcademicWri} />
+                <TypePaper setTypeOfPaper={setTypeOfPaper} setDiscipline={setDiscipline} setTypePaperValue={setTypePaperValue} setPageCount={setPageCount} pageCount={pageCount} setChartOrSlide={setChartOrSlide}/>
                 <button onClick={changeState} className="buttonOrderMenuNext">
-                Next Step 
-            </button>
-            </>
+                     Next Step 
+                 </button>
+                 </>
                 }
                 {step === 1 &&
                 <>
@@ -354,15 +349,8 @@ const summaryFun = () => {
             </button>
             </>
                 }
-                  {step === 3 &&
-                <>
-           <TypePaper setTypeOfPaper={setTypeOfPaper} setDiscipline={setDiscipline} setTypePaperValue={setTypePaperValue} setPageCount={setPageCount} pageCount={pageCount} setChartOrSlide={setChartOrSlide}/>
-           <button onClick={changeState} className="buttonOrderMenuNext">
-                Next Step 
-            </button>
-            </>
-                }
-                {step === 4 &&
+                 
+                {step === 3 &&
                 <>
            <Detailed setTextArea={setTextArea}  setPaperFormat={setPaperFormat} setCountReference={setCountReference} countReference={countReference} setFile={setFile}/>
            <button onClick={changeState} className="buttonOrderMenuNext">
@@ -370,7 +358,7 @@ const summaryFun = () => {
             </button>
             </>
                 }
-                   {step === 5 &&
+                   {step === 4 &&
                 <>
            <SixBlock setAdwPaper={setAdwPaper} setPaperPreffer={setPaperPreffer}/>
            <button onClick={changeState} className="buttonOrderMenuNext">
@@ -378,7 +366,7 @@ const summaryFun = () => {
             </button>
             </>
                 }
-                {step === 6 &&
+                {step === 5 &&
                 <>
            <SevenBlock setAdwWriter={setAdwWriter} setPrintable={setPrintable} setSh1={setSh1} setSh2={setSh2} setAdwWriterText={setAdwWriterText} setPrintableText={setPrintableText}/>
            <button onClick={summaryFun} className="buttonOrderMenuNext">
@@ -386,7 +374,7 @@ const summaryFun = () => {
                  </button>
             </>
                 }
-             {step === 7 && 
+             {step === 6 && 
                 <>
            <NewPayBlock totalPrice={totalPrice.toFixed(0)} orderId={orderId} setCheckPayment={setCheckPayment} setOrderId={setOrderId}/>
            

@@ -323,12 +323,22 @@ const changeChatRoom = async (id) => {
        
        
          return <div className='userListWithName'>
-         <div onClick={() => {changeChatRoom(el.uid)}} key={index} className='avatar'>{el.displayName}
+          {checkUser === el.uid &&
+         <div onClick={() => {changeChatRoom(el.uid)}} key={index} className='avatarActive'>{el.displayName}
 
   <div className='counerMessage'>{countMessage[id].length}</div>
 
          
          </div>
+   }
+   {checkUser !== el.uid &&
+   <div onClick={() => {changeChatRoom(el.uid)}} key={index} className='avatar'>{el.displayName}
+
+   <div className='counerMessage'>{countMessage[id].length}</div>
+ 
+          
+          </div>
+   }
          <h3 className='mailUser'>{el.email}</h3>
          </div>
          }

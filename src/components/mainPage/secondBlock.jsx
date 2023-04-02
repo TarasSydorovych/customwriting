@@ -1,6 +1,7 @@
 import { AiOutlineDollarCircle, AiOutlineCheck } from "react-icons/ai";
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
+import picToFea from '../../img/img5.png'
 import { useNavigate } from "react-router-dom";
 export default function SecondBlock() {
     const navigate = useNavigate();
@@ -102,45 +103,34 @@ const price = [
 
 const month1 = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 const arrTypePaper = [
-    'Essay (any type)',
-    'Admission essay',
-    'Analysis (any type)',
     'Annotated bibliography',
-    'Argumentative essays',
     'Article review',
-    'Assignment',
-    'Blog post',
+    'Blog',
     'Book/movie review',
     'Business plan',
     'Capstone project',
-    'Case study',
-    'College essay',
-    'Coursework',
+    'Cover letter',
+    'Course work',
     'Creative writing',
-    'Critical thinking',
-    'Discussion Essay',
-    'Dissertation/Dissertation chapter',
-    'Homework',
-    'Journal article',
-    'Lab Report',
-    'Literature Analysis/Review',
-    'Memo/Letter',
+    'CV',
+    'Discussion post',
+    'Dissertation',
+    'Essay (any type)',
+    'Lab report',
+    'Literature review',
     'Outline',
-    'Personal reflection',
-    'Poem',
-    'Presentation/PPT',
-    'Project',
-    'Question-Answer',
-    'Reflection paper/Reflection essay',
-    'Report (any type)/Brief report',
+    "PPT with speaker's notes",
+    "PPT without speaker's notes",
+    'PDF poster',
+    'Question-answer',
+    'Reflection paper',
     'Research paper',
     'Research proposal',
-    'Response essay',
+    'Response paper',
     'Speech',
-    'Summary',
     'Term paper',
-    'Thesis/Thesis chapter',
-    'Other',
+    'Thesis',
+    
 ];
 const arrAcademic = [
     'High School',
@@ -163,19 +153,14 @@ for(let i = 0; i< price.length; i++){
 
 </div>
 
-<h1>See how much your essay will cost</h1>
+<h1>Our prices are flexible and transparent</h1>
 </div>
 
 
-<div className="blockPriceCheap">
-<AiOutlineDollarCircle className="AiOutlineDollarCircle"/>
-<p>We use flexible pricing to make your paper cheap</p>
-</div>
+
 </div>
 <div className="secondTwo">
-Find your type of paper, add pages, and select an academic level.<br/>
-Choose the longer deadline to make our essay writing services cheaper.<br/>
-We can’t believe we’ve just told you that!
+The longer the deadline – the cheaper the paper
 </div>
 <div className="secondThree"> 
 <div className="calkWrapper">
@@ -201,7 +186,7 @@ We can’t believe we’ve just told you that!
 <div className="customSelectInput">
     <label>Pages</label>
 <input type="text" className="calkInput" id="page" value={pageCount} onChange={(e) => setPageCount(e.target.value)}  name="page"></input>
-<span>Words:</span>
+<span></span>
 <div className="buttonPlus">
     
     <button onClick={buttonMinus} className="minus">-</button>
@@ -274,11 +259,11 @@ We can’t believe we’ve just told you that!
 </div>
 <div className="calkthreBlock">
 <div className="threBlockOne">
-We'll send you the first draft for approval 
+Inform us through chat/ messages if you need a draft for approval 
 </div>
 
 <button onClick={() => navigate("/order")}>
-Order paper
+Order now
 <span className="pulse-button__rings"></span>
     <span className="pulse-button__rings"></span>
     <span className="pulse-button__rings"></span>
@@ -292,36 +277,31 @@ Total price: <span>${Math.round(finalPrice)}</span>
     <div className="future">
         <ul>
         {features === true && <li className="colorLi" onClick={aboutFeatures}>
-        Features
+        What you get
             </li> }
             {features !== true && <li className="greyLi" onClick={aboutFeatures}>
-            Features
+            What you get
             </li> }
-            {format === true && <li className="colorLi" onClick={FormatFun}>
-            Format
-            </li> }
-            {format !== true && <li className="greyLi" onClick={FormatFun}>
-            Format
-            </li> }
+          
                    </ul>
     </div>
     <div className="bibliography">
     {features === true &&
         <ul>
-            <li><AiOutlineCheck className="AiOutlineCheck"/>FREE bibliography page</li>
-            <li><AiOutlineCheck className="AiOutlineCheck"/>FREE title page</li>
-            <li><AiOutlineCheck className="AiOutlineCheck"/>FREE formatting </li>
-            <li><AiOutlineCheck className="AiOutlineCheck"/>24x7 support</li>
-            <li><AiOutlineCheck className="AiOutlineCheck"/>Part-by-part payment</li>
-            <li><AiOutlineCheck className="AiOutlineCheck"/>PowerPoint slides</li>
-            <li><AiOutlineCheck className="AiOutlineCheck"/>Review your writer’s samples</li>
+            <li><img src={picToFea} className="AiOutlineCheckimg"/>FREE bibliography page</li>
+            <li><img src={picToFea} className="AiOutlineCheckimg"/>FREE title page</li>
+            <li><img src={picToFea} className="AiOutlineCheckimg"/>FREE formatting </li>
+            <li><img src={picToFea} className="AiOutlineCheckimg"/>24x7 support</li>
+            <li><img src={picToFea} className="AiOutlineCheckimg"/>Part-by-part payment</li>
+            <li><img src={picToFea} className="AiOutlineCheckimg"/>PowerPoint slides</li>
+            <li><img src={picToFea} className="AiOutlineCheckimg"/>Review your writer’s samples</li>
         </ul>
 }
 {format === true &&
         <ul>
-            <li><AiOutlineCheck className="AiOutlineCheck"/>Approx. 275 words / page</li>
-            <li><AiOutlineCheck className="AiOutlineCheck"/>Font: 12 point Arial/Times New Roman</li>
-            <li><AiOutlineCheck className="AiOutlineCheck"/>Double and single spacing</li>
+            <li><img src={picToFea} className="AiOutlineCheckimg"/>Approx. 275 words / page</li>
+            <li><img src={picToFea} className="AiOutlineCheckimg"/>Font: 12 point Arial/Times New Roman</li>
+            <li><img src={picToFea} className="AiOutlineCheckimg"/>Double and single spacing</li>
           
         </ul>
 }

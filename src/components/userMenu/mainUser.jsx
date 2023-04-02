@@ -20,7 +20,7 @@ import OrderSmallPageAdmin from "./orderSmallPageAdmin";
 
 export default function MainUser() {
 
- const [statusOrder, setStatusOrder] = useState('RECENT')
+ const [statusOrder, setStatusOrder] = useState('NEW')
  const [order, setOrder] = useState([]);
  const [orderUser, setOrderUser] = useState([]);
  const [bigBlockProduct, setBigBlockProduct] = useState(false);
