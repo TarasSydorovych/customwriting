@@ -5,7 +5,7 @@ import ContactThre from './contactThre'
 import ContactTwo from './contactTwo'
 import Phone from './phone'
 
-
+import { Pixel } from 'react-facebook-pixel';
 
 export default function Contact() {
 
@@ -15,6 +15,7 @@ export default function Contact() {
     return(
 
     <>
+      
     <Header/>
     <Phone/>
     <ContactTwo/>

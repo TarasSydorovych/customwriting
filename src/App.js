@@ -7,13 +7,29 @@ import Contact from "./components/contact/contact";
 import AuthProvider from "./auth";
 import SignIn from "./components/signIn/signIn";
 import MainUser from "./components/userMenu/mainUser";
-
+import { useEffect } from "react";
 import Chat from "./components/chat/chat";
 import Order from "./components/order/order";
+
 import Sample from "./components/sample/sample";
 import OurValues from "./components/values/ourValues";
 import PageError from "./components/404/pageError";
+import ReactGA from 'react-ga';
+import ReactPixel from 'react-facebook-pixel';
+
+
+
 function App() {
+ 
+  const TRACKING_ID = "G-TVXC6GF6RQ";
+  useEffect(() => {
+    ReactPixel.init('1443497096480149');
+    ReactPixel.pageView();
+    ReactGA.initialize(TRACKING_ID);
+    ReactGA.send({ hitType: "pageview", page: `${window.location.pathname + window.location.search}` });
+  })
+
+
   return (
    <>
     <Routes>

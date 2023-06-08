@@ -26,14 +26,14 @@ useEffect(() => {
         })
         const signatureRow = orderKey.map((v) => params[v]).join('|');
        
-        console.log(signatureRow)
+       
         return sha1(`${password}|${signatureRow}`);
       }
       
       const merchant_id = "1396424";
       const password = "test";
       const signature = getSignature(merchant_id, password, params);
-      console.log(`ID${orderId}`)
+     
 
     return(
         <form action="https://pay.fondy.eu/api/checkout/redirect/" method="POST">

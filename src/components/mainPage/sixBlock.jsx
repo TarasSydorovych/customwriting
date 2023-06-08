@@ -28,7 +28,7 @@ export default function SixBlock() {
 </div>
 </div>
 <div className="sixBlogP">
-We write original papers in 75+ disciplines to help you cope with any topic. From writing descriptive essays to providing research paper help, we complete all kinds of tasks in almost any discipline you may be taking.
+Get help with any discipline and order type. With our service, you can get the A+ paper on any topic.
 </div>
 <div className="dusListWrap">
     <div className="disListrow">

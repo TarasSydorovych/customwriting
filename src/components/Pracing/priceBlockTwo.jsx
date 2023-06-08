@@ -1,5 +1,5 @@
 import {HandySvg} from 'handy-svg';
-import iconSrc from '../../img/1234.svg';
+import iconSrc from '../../img/Img28.jpg';
 
 
 export default function PriceBlockTwo() {
@@ -12,18 +12,18 @@ export default function PriceBlockTwo() {
         <section id="tenBlockOffer">
         <div className='teblockwrap'>
             <div className='tenblockContainerOffer'>
-           <h1>First time here and want to pay less <span>for your paper?</span></h1>
-           <p>Get a free page and save up to 33% on your first order</p>
+           <h1>Ordering with us for the first time have doubts?<br/><span>Ask for a draft for your paper in chat</span></h1>
+          
            <button>
             <a href="/order">
-            Get offer
+            Order now
             </a>
             <span className="pulse-button__rings"></span>
 <span className="pulse-button__rings"></span>
 <span className="pulse-button__rings"></span>
            </button>
             </div>
-<HandySvg
+<img
     src={iconSrc}
     className="svgPic"
     

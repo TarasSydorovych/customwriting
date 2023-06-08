@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import HeaderUser from "./headerUser";
 import StatusOrder from "./statusOrder";
 import UserBody from "./userBody";
+import { Pixel } from 'react-facebook-pixel';
 import {
     query,
    doc,
@@ -86,6 +87,7 @@ export default function MainUser() {
 
     return(
         <>
+       
         <HeaderUser/>
 
         <StatusOrder statusOrder={statusOrder} setStatusOrder={setStatusOrder} setBigBlockProduct={setBigBlockProduct}/>

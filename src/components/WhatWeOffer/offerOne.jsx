@@ -1,5 +1,5 @@
 
-import iconSrc from '../../img/121.svg';
+import iconSrc from '../../img/Img22.jpg';
 import {HandySvg} from 'handy-svg';
 
 export default function OfferOne() {
@@ -14,12 +14,12 @@ export default function OfferOne() {
             <div className='teblockwrap'>
                 <div className='OfferOneBlock'>
                <h1>What we offer</h1>
-              <p>We provide help of every kind, from completing an essay to solving math problems and writing code.</p>
+              <p>Solution of any writing problem,no plagiarism, short deadlines, fair prices and high quality from the professional writers</p>
                 </div>
- <HandySvg
+ <img
         src={iconSrc}
         
-        className="svgPic"
+        className="svgPicImg"
     />
     </div>
         </section>

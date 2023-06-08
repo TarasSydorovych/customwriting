@@ -1,5 +1,5 @@
 import {HandySvg} from 'handy-svg';
-import iconSrc from '../../img/120.svg';
+import iconSrc from '../../img/Img27.jpg';
 
 
 
@@ -12,19 +12,19 @@ export default function OfferSeven() {
         <section id="tenBlockOffer">
             <div className='teblockwrap'>
                 <div className='tenblockContainerOffer'>
-               <h1> Need an expert to help you write a<span>compelling text?</span></h1>
+               <h1>Need an expert, tutor, editor or proofreader for your<span>text/ essay/ dissertation chapter?</span></h1>
                <button><a href="/contact">
-                Contact us
+               Get help
                 </a>
                 <span className="pulse-button__rings"></span>
     <span className="pulse-button__rings"></span>
     <span className="pulse-button__rings"></span>
                </button>
                 </div>
- <HandySvg
+ <img
         src={iconSrc}
              
-        className="svgPic"
+        className="svgPicImg"
         
     />
     </div>

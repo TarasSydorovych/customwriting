@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { doc, setDoc } from "firebase/firestore"; 
 import { async } from '@firebase/util'
 import { OAuthProvider ,signInWithRedirect, FacebookAuthProvider } from "firebase/auth";
-
+import { Pixel } from 'react-facebook-pixel';
 export default function SignIn() {
 const [mail, setMail] = useState('');
 const [password, setPassword] = useState('');
@@ -127,6 +127,7 @@ const signWithFacebook = async (e) => {
 
     return(
         <>
+        
         <Header/>
         <section id="signIn">
             <div className="wrap">

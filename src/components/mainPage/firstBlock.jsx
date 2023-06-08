@@ -4,6 +4,9 @@ import { GiMoneyStack } from "react-icons/gi";
 import { HiDocumentReport } from "react-icons/hi";
 import { CardMedia, Card} from '@mui/material';
 import { useNavigate,Link } from "react-router-dom";
+import img1 from '../../img/Img1.png'
+import img2 from '../../img/Img2.png'
+import img3 from '../../img/Img3.png'
 export default function FirstPage() {
   const navigate = useNavigate();
 
@@ -24,26 +27,28 @@ export default function FirstPage() {
        
                 </div>
                 <div className='firstBlockWrap'>
-         <h1>     Live without stress and take your time.<br/>
-Get your perfect essay done!</h1>
+         <h1>     Live without stress
+</h1>
+<h2 className='firstBlockWraph2'> and take your time.</h2>
+<h3 className='firstBlockWraph3'>Get your perfect essay done!</h3>
          <div className='firstBlockIcon'>
             <div className='blockIconF'>
-            <BsPencil className='BsPencil'/>
+            <img src={img1} className='BsPencil'/>
             </div>
             <h2>200+<br/>
             Professional Writers</h2>
 
 <div className='blockIconF'>
-            <GiMoneyStack className='BsPencil'/>
+            <img src={img2} className='BsPencil'/>
             </div>
             <h2>100%<br/>
-            Money-Back Guarantee</h2>
+            Followed Guidelines</h2>
 
 <div className='blockIconF'>
-            <HiDocumentReport className='BsPencil'/>
+            <img src={img3} className='BsPencil'/>
             </div>
             <h2>100%<br/>
-            Plagiarism-free Papers</h2>
+            Original Writing</h2>
          </div>
          <button ><a href="/order">
             Place an order</a>

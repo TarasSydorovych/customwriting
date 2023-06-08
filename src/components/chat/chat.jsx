@@ -23,7 +23,7 @@ import { useEffect } from 'react';
 import { async } from '@firebase/util';
 import Loading from './loading';
 import HeaderUser from '../userMenu/headerUser';
-
+import { Pixel } from 'react-facebook-pixel';
 
 export default function Chat () {
   const storage = getStorage();
@@ -309,6 +309,7 @@ const changeChatRoom = async (id) => {
 
     return(
       <>
+      
    <HeaderUser/>
 <div className='wrapper'>
   <div className='wrapchat'>

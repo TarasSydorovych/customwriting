@@ -1,5 +1,5 @@
 import {HandySvg} from 'handy-svg';
-import iconSrc from '../../img/1123.svg';
+import iconSrc from '../../img/Img 29.jpg';
 
 
 
@@ -14,17 +14,17 @@ export default function ContactThre() {
         <section id="tenBlockOffer">
         <div className='teblockwrap'>
             <div className='tenblockContainerOffer'>
-           <h1>Need your complex paper done ASAP? Get it done in no time<span>with our help!</span></h1>
+           <h1>Stressed out? Our writers are available&nbsp;<span>24/7</span></h1>
            <button>
             <a href="/order">
-            Order now
+            Get help
             </a>
             <span className="pulse-button__rings"></span>
 <span className="pulse-button__rings"></span>
 <span className="pulse-button__rings"></span>
            </button>
             </div>
-<HandySvg
+<img
     src={iconSrc}
     className="svgPic"
     

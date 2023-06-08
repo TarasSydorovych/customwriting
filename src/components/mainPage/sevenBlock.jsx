@@ -43,7 +43,7 @@ Essay Wanted writers are here to write your paper, pay attention to your ideas, 
 </div>
 <img src={img16} className="TbWriting"/>
 <div>
-    <h2>Send a paper for revision during 5 days if any points were overlooked</h2>
+    <h2>Send a paper for revision during 3 days if any points were overlooked</h2>
   
 </div>
 <img src={img17} className="TbWriting"/>

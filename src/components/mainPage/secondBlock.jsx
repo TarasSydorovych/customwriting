@@ -9,6 +9,7 @@ const [pageCount, setPageCount] = useState(1);
 const [procent, setProcent] = useState(1);
 const [finalPrice, setPrice] = useState(0);
 const [indexPage, setIndexPage] = useState(7)
+const [typePap, setTypePap] = useState(1);
 const d = new Date();
 let hour = d.getHours();
 let minutes = d.getMinutes();
@@ -29,8 +30,8 @@ const FormatFun = () => {
 
 useEffect(() => {
     document.getElementsByClassName('secondBlockPrice')[indexPage].style.backgroundColor = '#03a9f4';
-    setPrice(price[indexPage].price * procent * pageCount)
-}, [procent, pageCount, indexPage])
+    setPrice(price[indexPage].price * procent * pageCount * typePap)
+}, [procent, pageCount, indexPage,typePap])
 
 const buttonMinus = () => {
     if(pageCount > 1){
@@ -115,6 +116,7 @@ const arrTypePaper = [
     'CV',
     'Discussion post',
     'Dissertation',
+    'Editing',
     'Essay (any type)',
     'Lab report',
     'Literature review',
@@ -127,6 +129,7 @@ const arrTypePaper = [
     'Research paper',
     'Research proposal',
     'Response paper',
+    'Rewriting',
     'Speech',
     'Term paper',
     'Thesis',
@@ -139,7 +142,22 @@ const arrAcademic = [
     'Graduate',
     'PhD',
 ]
-console.log(dayjs().hour());
+
+const selectCheckType = (e) => {
+    const numValue = +e.target.value
+   
+    if(numValue === 18){
+        setTypePap(0.5);
+    }else if(numValue === 19){
+        setTypePap(3);
+    }else if(numValue === 12){
+        setTypePap(0.3333333333333333);
+    }else if(numValue === 25){
+        setTypePap(0.5);
+    }else {
+        setTypePap(1);
+    }
+}
 const arr = [];
 for(let i = 0; i< price.length; i++){
    arr.push(dayjs().add(price[i].time, 'hour').$M) 
@@ -167,7 +185,7 @@ The longer the deadline – the cheaper the paper
 <div className="clakfirstBblock">
     <div className="customSelect">
 <span>Type of paper</span>
-<select name="user_profile_color_1" className="calkSelect">
+<select name="user_profile_color_1" className="calkSelect" onChange={selectCheckType}>
 
     {arrTypePaper.map((el,index)=>{
         return <option value={index}>{el}</option>
@@ -277,6 +295,7 @@ Total price: <span>${Math.round(finalPrice)}</span>
     <div className="future">
         <ul>
         {features === true && <li className="colorLi" onClick={aboutFeatures}>
+            <img src={picToFea} className="AiOutlineCheckimg"/>
         What you get
             </li> }
             {features !== true && <li className="greyLi" onClick={aboutFeatures}>
@@ -288,13 +307,13 @@ Total price: <span>${Math.round(finalPrice)}</span>
     <div className="bibliography">
     {features === true &&
         <ul>
-            <li><img src={picToFea} className="AiOutlineCheckimg"/>FREE bibliography page</li>
-            <li><img src={picToFea} className="AiOutlineCheckimg"/>FREE title page</li>
-            <li><img src={picToFea} className="AiOutlineCheckimg"/>FREE formatting </li>
-            <li><img src={picToFea} className="AiOutlineCheckimg"/>24x7 support</li>
-            <li><img src={picToFea} className="AiOutlineCheckimg"/>Part-by-part payment</li>
-            <li><img src={picToFea} className="AiOutlineCheckimg"/>PowerPoint slides</li>
-            <li><img src={picToFea} className="AiOutlineCheckimg"/>Review your writer’s samples</li>
+            <li><AiOutlineCheck className="AiOutlineCheck"/>FREE Title page</li>
+            <li><AiOutlineCheck className="AiOutlineCheck"/>FREE Reference page</li>
+            <li><AiOutlineCheck className="AiOutlineCheck"/>24/7 support</li>
+            <li><AiOutlineCheck className="AiOutlineCheck"/>300 words per page</li>
+            <li><AiOutlineCheck className="AiOutlineCheck"/>12 point Arial/Times New Roman</li>
+            <li><AiOutlineCheck className="AiOutlineCheck"/>Free revisions for 3 days after the deadline</li>
+            <li><AiOutlineCheck className="AiOutlineCheck"/>Money-back guarantee</li>
         </ul>
 }
 {format === true &&

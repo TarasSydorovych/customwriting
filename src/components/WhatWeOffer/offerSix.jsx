@@ -1,6 +1,7 @@
 import { AiOutlineDollarCircle, AiOutlineCheck, AiOutlineLike } from "react-icons/ai";
-
-
+import one from '../../img/Img1.png'
+import sectiond from '../../img/Img2.png'
+import thre from '../../img/Img3.png'
 
 export default function OfferSix() {
 
@@ -11,47 +12,24 @@ export default function OfferSix() {
         <section id="twoblockoffer">
 <div className="twoblockOfferWrap">
 <div className="secodFirsOffer">
-<div className="bubleGroupOffer">
-
-
-<h1>Why choose Essay-Wanted.com?</h1>
-</div>
+<h1 className="bubleGroupOffer">Why choose &nbsp;<span className="bubleGroupOfferSpan">ESSAY-WANTED?</span></h1>
 
 
 
 </div>
-<div className="sixBlogPOffer">
-There are a few good reasons to stick with us
-</div>
+
 <div className="dusListWrapOffer">
     <div className="disListrowOffer">
-        <ul>
-            <h2>High quality</h2>
-            <li><AiOutlineCheck className="disListrowIcon"/>15+ years of experience</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Top-tier content writers and editors</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Strict quality control</li>
-                   
-        </ul>
+    <h2 className="watsIconNNH2">Premium Essay Quality from 200+ Professional Writers</h2>
+     <img className="watsIconNN" src={one}/>
     </div>
     <div className="disListrow">
-    <ul>
-    <h2>Personal service</h2>
-    
-            <li><AiOutlineCheck className="disListrowIcon"/>Talk to your writer directly</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Reach us by phone, chat, or email</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>24/7 customer support</li>
-          
-        </ul>
+    <h2 className="watsIconNNH2">100% Followed Guidelines and Clear answers to Questions</h2>
+    <img className="watsIconNN" src={sectiond}/>
     </div>
     <div className="disListrow">
-    <ul>
-    <h2>Affordable cost</h2>
-
-            <li><AiOutlineCheck className="disListrowIcon"/>Prices start at $10/page</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Expert-level quality for a reasonable price</li>
-            <li><AiOutlineCheck className="disListrowIcon"/>Flexible pricing system</li>
-           
-        </ul>
+    <h2 className="watsIconNNH2">100% Original Writing and unique ideas</h2>
+    <img className="watsIconNN" src={thre}/>
     </div>
  </div>
 

@@ -99,7 +99,7 @@ const orderButton= () =>{
         <div className="signInnew">
         <Link to="/signin">
             <AiOutlineUser className="AiOutlineUsernew"/>
-            Log in</Link>
+            Sign in</Link>
         </div>
        }
        {authUser !== null &&

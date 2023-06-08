@@ -9,7 +9,7 @@ import OfferThree from "./offerThree";
 import OfferTwo from "./offetTwo";
 
 
-
+import { Pixel } from 'react-facebook-pixel';
 
 export default function MainOffer() {
 
@@ -19,6 +19,7 @@ export default function MainOffer() {
 
     return(
         <div >
+            
        <Header/>
        <OfferOne/>
        <OfferTwo/>

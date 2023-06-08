@@ -15,40 +15,40 @@ export default function ThreeBlock() {
     return(
         <section id="threBlockSamples">
         <div className="eighthBlockWrap">
-            <h1>The perks you get when you choose us</h1>
+            <h1>How do we work?</h1>
            
             <div className="eighthBlockWrapLIst">
                 <div className="wrapSamplethre">
             <div className="checkIconSample">
-    <BiBrain/>
+    1
     </div>
 <div className="wrapH2P">
     <h2>
-    Expert writers
+    Check your task
     </h2>
-    <p>All our experts pass multiple tests before being hired. They can professionally help you with more than 80 disciplines, from English 101 to biology.</p>
+  
     </div>
     </div>
     <div className="wrapSamplethre">
             <div className="checkIconSample">
-    <BiTask/>
+    2
     </div>
 <div className="wrapH2P">
     <h2>
-    100% original papers
+    Find a writer
     </h2>
-    <p>We complete all our papers from scratch, following your instructions. Our experts only give you well-written and correctly formatted essays.</p>
+    
     </div>
     </div>
     <div className="wrapSamplethre">
             <div className="checkIconSample">
-    <BiCodeBlock/>
+    3
     </div>
 <div className="wrapH2P">
     <h2>
-    Safety and confidentiality
+    Provide a paper
     </h2>
-    <p>We regularly check and update our encryption to make our website safe. Your confidentiality is our priority, so we never disclose your private data.</p>
+   
     </div>
     </div>
     

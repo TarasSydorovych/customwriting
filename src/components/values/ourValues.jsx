@@ -8,7 +8,7 @@ import Diversity from "./diversity";
 import BlockTime from "./timeBlock";
 import Tolerance from "./tolerance";
 import Uniqueness from "./uniqueness";
-
+import { Pixel } from 'react-facebook-pixel';
 
 
 export default function OurValues() {
@@ -18,6 +18,7 @@ export default function OurValues() {
 
     return(
         <>
+        
         <Header/>
 <BlockTitle/>
 <BlockTime/>

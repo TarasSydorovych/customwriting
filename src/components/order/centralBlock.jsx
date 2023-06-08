@@ -24,7 +24,9 @@ import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/
 export default function CentralBlock() {
     const [authUser, setAuthUser] = useState(null);
     const [price, setPrise] = useState(2);
-   
+   const [promo, setPromo] = useState('');
+   const [disc, setDisc] = useState(1);
+
      const [academicWri, setAcademicWri] = useState('');
     const [educationLevel, setEducationLevel] = useState('Senior in high school');
     const [dekiveryDate, setDekiveryDate] = useState(``);
@@ -167,9 +169,9 @@ export default function CentralBlock() {
      useEffect(() => {
         setProceForOne(datePrice * procent * typePaperValue * adwPaper);
         setPriceNull(datePrice * procent * typePaperValue  * adwPaper * pageCount);
-        setTotalPrice(priceNull + sh1 + sh2)
+        setTotalPrice((priceNull + sh1 + sh2) / disc)
 
-     }, [datePrice, procent, typePaperValue,  adwPaper, adwVriter, printable, sh1, sh2, pageCount, priceNull, totalPrice])
+     }, [disc, datePrice, procent, typePaperValue,  adwPaper, adwVriter, printable, sh1, sh2, pageCount, priceNull, totalPrice])
 
      const buttonMinus = () => {
         if(pageCount > 1){
@@ -192,6 +194,24 @@ const changeStateBack = () => {
         
     }
 }
+const pro = [
+    {
+   name: 'WRITE4ME5',
+   value: 1.05,
+    },
+    {
+        name: 'CHEAPY10P',
+        value: 1.10,
+    },
+    {
+        name: 'FIRSTTRY15',
+        value: 1.15,
+    },
+    {
+        name: 'DISCONI20',
+        value: 1.20,
+    },
+]
 const infoBlock = [{
     step: 1,
     title: 'Basic paper details',
@@ -232,8 +252,18 @@ const summaryFun = () => {
     setLastSym(true);
     setStep(el => el+1);
 }
+const changeProm = (e) => {
+    setPromo(e.target.value);
 
-
+}
+const activPr = () => {
+    const matchedPromo = pro.find((item) => item.name === promo);
+    if (matchedPromo) {
+      setDisc(matchedPromo.value);
+    } else {
+      setDisc(1); // Якщо промокод не знайдено, знижка залишається 1 (без знижки)
+    }
+}
 
 
     return(
@@ -304,13 +334,17 @@ const summaryFun = () => {
                       </p>
                       <p className="orderInfoCountPagePNew">FREE</p>
                       </div>
+                      <div className="promoCodWrap">
+<input type='text' className="promoInput" placeholder="Coupon code" value={promo} onChange={changeProm}/>
+<button className="promoButton" onClick={activPr}>Activate</button>
+                      </div>
                     
                 </div>
                 <div className="orderInfoCountLast">
                 <div className="orderInfoCountPage">
                     <p className="orderInfoCountPageP">Total price
                     </p>
-                    <p className="orderInfoCountPageP">{`$${totalPrice.toFixed(2)}`} </p>
+                    <p className="orderInfoCountPageP">{`$${totalPrice.toFixed(0)}`} </p>
                     </div>
                 </div>
                     </div>

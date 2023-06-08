@@ -13,52 +13,38 @@ export default function Phone() {
 
     return(
         <section id="phone">
-            <div className='container'>
-        <div className='wraper'>
-            <div className='contact'>
-<h1>Contact us</h1>
-<p>Let us know if we can help with your paper or if you have any other questions regarding our services.</p>
-            </div>
-            <div className='info'>
-<div className='sectionInfo'>
-<div className='phone'>
-    <BsFillPinMapFill  className='icon'/><h1>Our location</h1>
-    <p>East 46th Street, New York City, NY </p>
-    <img src={imgCard} style={{width: '450px', height: '350px'}}/>
-    </div>
-    <div className='phone'>
-    <AiOutlinePhone className='icon'/><h1>Do not hesitate and contact us</h1>
-    <p>Phone: +420607710989</p>
-    <p>Email: essaywanted.agent@gmail.com</p>
-    <p>Chat:  <button>
-    <a href="chat">
-    Live chat
-    <span className="pulse-button__rings"></span>
-    <span className="pulse-button__rings"></span>
-    <span className="pulse-button__rings"></span>
-    </a>
-   </button></p>
-    </div>
-   
-</div>
-<div className='sectionInfo'>
-    <div className='phone'>
-    <div className="spcialIcoContact">
+           <div className='phoneWrap'>
+            <h1 className='h1Contact'>Contact Us</h1>
+            <div className="spcialIcoContactTwo">
     <a className="iconSocialHrefContact" href="https://www.instagram.com/essaywanted/" target="_blank"> <AiOutlineInstagram style={{color: '#d53c7c'}}/></a>
                    <a className="iconSocialHrefContact" href='https://www.facebook.com/profile.php?id=100090737010565' target='_blank' ><AiOutlineFacebook style={{color: '#4064ac'}}/></a>
                   <a className="iconSocialHrefContact" href="https://www.youtube.com/@essaywanted" target="_blank">  <AiFillYoutube style={{color: '#f70000'}}/></a>
                    <a className="iconSocialHrefContact" href="https://www.pinterest.com/essaywanted/" target='_blank'> <BsPinterest style={{color: '#c51f26'}}/></a>
                     </div>
+                    <div className='wrapPhoneAndMail'>
+                    <p className='em'>essaywanted.agent@gmail.com</p>
+                        <p className='ph'>+17165033320</p>
+                        
+                    </div>
+                    <div className='constactButWrapOr'>
+                    <button className="newChatButton"><a className="newChatButtonLink" href="/order">
+            Place an order</a>
+            <span className="pulse-button__rings"></span>
+    <span className="pulse-button__rings"></span>
+    <span className="pulse-button__rings"></span>
+         </button>
+                    <button className="newChatButtonRight">
+    <a href="chat" className="newChatButtonLink">
+    Live chat
+    <span className="pulse-button__rings"></span>
+    <span className="pulse-button__rings"></span>
+    <span className="pulse-button__rings"></span>
+    </a>
+   </button>
+  
+                    </div>
     </div>
-    <div className='phone'>
-    
-    </div>
-</div>
-            </div>
-            </div>
-        </div>
-
-
+           
         </section>
     )
 }

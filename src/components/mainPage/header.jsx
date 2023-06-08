@@ -99,7 +99,7 @@ export default function Header() {
        <div className="signIn">
        <Link to="/signin">
            <AiOutlineUser className="AiOutlineUser"/>
-           Log in</Link>
+           Sign in</Link>
        </div>
        }
        {authUser !== null &&

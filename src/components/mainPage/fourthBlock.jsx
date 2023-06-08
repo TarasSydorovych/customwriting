@@ -52,10 +52,10 @@ const arrowRight = () => {
 <section id="fourthBlock">
 <div className="wrapFourthBlock">
     <h2>
-    Essay Wanted solves your problems
+    <span className="essaySpan">ESSAY WANTED &nbsp;</span> solves your problems
     </h2>
     <p>
-    See how we process your order when you use our custom essay writing service.
+    No stressful writing any more!
     </p>
 <div className="fourthBlockInfo">
 <div className="fourthBlockInfoImg">

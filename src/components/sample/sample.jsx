@@ -5,6 +5,7 @@ import SecondBlockSample from "./secondBlock";
 import ThreeBlock from "./threBlock";
 import SecondBlock from '../mainPage/secondBlock'
 import { useNavigate } from "react-router-dom";
+import { Pixel } from 'react-facebook-pixel';
 export default function Sample() {
 
     
@@ -12,6 +13,7 @@ export default function Sample() {
 
     return(
 <>
+
     <Header/>
 <FirstBlock/>
 <SecondBlockSample/>

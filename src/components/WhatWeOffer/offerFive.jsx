@@ -1,7 +1,6 @@
-import one from '../../img/12.png'
-import two from '../../img/13.png'
-import thre from '../../img/14.png'
 
+import { AiOutlineDollarCircle, AiOutlineCheck, AiOutlineLike } from "react-icons/ai";
+import one from '../../img/Img26.jpg'
 
 
 
@@ -16,48 +15,31 @@ export default function OfferFive() {
     return(
 
         <section id="sevenBlock">
-        <div className="secondBlockWrap">
-        <div className="secodFirst">
-        <div className="bubleGroupOfferThree">
-        <h1><span>Business</span>content</h1>
-        </div>
-         
-        
-        
-        </div>
-        <div className="paragrafOfferFive">
-        Get the attention of your audience with our precisely targeted messages
-        </div>
-
-
-        <div className="blockLeptop">
-<div className="lapPic">
-<div className="pictureCircle">
-<img src={one}></img>
+        <div className='firstBlockTimeteblockwrap'>
+           
+           <div className="imageKolDiversity">
+           <img src={one}></img>
+           </div>
+           <div className='secondBlockTimeOfferOneBlock'>
+           <div className="disListrowOffer">
+    <ul>
+        <h2>Additional <span className="wrSpanBlue">Services</span></h2>
+        <li><AiOutlineCheck className="disListrowIcon"/>Books</li>
+        <li><AiOutlineCheck className="disListrowIcon"/>Charts</li>
+        <li><AiOutlineCheck className="disListrowIcon"/>Calculations</li>
+        <li><AiOutlineCheck className="disListrowIcon"/>Content making</li>
+        <li><AiOutlineCheck className="disListrowIcon"/>Diagrams</li>
+        <li><AiOutlineCheck className="disListrowIcon"/>Graphs</li>
+        <li><AiOutlineCheck className="disListrowIcon"/>Images/video editing</li>
+        <li><AiOutlineCheck className="disListrowIcon"/>Poems</li>
+        <li><AiOutlineCheck className="disListrowIcon"/>Slogans</li>
+        <li><AiOutlineCheck className="disListrowIcon"/>Summaries</li>
+        <li><AiOutlineCheck className="disListrowIcon"/>Tables</li>
+              
+    </ul>
 </div>
-<h2>Press releases</h2>
-<p>We write informative news articles on any given topic.</p>
-</div>
-<div className="lapPic">
-<div className="pictureCircle">
-<img src={two}></img>
-</div>
-<h2>Corporate brochures</h2>
-<p>We highlight your company's strengths with creative corporate brochures.</p>
-</div>
-<div className="lapPic">
-<div className="pictureCircle">
-<img src={thre}></img>
-</div>
-<h2>Presentations</h2>
-<p>We create informative and entertaining presentations.</p>
-</div>
-        </div>
-        
-        
-                </div>
-                
-        
+                       </div>
+           </div>
         </section>
     
     )

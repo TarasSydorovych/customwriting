@@ -87,7 +87,7 @@ export default function ThreBlock({timeDifference, setDatePrice, datePrice, setD
         {todayFour &&
         <div className="blockLikeAcademic" onClick={(e) => priceTime(4, e)}>
 <div className="recomendedDate">
-        <h4 className='blockLikeAcademicH4'>SyperFast</h4>
+        <h4 className='blockLikeAcademicH4'>Super Fast</h4>
         <p className='blockLikeAcademicP'>{month1[month]} {day}, {hour+4}:{minutes}</p>
         </div>
         <div className="onDueDate">
