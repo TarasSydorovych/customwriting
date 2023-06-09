@@ -47,7 +47,7 @@ export default function Header() {
     }, []);
 
     const orderButton= () =>{
-      alert('Register to place an order')
+      
        navigate("/order")
       }
 

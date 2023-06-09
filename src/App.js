@@ -15,7 +15,7 @@ import Sample from "./components/sample/sample";
 import OurValues from "./components/values/ourValues";
 import PageError from "./components/404/pageError";
 import ReactGA from 'react-ga';
-import ReactPixel from 'react-facebook-pixel';
+
 
 
 
@@ -23,8 +23,6 @@ function App() {
  
   const TRACKING_ID = "G-TVXC6GF6RQ";
   useEffect(() => {
-    ReactPixel.init('1443497096480149');
-    ReactPixel.pageView();
     ReactGA.initialize(TRACKING_ID);
     ReactGA.send({ hitType: "pageview", page: `${window.location.pathname + window.location.search}` });
   })

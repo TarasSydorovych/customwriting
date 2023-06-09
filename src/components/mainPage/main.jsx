@@ -11,7 +11,7 @@ import EighthBlock from "./eighthBlock";
 import NineBlock from "./nineBlock";
 import TenBlock from "./tenBlock";
 import Footer from "./footer";
-import { Pixel } from 'react-facebook-pixel';
+
 
 
 export default function Main() {

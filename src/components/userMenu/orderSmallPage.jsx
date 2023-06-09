@@ -2,6 +2,7 @@ import { useState } from 'react'
 import UserBody from './userBody'
 import './userMenu.css'
 import { AiFillFile } from "react-icons/ai";
+import PayBlockForUs from './payBlockForUs';
 
 
 export default function OrderSmallPage({order, statusOrder, setBigBlockProduct, bigBlockProduct}) {
@@ -125,7 +126,21 @@ export default function OrderSmallPage({order, statusOrder, setBigBlockProduct, 
             {product.printableText && 
                 <h4 className='joinH4block'>Printable sources</h4>
             }
+         
             </div>
+            {product.paymentStatus === 'check' &&
+                <div className='joinOrderTwBlock'>
+                <p className='joinPblock'>Payment status</p>
+                <h4 className='joinH4block'>Not paid</h4>
+                <PayBlockForUs totalPrice={parseInt(product.totalPrice)} orderId={product.uid}/>
+            </div>
+            }
+             {product.paymentStatus === 'true' &&
+                <div className='joinOrderTwBlock'>
+                <p className='joinPblock'>Payment status</p>
+                <h4 className='joinH4block'>Paid</h4>
+            </div>
+            }
         </div>
         
         

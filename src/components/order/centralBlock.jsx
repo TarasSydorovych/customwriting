@@ -18,6 +18,7 @@ import { useNavigate } from "react-router-dom";
 import { doc, setDoc, addDoc, collection, serverTimestamp } from "firebase/firestore"; 
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import SignForOrder from "./signForOrder";
 
 
 
@@ -55,13 +56,26 @@ export default function CentralBlock() {
      const [proceForOne, setProceForOne] = useState(0);
      const [sh1, setSh1] =useState(0);
      const [sh2, setSh2] =useState(0);
+     const [toCheck, setToCheck] = useState(false);
      const [checkPayment, setCheckPayment] = useState(false);
      const [orderId, setOrderId] = useState('');
      const storage = getStorage();
      const navigate = useNavigate();
-     
+     useEffect(() => {
+     const listen = onAuthStateChanged(auth, (user) => {
+        if(!user){
+            setAuthUser(false);
+        }else{
+            setAuthUser(user)
+        }
+        
+    });
 
-
+return () => {
+    // Відписка від слухача після розмонтовування компоненти
+    listen();
+  };
+},[toCheck])
 
    
     useEffect(() => {
@@ -247,10 +261,22 @@ const infoBlock = [{
     title: 'Upgrades',
     desc: 'Proceed to checkout',
 }, 
+{
+    step: 8,
+    title: 'Upgrades',
+    desc: 'Please register',
+}, 
 ]
-const summaryFun = () => {
+const summaryFun = (user) => {
+    console.log('Юзер з функції', user)
+if(user){
     setLastSym(true);
-    setStep(el => el+1);
+    setStep(6);
+}else if (user !== true){
+    setLastSym(true);
+setStep(7);
+}
+setToCheck(!toCheck)
 }
 const changeProm = (e) => {
     setPromo(e.target.value);
@@ -403,10 +429,15 @@ const activPr = () => {
                 {step === 5 &&
                 <>
            <SevenBlock setAdwWriter={setAdwWriter} setPrintable={setPrintable} setSh1={setSh1} setSh2={setSh2} setAdwWriterText={setAdwWriterText} setPrintableText={setPrintableText}/>
-           <button onClick={summaryFun} className="buttonOrderMenuNext">
+           <button onClick={() => summaryFun(auth.currentUser)} className="buttonOrderMenuNext">
                 Summary          
                  </button>
             </>
+                }
+                {step === 7 && 
+<>
+<SignForOrder summaryFun={summaryFun}/>
+</>
                 }
              {step === 6 && 
                 <>
