@@ -32,7 +32,7 @@ Get help with any discipline and order type. With our service, you can get the A
 </div>
 <div className="dusListWrap">
     <div className="disListrow">
-        <ul>
+        <ul className="notStylingUl">
             <li><AiOutlineCheck className="disListrowIcon"/>Accounting</li>
             <li><AiOutlineCheck className="disListrowIcon"/>Anthropology</li>
             <li><AiOutlineCheck className="disListrowIcon"/>Art</li>
@@ -43,7 +43,7 @@ Get help with any discipline and order type. With our service, you can get the A
         </ul>
     </div>
     <div className="disListrow">
-    <ul>
+    <ul className="notStylingUl">
             <li><AiOutlineCheck className="disListrowIcon"/>Economics</li>
             <li><AiOutlineCheck className="disListrowIcon"/>Emergency studies</li>
             <li><AiOutlineCheck className="disListrowIcon"/>Environmental studies</li>
@@ -54,7 +54,7 @@ Get help with any discipline and order type. With our service, you can get the A
         </ul>
     </div>
     <div className="disListrow">
-    <ul>
+    <ul className="notStylingUl">
             <li><AiOutlineCheck className="disListrowIcon"/>IT </li>
             <li><AiOutlineCheck className="disListrowIcon"/>Law</li>
             <li><AiOutlineCheck className="disListrowIcon"/>Literature</li>
@@ -65,7 +65,7 @@ Get help with any discipline and order type. With our service, you can get the A
         </ul>
     </div>
     <div className="disListrow">
-    <ul>
+    <ul className="notStylingUl">
             <li><AiOutlineCheck className="disListrowIcon"/>Philosophy</li>
             <li><AiOutlineCheck className="disListrowIcon"/>Physics</li>
             <li><AiOutlineCheck className="disListrowIcon"/>Political Science</li>

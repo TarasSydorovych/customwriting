@@ -1080,6 +1080,10 @@ height: 15%;
   font-size: 20px;
   width: 60%;
 }
+.notStylingUl{
+  list-style-type: none;
+
+}
 .dusListWrap{
   width: 80%;
   display: flex;
