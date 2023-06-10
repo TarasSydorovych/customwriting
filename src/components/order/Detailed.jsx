@@ -8,7 +8,7 @@ export default function Detailed({setTextArea, setPaperFormat, setCountReference
         'MLA',
 'APA 6',
 'APA 7',
-'Chacago / Turabian',
+'Chicago / Turabian',
 'Not applicable',
 'Other',
 

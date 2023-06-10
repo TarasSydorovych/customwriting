@@ -1,5 +1,5 @@
 
-import iconSrc from '../../img/121.svg';
+import iconSrc from '../../img/Img30.jpg';
 import {HandySvg} from 'handy-svg';
 
 export default function SecondBlockSample() {
@@ -13,10 +13,10 @@ export default function SecondBlockSample() {
      <section id="offerfirstblock">
             <div className='teblockwrap'>
                 <div className='OfferOneBlock'>
-               <h1>Out of inspiration? Hire an expert!</h1>
-              <p>We’ve all received that one assignment that makes us think, “There’s no way that I can do this on my own!” Luckily, you can always entrust your essays to us. We’ve been dealing with papers of every complexity since 2008, and we’re ready for new challenges.</p>
+               <h1>Out of inspiration?</h1>
+              <p>Our writers are ready to help with the most complex essays, tasks and papers. Contact us and feel a relief, get the desired academic help quickly and easily. </p>
                 </div>
- <HandySvg
+ <img
         src={iconSrc}
         className="svgPic"
         

@@ -562,6 +562,47 @@
 
 /*   мобільна версія */
 @media screen and (max-width: 768px) {
+  .centralBlockOrderInfo{
+    display: flex;
+    flex-direction: column;
+   justify-content: space-between;
+    width: 95%;
+    height: auto;
+    
+    
+    font-family: 'Quicksand', sans-serif;
+}
+  .promoCodWrap{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  .promoButton{
+    width: 30%;
+    height: 30px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .promoInput{
+    width: 40%;
+    height: 10px;
+    margin: 0;
+  }
+  .centralBlockOrderFinish{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: center;
+    width: 90%;
+    height: auto;
+    background: #093b76;
+    border-radius: 50px;
+    font-family: 'Quicksand', sans-serif;
+  }
   .wraperHeadMenu {
   flex-direction: column;
   margin-top: 20px;
@@ -601,15 +642,14 @@
   }
   
   .centralBlockOrder {
-  width: 100%;
+  width: 95%;
   height: auto;
   margin-top: 20px;
   margin-bottom: 20px;
+  align-self: center;
   }
   
-  .centralBlockOrderInfo {
-  width: 100%;
-  }
+
   
   .blockAcademic {
   height: 120px;
@@ -636,7 +676,43 @@
   }
   }
   
-  @media screen and (min-width: 768px) {
+  @media only screen and (max-width: 1024px) and (min-width: 768px) { 
+    .centralBlockOrder{
+  
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: flex-start;
+      width: 80%;
+      height: 500px;
+      background: #093b76;
+      border-radius: 50px;
+      font-family: 'Quicksand', sans-serif;
+  }
+    .promoButton{
+      width: 35%;
+      height: 30px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .wrapBodyMenu {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      }
+    .centralBlockOrderFinish{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: center;
+      width: 50%;
+      height: auto;
+      background: #093b76;
+      border-radius: 50px;
+      font-family: 'Quicksand', sans-serif;
+    }
   .wraperHeadMenu {
   margin-top: 40px;
   }
@@ -659,6 +735,7 @@
   height: 500px;
   margin-top: 0;
   margin-bottom: 0;
+  align-self: center;
   }
   .centrelBlockLeftP{
     margin-top: 30px;
@@ -710,3 +787,11 @@
   height: 400px;
   color: black;
 }
+@media only screen and (max-width: 1288px) and (min-width: 1024px) {
+  .promoButton{
+    width: 40%;
+    height: 30px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+ }

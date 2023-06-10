@@ -74,7 +74,7 @@ export default function Header() {
   <li className="liMobile"><Link to='/prices'>Our prices</Link></li>
   <li className="liMobile"><Link to='/sample'>Sample papers</Link></li>
   <li className="liMobile"><Link to='/values'>Our values</Link></li>
-  <li className="liMobile"><Link to='/blog'>Blog</Link></li>
+  <li className="liMobile"><a href='https://www.facebook.com/profile.php?id=100090737010565'  target='_blank'>Blog</a></li>
   <li className="liMobile"><Link to='/contact'>Contact us</Link></li>
 </ul>
 </div>
@@ -90,7 +90,7 @@ export default function Header() {
             <li><Link to='/prices'>Our prices</Link></li>
             <li><Link to='/sample'>Sample papers</Link></li>
             <li><Link to='/values'>Our values</Link></li>
-            <li><Link to='/blog'>Blog</Link></li>
+            <li><a href='https://www.facebook.com/profile.php?id=100090737010565'  target='_blank'>Blog</a></li>
             <li><Link to='/contact'>Contact us</Link></li>
         </ul>
 }
@@ -99,7 +99,7 @@ export default function Header() {
        <div className="signIn">
        <Link to="/signin">
            <AiOutlineUser className="AiOutlineUser"/>
-           Sign in</Link>
+           Sign up</Link>
        </div>
        }
        {authUser !== null &&

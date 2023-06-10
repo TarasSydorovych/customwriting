@@ -1,10 +1,10 @@
 
 import './order.css'
-
+import { useState } from 'react';
 
 
 export default function EducationLevel({setProcent, setEducationLevel, educationLevel}) {
-
+  const [selectedItem, setSelectedItem] = useState(null);
   const arrAcademic = [
     'Senior in high school',
     'Undergraduate student  (years 1-2)',
@@ -12,8 +12,8 @@ export default function EducationLevel({setProcent, setEducationLevel, education
     'Graduate student',
     'PhD student',
 ]
-const educationLevelFun = (id) => {
-  const numValue = id;
+const educationLevelFun = (index) => {
+  const numValue = index;
    
     if(numValue === 0){
         setProcent(1);
@@ -27,16 +27,7 @@ const educationLevelFun = (id) => {
         setProcent(1.196);
     }
 
-    setEducationLevel(document.getElementsByTagName('li')[id+3].innerText);
-    for(let i = 3; i < document.getElementsByTagName('li').length; i++){
-              if(i === (id + 3)){
-                document.getElementsByTagName('li')[id+3].style.background = '#DCDEDF';
-              }else{
-                document.getElementsByTagName('li')[i].style.background = 'white';
-              }
-    }
-   
-    
+    setSelectedItem(index);
 }
 
 
@@ -44,8 +35,12 @@ const educationLevelFun = (id) => {
     return(
       <ul className='educationLevelUl'>
         {arrAcademic.map((el,index)=>{
+          const isSelected = selectedItem === index;
+          const className = isSelected ? 'educationLevelLi selected' : 'educationLevelLi';
 
-        return <li key={index} className='educationLevelLi' onClick={() => educationLevelFun(index)}>{el}</li>
+        return <li key={index}
+        style={isSelected ? { backgroundColor: '#DCDEDF' } : null}
+        className={className} onClick={() => educationLevelFun(index)}>{el}</li>
         
     })}
        

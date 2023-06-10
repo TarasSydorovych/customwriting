@@ -74,7 +74,7 @@ const orderButton= () =>{
   <li className="liMobilenew"><Link to='/prices'>Our prices</Link></li>
   <li className="liMobilenew"><Link to='/sample'>Sample papers</Link></li>
   <li className="liMobilenew"><Link to='/values'>Our values</Link></li>
-  <li className="liMobilenew"><Link to='offer'>Blog</Link></li>
+  <li className="liMobilenew"><a href='https://www.facebook.com/profile.php?id=100090737010565'  target='_blank'>Blog</a></li>
   <li className="liMobilenew"><Link to='/contact'>Contact us</Link></li>
 </ul>
 </div>
@@ -90,7 +90,7 @@ const orderButton= () =>{
             <li><Link to='/prices'>Our prices</Link></li>
             <li><Link to='/sample'>Sample papers</Link></li>
             <li><Link to='/values'>Our values</Link></li>
-            <li><Link to='offer'>Blog</Link></li>
+            <li><a href='https://www.facebook.com/profile.php?id=100090737010565'  target='_blank'>Blog</a></li>
             <li><Link to='/contact'>Contact us</Link></li>
         </ul>
 }
@@ -99,7 +99,7 @@ const orderButton= () =>{
         <div className="signInnew">
         <Link to="/signin">
             <AiOutlineUser className="AiOutlineUsernew"/>
-            Sign in</Link>
+            Sign up</Link>
         </div>
        }
        {authUser !== null &&

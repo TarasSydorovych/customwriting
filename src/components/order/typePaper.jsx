@@ -7,10 +7,14 @@ export default function TypePaper({setDiscipline, setTypeOfPaper, setTypePaperVa
 
 const selectCheckValue = (e) => {
     let numValue = e.target.value;
-    if(numValue === "PPT without speaker's"){
+    if(numValue === "PPT without speaker's notes"){
         setTypePaperValue(0.5);
     }else if(numValue === 'PDF poster'){
         setTypePaperValue(3);
+    }else if(numValue === 'Editing'){
+        setTypePaperValue(0.3333333333333333);
+    }else if(numValue === 'Rewriting'){
+        setTypePaperValue(0.5);
     }else{
         setTypePaperValue(1);
     }
@@ -96,33 +100,34 @@ const subArray = [
 ];
     const arrTypePaper = [
         'Annotated bibliography',
-'Article review',
-'Blog',
-'Book/movie review',
-'Business plan',
-'Capstone project',
-'Cover letter',
-'Course work',
-'Creative writing',
-'CV',
-'Discussion post',
-'Dissertation',
-'Essay (any type)',
-'Lab report',
-'Literature review',
-'Outline',
-"PPT with speaker's",
-"PPT without speaker's",
-'PDF poster',
-'Question-answer',
-'Reflection paper',
-'Research paper',
-'Research proposal',
-'Response paper',
-'Speech',
-'Term paper',
-'Thesis',
-
+        'Article review',
+        'Blog',
+        'Book/movie review',
+        'Business plan',
+        'Capstone project',
+        'Cover letter',
+        'Course work',
+        'Creative writing',
+        'CV',
+        'Discussion post',
+        'Dissertation',
+        'Editing',
+        'Essay (any type)',
+        'Lab report',
+        'Literature review',
+        'Outline',
+        "PPT with speaker's notes",
+        "PPT without speaker's notes",
+        'PDF poster',
+        'Question-answer',
+        'Reflection paper',
+        'Research paper',
+        'Research proposal',
+        'Response paper',
+        'Rewriting',
+        'Speech',
+        'Term paper',
+        'Thesis',
     ];
 
 
@@ -155,7 +160,7 @@ const subArray = [
     <input type='text' className="inputWordCount" onChange={(e) => setPageCount(e.target.value)} value={pageCount}></input>
     <AiOutlinePlus className="countPlusMinus" onClick={() => setPageCount(prev => prev + 1)}/>
     </div>
-    <div className="countWOrds">{275 * pageCount} word</div>
+    <div className="countWOrds">{300 * pageCount} word</div>
     
    </div>
 

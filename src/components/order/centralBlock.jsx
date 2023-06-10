@@ -301,7 +301,7 @@ const activPr = () => {
                 {lastSym && 
                 
                     <div className="centralBlockOrderFinish">
-                     <p className="centrelBlockLeftP">Symmary</p>
+                     <p className="centrelBlockLeftP">Summary</p>
                 <h2 className="centrelBlockLeftH2">Order details</h2>
                 <div className="orderInformation">
                    
