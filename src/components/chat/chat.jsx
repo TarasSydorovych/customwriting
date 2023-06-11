@@ -8,6 +8,7 @@ import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/
 import { AiFillFile } from "react-icons/ai";
 import { Container, Grid, Input, Button } from '@mui/material';
 import { v4 as uuidv4 } from 'uuid';
+import { sendMess } from '../../func';
 import Header from '../header'
 import {
   query,
@@ -83,6 +84,7 @@ const [msg, setMsg] = useState('')
         check: 'true',
         downloadURL,
       });
+      sendMess('У Вас нове повідомлення на сайті');
     });
   }
 );
@@ -100,6 +102,7 @@ try{
       check: 'true',
       downloadURL: '',
     });
+    sendMess('У Вас нове повідомлення на сайті');
 }catch (error) {
   alert('Помилка додавання повідомлення без файлу Адмін:', error);
 }
@@ -135,7 +138,7 @@ getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
 });
 }
 );
-
+sendMess('У Вас нове повідомлення на сайті');
 }catch (error) {
   alert('Помилка додавання повідомлення з файлом Юзер:', error);
 }
@@ -154,6 +157,7 @@ try{
     check: 'false',
     downloadURL: '',
   });
+  sendMess('У Вас нове повідомлення на сайті');
 }catch (error) {
   alert('Помилка додавання повідомлення без файлу Юзер:', error);
 }

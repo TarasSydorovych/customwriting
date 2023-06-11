@@ -19,7 +19,7 @@ import { doc, setDoc, addDoc, collection, serverTimestamp } from "firebase/fires
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import SignForOrder from "./signForOrder";
-
+import { sendMess } from '../../func';
 
 
 export default function CentralBlock() {
@@ -131,6 +131,7 @@ return () => {
               paymentStatus: 'check'
 
              })
+             sendMess('У Вас нове замовлення на сайті');
             });
         }
         );
@@ -159,6 +160,7 @@ return () => {
           orderStatus: 'NEW',
           paymentStatus: 'check'
          })
+         sendMess('У Вас нове замовлення на сайті');
         }
           }catch (error) {
                   alert('The user with this login is not registered')

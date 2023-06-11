@@ -15,6 +15,7 @@ import Sample from "./components/sample/sample";
 import OurValues from "./components/values/ourValues";
 import PageError from "./components/404/pageError";
 import ReactGA from 'react-ga';
+import ChatKo from "./components/chatKo/chatKo";
 
 
 
@@ -42,7 +43,9 @@ function App() {
     <Route path='/sample' element={<Sample/>}/>
     <Route path='/values' element={<OurValues/>}/>
     <Route path='*' element={<PageError/>}/>
+    
    </Routes>
+   <ChatKo/>
    </>
   );
 }
