@@ -3,7 +3,7 @@ import './pay.css'
 import {useEffect, useState} from 'react'
 import sha1 from 'sha1'
 import { v4 as uuidv4 } from 'uuid';
-export default function NewPayBlock({totalPrice, orderId, setOrderId, setCheckPayment}) {
+export default function NewPayBlock({totalPrice, orderId, setOrderId, setCheckPayment, addOrder}) {
 useEffect(() => {
   setOrderId(uuidv4())
 
@@ -36,7 +36,7 @@ useEffect(() => {
      
 
     return(
-        <form action="https://pay.fondy.eu/api/checkout/redirect/" method="POST">
+        <form  action="https://pay.fondy.eu/api/checkout/redirect/" method="POST">
 
   <input type="hidden" name="merchant_id" value="1396424"/>
   <input type="hidden" name="order_id" value={`ID${orderId}`}/>
@@ -45,7 +45,11 @@ useEffect(() => {
   <input type="hidden" name="amount" value={`${totalPrice*100}`}/>
   <input type="hidden" name="signature" value={signature}/>
  
-  <button type="submit" onClick={() => setCheckPayment(true)}>${totalPrice}</button>
+  <button type="submit" onClick={(e) => {
+  e.preventDefault();
+  addOrder(e);
+
+}}>${totalPrice}</button>
 </form>
     )
 }

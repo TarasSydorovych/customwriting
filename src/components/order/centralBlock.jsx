@@ -78,11 +78,105 @@ return () => {
 },[toCheck])
 
    
-    useEffect(() => {
-        if(checkPayment === true){
+    // useEffect(() => {
+    //     if(checkPayment === true){
            
-        const addOrder = async (e) => {
+    //     const addOrder = async (e) => {
             
+    //     try{
+            
+            
+    //         if(file !== null){
+                
+    //         const storageRef = ref(storage, file[0].name);
+    //         const uploadTask = uploadBytesResumable(storageRef, file[0]);
+            
+    //         uploadTask.on('state_changed',
+    //         (snapshot) => {
+    //             const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+    //             console.log('progress',progress)
+    //              }, 
+    //           (error) => {
+                
+    //           }, 
+    //           ()  => {
+    //         getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
+    //             const arr = []
+    //             arr.push({downloadURL: downloadURL, fileName: file[0].name})
+    //             const frankDocRef = doc(db, "order", orderId);
+    //            // const messagesCollectionRef = collection(db, `order/${orderId.payment.orderId}/order`);
+    //            // const newMessageRef = await addDoc(messagesCollectionRef, {
+    //             await setDoc(frankDocRef, {
+    //           uid: orderId,
+    //           academicWri: academicWri,
+    //           educationLevel: educationLevel,
+    //           dekiveryDate: dekiveryDate,
+    //           typeOfPaper: typeOfPaper,
+    //           discipline: discipline,
+    //           pageCount: pageCount,
+    //           chartOrSlide: chartOrSlide,
+    //           textArea: textArea,
+    //           paperFormat: paperFormat,
+    //           downloadURL: arr,
+    //           downloadURLs:'',
+    //           countReference: countReference,
+    //           paperPreffer: paperPreffer,
+    //           adwVriterText: adwVriterText,
+    //           printableText: printableText,
+    //           totalPrice: totalPrice,
+    //           auth: auth.lastNotifiedUid,
+    //           status: 'NEW',
+    //           orderStatus: 'NEW',
+    //           fileName: file[0].name,
+    //           paymentStatus: 'check'
+
+    //          })
+    //          sendMess('У Вас нове замовлення на сайті');
+    //         });
+    //     }
+    //     );
+    //     }else{
+    //         const frankDocRef = doc(db, "order", orderId);
+    //        //const messagesCollectionRef = collection(db, `order/${orderId.payment.orderId}/order`);
+    //        //const newMessageRef = await addDoc(messagesCollectionRef, {
+    //         await setDoc(frankDocRef, {
+    //       uid: orderId,
+    //       academicWri: academicWri,
+    //       educationLevel: educationLevel,
+    //       dekiveryDate: dekiveryDate,
+    //       typeOfPaper: typeOfPaper,
+    //       discipline: discipline,
+    //       pageCount: pageCount,
+    //       chartOrSlide: chartOrSlide,
+    //       textArea: textArea,
+    //       paperFormat: paperFormat,
+    //       countReference: countReference,
+    //       paperPreffer: paperPreffer,
+    //       adwVriterText: adwVriterText,
+    //       printableText: printableText,
+    //       totalPrice: totalPrice,
+    //       auth: auth.lastNotifiedUid,
+    //       status: 'NEW',
+    //       orderStatus: 'NEW',
+    //       paymentStatus: 'check'
+    //      })
+    //      sendMess('У Вас нове замовлення на сайті');
+    //     }
+    //       }catch (error) {
+    //               alert('The user with this login is not registered')
+    //           }
+    //         }
+    //         addOrder();
+    //         alert('Please pay for the order')
+    //         navigate("/cabinet");
+    //         setCheckPayment(false);
+    //     }
+
+   
+    // }, [orderId, checkPayment])
+         const addOrder = async (e) => {
+           
+            sendMess('У Вас нове замовлення на сайті');
         try{
             
             
@@ -131,7 +225,8 @@ return () => {
               paymentStatus: 'check'
 
              })
-             sendMess('У Вас нове замовлення на сайті');
+             document.querySelector('form').submit();
+             
             });
         }
         );
@@ -160,20 +255,24 @@ return () => {
           orderStatus: 'NEW',
           paymentStatus: 'check'
          })
-         sendMess('У Вас нове замовлення на сайті');
+         document.querySelector('form').submit();
+         
         }
           }catch (error) {
                   alert('The user with this login is not registered')
               }
+             
+              alert('Please pay for the order')
+                navigate("/cabinet");
             }
-            addOrder();
-            alert('Please pay for the order')
-            navigate("/cabinet");
-            setCheckPayment(false);
-        }
 
-   
-    }, [orderId, checkPayment])
+
+
+
+
+
+
+
      const firstRemote = () => {
         setAdwWriter(false);
         setSh1(0);
@@ -443,7 +542,7 @@ const activPr = () => {
                 }
              {step === 6 && 
                 <>
-           <NewPayBlock totalPrice={totalPrice.toFixed(0)} orderId={orderId} setCheckPayment={setCheckPayment} setOrderId={setOrderId}/>
+           <NewPayBlock addOrder={addOrder} totalPrice={totalPrice.toFixed(0)} orderId={orderId} setCheckPayment={setCheckPayment} setOrderId={setOrderId}/>
            
             </>
                 }

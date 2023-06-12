@@ -3583,4 +3583,10 @@ justify-content: center;
  margin: 0;
  font-size: 14px;
 }
-
+#chat-button {
+  background-color: #03a9f4;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+}

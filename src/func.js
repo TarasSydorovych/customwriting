@@ -1,7 +1,7 @@
 export const sendMess = async (mes) => {
     const token = '6163478688:AAFZtRxGgcMirkkkt2ISrDcrH26OtX-uATw';
     const url = `https://api.telegram.org/bot${token}/sendMessage`;
-  
+  //  
     const formData = new FormData();
     formData.append('chat_id', '1142295907');
     formData.append('text', mes);
