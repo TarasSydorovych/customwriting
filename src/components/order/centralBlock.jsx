@@ -175,10 +175,10 @@ return () => {
    
     // }, [orderId, checkPayment])
          const addOrder = async (e) => {
+            e.preventDefault();
            
-            sendMess('У Вас нове замовлення на сайті');
         try{
-            
+            sendMess('У Вас нове замовлення на сайті');
             
             if(file !== null){
                 
@@ -231,6 +231,7 @@ return () => {
         }
         );
         }else{
+            
             const frankDocRef = doc(db, "order", orderId);
            //const messagesCollectionRef = collection(db, `order/${orderId.payment.orderId}/order`);
            //const newMessageRef = await addDoc(messagesCollectionRef, {

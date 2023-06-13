@@ -46,7 +46,7 @@ useEffect(() => {
   <input type="hidden" name="signature" value={signature}/>
  
   <button type="submit" onClick={(e) => {
-  e.preventDefault();
+
   addOrder(e);
 
 }}>${totalPrice}</button>
